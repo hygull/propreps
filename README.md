@@ -4,7 +4,8 @@ A repository to enhance the existing skills set by solving different kinds of co
 
 ### Length of longest substring without repeating characters
 
-![Length of longest substring without repeating characters](./assets/images/length_of_longest_substring_without_repeating_characters_my_own_solution_just_after_looking_into_problem.png)
+![Length of longest substring without repeating characters](./assets/images/001_length_of_longest_substring_without_repeating_characters_my_own_solution_just_after_looking_into_problem.png)
 
 ### Find pairs
-![Find pairs](./assets/images/find_pairs.png)
+
+![Find pairs](./assets/images/002_find_pairs.png)
