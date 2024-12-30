@@ -32,3 +32,5 @@ ___
 ![Check if two strings are anagrams of each other](./assets/images/code_snippets/2024/05_check_if_two_strings_are_anagrams_of_each_other.png)
 
 ---
+
+![Find first non repeating characters in a string](./assets/images/code_snippets/2024/06_find_first_non_repeating_characters.png)
