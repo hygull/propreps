@@ -23,6 +23,12 @@ ___
 
 ![GPT: Balanced parantheses (Symmetric case only)](./assets/images/gpts_and_others/2024/01_balanced_parantheses_symmetric_case.png)
 
+---
 
+![Balanced parantheses (Symmetric & Assymmetric cases, Stack based efficient solution)](./assets/images/code_snippets/2024/04_balanced_parantheses_symmetric_asymmetric_cases.png)
 
-![Balanced parantheses (Symmetric & Assymmetric cases, Stack based efficient solution)](./assets/images/gpts_and_others/2024/04_balanced_parantheses_symmetric_asymmetric_cases.png)
+---
+
+![Check if two strings are anagrams of each other](./assets/images/code_snippets/2024/05_check_if_two_strings_are_anagrams_of_each_other.png)
+
+---
