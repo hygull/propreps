@@ -36,3 +36,22 @@ print("n2 == n6", n2 == n6)
 print(math.isinf(n1))  # True
 print(math.isinf(n2))  # True
 print(math.isinf(10))  # False
+
+
+"""############ Output(python3 src/practice/infinite_numbers.py) ##############
+n1 inf
+n2 -inf
+n2 inf
+n4 -inf
+n1 == n3 True
+n2 == n4 True
+n1 == n2 False
+n3 == n4 False
+n5 inf
+n6 -inf
+n1 == n5 True
+n2 == n6 True
+True
+True
+False
+"""
