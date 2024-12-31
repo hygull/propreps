@@ -38,7 +38,7 @@ print(math.isinf(n2))  # True
 print(math.isinf(10))  # False
 
 
-"""############ Output(python3 src/practice/infinite_numbers.py) ##############
+"""############## Output(python3 src/practice/infinite_numbers.py) ##############
 n1 inf
 n2 -inf
 n2 inf
