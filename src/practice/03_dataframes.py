@@ -8,9 +8,8 @@ df["last_name"] = "Agrawani"
 
 print(df)
 """
-OUTPUT (python3 src/practice/03_dataframes.py)
-==============================================
-
+O/P
+---
    first_name  age last_name
 0   Rishikesh   32  Agrawani
 1     Hemkesh   30  Agrawani
