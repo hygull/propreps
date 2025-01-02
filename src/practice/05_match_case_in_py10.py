@@ -62,3 +62,29 @@ O/P
 ---
 I love coding
 """
+
+
+# *-------- Another example ---------*
+def print_lords_incarnations_details(lord_name1, lord_name2):
+    match (lord_name1, lord_name2):
+        case ("Ram", "Krishna") | ("Parshuram", "Narsingh"):
+            print(
+                f"Lord {lord_name1} ji and lord {lord_name2} ji, both are incarnations of Lord shri Hari Narayana Vishnu ji."
+            )
+        case ("Kal Bhairav", "Hanuman"):
+            print(
+                f"Lord {lord_name1} ji and lord {lord_name2} ji, both are incarnations of Lord Mahadev ji."
+            )
+
+
+print_lords_incarnations_details("Parshuram", "Narsingh")
+print_lords_incarnations_details("Kal Bhairav", "Hanuman")
+print_lords_incarnations_details("Ram", "Krishna")
+print_lords_incarnations_details("Buddha", "Krishna")  # Won't be printed
+"""
+O/P
+---
+Lord Parshuram ji and lord Narsingh ji, both are incarnations of Lord shri Hari Narayana Vishnu ji.
+Lord Kal Bhairav ji and lord Hanuman ji, both are incarnations of Lord Mahadev ji.
+Lord Ram ji and lord Krishna ji, both are incarnations of Lord shri Hari Narayana Vishnu ji.
+"""
