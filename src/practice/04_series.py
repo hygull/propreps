@@ -14,8 +14,8 @@ import pandas as pd
 numbers = pd.Series([12, 4, 57, 8, 9, 10])
 print(numbers)
 """
-O/P (python3 ./src/practice/04_series.py)
-=========================================
+O/P
+---
 0    12
 1     4
 2    57
