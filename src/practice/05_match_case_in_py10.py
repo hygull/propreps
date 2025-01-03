@@ -1,12 +1,12 @@
 """
 Command to run the script
 =========================
-	python src/practice/05_match_case_in_py10.py
+    python src/practice/05_match_case_in_py10.py
 
 Note
 ====
-	- Patterns must be literal values, variables, or other valid pattern elements.
-	- Expressions like 45 - 35 and 60 + 7 are evaluated at runtime, which is not compatible with pattern matching's static evaluation.
+    - Patterns must be literal values, variables, or other valid pattern elements.
+    - Expressions like 45 - 35 and 60 + 7 are evaluated at runtime, which is not compatible with pattern matching's static evaluation.
 """
 
 
@@ -80,7 +80,7 @@ def print_lords_incarnations_details(lord_name1, lord_name2):
 print_lords_incarnations_details("Parshuram", "Narsingh")
 print_lords_incarnations_details("Kal Bhairav", "Hanuman")
 print_lords_incarnations_details("Ram", "Krishna")
-print_lords_incarnations_details("Buddha", "Krishna")  # Won't be printed
+print_lords_incarnations_details("Buddha", "Krishna")  # Won't print anything
 """
 O/P
 ---
