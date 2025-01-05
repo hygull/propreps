@@ -22,6 +22,10 @@ print(f"Sometimes we more think about {100:>10} different ways to solve a proble
 
 # Center aligns the result (within the available space)
 print(f"Sometimes we more think about {100:^10} different ways to solve a problem.")
+
+# Use a plus sign to indicate if the result is positive or negative
+print(f"I like positive numbers like {45 + 5:+} and negative numbers like {-10 + 5:+}.")
+
 """
 O/P
 ---
@@ -29,4 +33,5 @@ Dwaparyuga is 5,000 years old.
 Sometimes we more think about 100        different ways to solve a problem.
 Sometimes we more think about        100 different ways to solve a problem.
 Sometimes we more think about    100     different ways to solve a problem.
+I like positive numbers like +50 and negative numbers like -5.
 """
