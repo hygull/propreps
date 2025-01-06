@@ -25,7 +25,6 @@ print(f"Sometimes we more think about {100:^10} different ways to solve a proble
 
 # Use a plus sign to indicate if the result is positive or negative
 print(f"I like positive numbers like {45 + 5:+} and negative numbers like {-10 + 5:+}.")
-
 """
 O/P
 ---
@@ -34,4 +33,24 @@ Sometimes we more think about 100        different ways to solve a problem.
 Sometimes we more think about        100 different ways to solve a problem.
 Sometimes we more think about    100     different ways to solve a problem.
 I like positive numbers like +50 and negative numbers like -5.
+"""
+
+# Binary format
+print(f"The Binary format of 8 is {8:b}")
+
+# Octal format
+print(f"The Octal format of 8 is {8:o}")
+
+# Hex format, lower case
+print(f"The Hex format (lower case) of 31 is {31:x}")
+
+# Hex format, upper case
+print(f"The Hex format (upper case) of 31 is {31:X}")
+"""
+O/P
+---
+The Binary format of 8 is 1000
+The Octal format of 8 is 10
+The Hex format (lower case) of 31 is 1f
+The Hex format (upper case) of 31 is 1F
 """
