@@ -36,21 +36,51 @@ I like positive numbers like +50 and negative numbers like -5.
 """
 
 # Binary format
-print(f"The Binary format of 8 is {8:b}")
+print(f"The Binary format of 8 is {8:b}.")
 
 # Octal format
-print(f"The Octal format of 8 is {8:o}")
+print(f"The Octal format of 8 is {8:o}.")
 
 # Hex format, lower case
-print(f"The Hex format (lower case) of 31 is {31:x}")
+print(f"The Hex format (lower case) of 31 is {31:x}.")
 
 # Hex format, upper case
-print(f"The Hex format (upper case) of 31 is {31:X}")
+print(f"The Hex format (upper case) of 31 is {31:X}.")
 """
 O/P
 ---
-The Binary format of 8 is 1000
-The Octal format of 8 is 10
-The Hex format (lower case) of 31 is 1f
-The Hex format (upper case) of 31 is 1F
+The Binary format of 8 is 1000.
+The Octal format of 8 is 10.
+The Hex format (lower case) of 31 is 1f.
+The Hex format (upper case) of 31 is 1F.
+"""
+
+
+# Operations on f-strings i.e. math operation in the placeholders
+print(f"My favourite number is {1700 + 29}.")
+
+# Performing math operations on variables
+four = 3
+two = 2
+print(f"There are total {two + 3 + 1} days in a week.")
+
+# if...else inside placeholders
+num = 4
+print(f"{num} is an {'even' if num % 2 == 0 else 'odd'} number.")
+
+
+# Execute functions inside the placeholders
+def hello():
+    return "Hello programmers!"
+
+
+print(f"Once I woke up very early in the morning and saw a message -> {hello()}")
+
+"""
+O/P
+---
+My favourite number is 1729.
+There are total 6 days in a week.
+4 is an even number.
+Once I woke up very early in the morning and saw a message -> Hello programmers!
 """
