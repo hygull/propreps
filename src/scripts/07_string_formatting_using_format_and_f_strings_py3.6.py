@@ -89,3 +89,31 @@ There are total 6 days in a week.
 4 is an even number.
 Once I woke up very early in the morning and saw a message -> Hello programmers!
 """
+
+
+# String formatting using format()
+print("My name is {} and I am {} years old.".format("Rishikesh Agrawani", 32))
+
+# If we do not use index numbers then -> My name is 32 and I am Rishikesh Agrawani years old.
+print("My name is {1} and I am {0} years old.".format(32, "Rishikesh Agrawani"))
+
+# Named indexes
+print(
+    "My name is {fullname} and I am {age} years old.".format(
+        age=30, fullname="Hemkesh Agrawani"
+    )
+)
+print(
+    "My name is {fullname} and I am {age} years old.".format(
+        fullname="Malinikesh Agrawani", age=28
+    )
+)
+
+"""
+O/P
+---
+My name is Rishikesh Agrawani and I am 32 years old.
+My name is Rishikesh Agrawani and I am 32 years old.
+My name is Hemkesh Agrawani and I am 30 years old.
+My name is Malinikesh Agrawani and I am 28 years old.
+"""
