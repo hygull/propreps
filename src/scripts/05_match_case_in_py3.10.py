@@ -1,7 +1,7 @@
 """
 Command to run the script
 =========================
-    python src/practice/05_match_case_in_py10.py
+    python src/scripts/05_match_case_in_py10.py
 
 Note
 ====

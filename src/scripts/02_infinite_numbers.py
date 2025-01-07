@@ -39,7 +39,7 @@ print(math.isinf(10))  # False
 
 
 """
-OUTPUT (python3 src/practice/infinite_numbers.py) 
+OUTPUT (python3 src/scripts/infinite_numbers.py) 
 =================================================
 
 n1 inf

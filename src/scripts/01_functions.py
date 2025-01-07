@@ -1,4 +1,4 @@
-# python3 src/practice/functions.py
+# python3 src/scripts/functions.py
 
 
 def addition(a, b):

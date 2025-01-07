@@ -5,7 +5,7 @@ Description
 
 Command to run the script
 =========================
-	python3 ./src/practice/04_series.py
+	python3 ./src/scripts/04_series.py
 """
 
 import pandas as pd
@@ -43,7 +43,7 @@ dtype: int64
 # Print the first value (By default the values are labeled with the index numbers)
 print(numbers[0], numbers[1])
 """
-O/P (python3 ./src/practice/04_series.py)
+O/P (python3 ./src/scripts/04_series.py)
 =========================================
 13 5
 """

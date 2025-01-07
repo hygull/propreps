@@ -1,3 +1,8 @@
+"""
+Command:
+    - python3 src/scripts/07_string_formatting_using_format_and_f_strings_py3.6.py
+"""
+
 fullname = "Rishikesh Agrawani"
 age = 32
 pi = 3.142
