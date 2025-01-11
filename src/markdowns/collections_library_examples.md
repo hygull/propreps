@@ -314,3 +314,48 @@ In [14]: fruits_dict.clear()
 In [15]: fruits_dict
 Out[15]: defaultdict(int, {})
 ```
+
+```shell
+In [25]: numbers_dict = defaultdict(list)
+
+In [26]: numbers_dict
+Out[26]: defaultdict(list, {})
+
+In [27]: numbers_dict["even_numbers"].extend([2, 4, 6, 8, 10])
+
+In [28]: numbers_dict
+Out[28]: defaultdict(list, {'even_numbers': [2, 4, 6, 8, 10]})
+
+In [29]: numbers_dict["odd_numbers"].extend([1, 3, 5, 7, 9])
+
+In [30]: numbers_dict
+Out[30]: 
+defaultdict(list,
+            {'even_numbers': [2, 4, 6, 8, 10], 'odd_numbers': [1, 3, 5, 7, 9]})
+```
+
+```shell
+In [31]: books_dict = defaultdict(tuple)
+
+In [32]: books_dict
+Out[32]: defaultdict(tuple, {})
+
+In [33]: books_dict["programming_books"] += ("Let us C", "Core Java")
+
+In [34]: books_dict
+Out[34]: defaultdict(tuple, {'programming_books': ('Let us C', 'Core Java')})
+
+In [35]: books_dict["poetry_books"].extend(("Mongli and Wolf", "Ghost with Angels"))
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-35-190f65902710> in <module>
+----> 1 books_dict["poetry_books"].extend(("Mongli and Wolf", "Ghost with Angels"))
+
+AttributeError: 'tuple' object has no attribute 'extend'
+
+In [36]: books_dict
+Out[36]: 
+defaultdict(tuple,
+            {'programming_books': ('Let us C', 'Core Java'),
+             'poetry_books': ()})
+```
