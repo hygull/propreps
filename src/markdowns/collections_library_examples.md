@@ -263,3 +263,54 @@ Plum
 Peach
 Banana
 ```
+
+
+# collections - defaultdict
+
+```shell
+In [1]: from collections import defaultdict
+
+In [2]: fruits_dict = defaultdict(int)
+
+In [3]: fruits_dict["Apple"] += 5
+
+In [4]: fruits_dict
+Out[4]: defaultdict(int, {'Apple': 5})
+
+In [5]: fruits_dict["Banana"]
+Out[5]: 0
+
+In [6]: fruits_dict
+Out[6]: defaultdict(int, {'Apple': 5, 'Banana': 0})
+
+In [7]: fruits_dict["Banana"] += 6
+
+In [8]: fruits_dict
+Out[8]: defaultdict(int, {'Apple': 5, 'Banana': 6})
+
+In [9]: for key, value in fruits_dict.items():
+   ...:     print(f"{key} => {value}")
+   ...: 
+Apple => 5
+Banana => 6
+
+In [10]: for key, value in fruits_dict.items():
+    ...:     print(f"{key:<8} => {value:>8}")
+    ...: 
+Apple    =>        5
+Banana   =>        6
+
+In [11]: fruits_dict.items()
+Out[11]: dict_items([('Apple', 5), ('Banana', 6)])
+
+In [12]: fruits_dict.keys()
+Out[12]: dict_keys(['Apple', 'Banana'])
+
+In [13]: fruits_dict.values()
+Out[13]: dict_values([5, 6])
+
+In [14]: fruits_dict.clear()
+
+In [15]: fruits_dict
+Out[15]: defaultdict(int, {})
+```
