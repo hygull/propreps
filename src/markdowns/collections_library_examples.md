@@ -359,3 +359,86 @@ defaultdict(tuple,
             {'programming_books': ('Let us C', 'Core Java'),
              'poetry_books': ()})
 ```
+
+```shell
+In [39]: class Person:
+    ...:     def __init__(self, first_name, last_name, age):
+    ...:         self.first_name = first_name
+    ...:         self.last_name = last_name
+    ...:         self.age = age
+    ...: 
+    ...:     def print_details(self):
+    ...:         print(f"Full name: {self.first_name} {self.last_name}")
+    ...:         print(f"Age: {self.age}")
+    ...: 
+
+In [40]: person1 = Person("Rishikesh", "Agrawani", 32)
+
+In [41]: person1
+Out[41]: <__main__.Person at 0x7fadc841cef0>
+
+In [42]: person1.print_details()
+Full name: Rishikesh Agrawani
+Age: 32
+
+In [43]: persons_dict = defaultdict(Person)
+
+In [44]: persons_dict
+Out[44]: defaultdict(__main__.Person, {})
+
+In [45]: persons_dict["Rishikesh"].first_name
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-45-a0b5ecfd780d> in <module>
+----> 1 persons_dict["Rishikesh"].first_name
+
+TypeError: __init__() missing 3 required positional arguments: 'first_name', 'last_name', and 'age'
+
+In [46]: persons_dict["Rishikesh"]("Hemkesh", "Agrawani", 30)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-46-3cc2f38f8e24> in <module>
+----> 1 persons_dict["Rishikesh"]("Hemkesh", "Agrawani", 30)
+
+TypeError: __init__() missing 3 required positional arguments: 'first_name', 'last_name', and 'age'
+
+In [47]: class Person:
+    ...:     def __init__(self, first_name=None, last_name=None, age=None):
+    ...:         self.first_name = first_name
+    ...:         self.last_name = last_name
+    ...:         self.age = age
+    ...: 
+    ...:     def print_details(self):
+    ...:         print(f"Full name: {self.first_name} {self.last_name}")
+    ...:         print(f"Age: {self.age}")
+    ...: 
+
+In [48]: persons_dict["Rishikesh"]("Hemkesh", "Agrawani", 30)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-48-3cc2f38f8e24> in <module>
+----> 1 persons_dict["Rishikesh"]("Hemkesh", "Agrawani", 30)
+
+TypeError: __init__() missing 3 required positional arguments: 'first_name', 'last_name', and 'age'
+
+In [49]: persons_dict = defaultdict(Person)
+
+In [50]: persons_dict["Rishikesh"]
+Out[50]: <__main__.Person at 0x7fade8ba6588>
+
+In [51]: persons_dict["Rishikesh"].first_name
+
+In [52]: print(persons_dict["Rishikesh"].first_name)
+None
+
+In [53]: persons_dict
+Out[53]: 
+defaultdict(__main__.Person,
+            {'Rishikesh': <__main__.Person at 0x7fade8ba6588>})
+
+In [54]: persons_dict["Hemkesh"].first_name = "Hemkesh"
+
+In [55]: persons_dict["Hemkesh"].__dict__
+Out[55]: {'first_name': 'Hemkesh', 'last_name': None, 'age': None}
+```
+
