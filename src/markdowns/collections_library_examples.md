@@ -442,3 +442,44 @@ In [55]: persons_dict["Hemkesh"].__dict__
 Out[55]: {'first_name': 'Hemkesh', 'last_name': None, 'age': None}
 ```
 
+# collections - namedtuple
+
+```shell
+In [1]: from collections import namedtuple
+
+In [2]: Person = namedtuple("Person", ["first_name", "last_name", "age"])
+
+In [3]: Person
+Out[3]: __main__.Person
+
+In [4]: person = Person("Rishikesh", "Agrawani", 32)
+
+In [5]: person[0]
+Out[5]: 'Rishikesh'
+
+In [6]: person[1]
+Out[6]: 'Agrawani'
+
+In [7]: person[2]
+Out[7]: 32
+
+In [8]: person[3]
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+<ipython-input-8-56d117fa3037> in <module>
+----> 1 person[3]
+
+IndexError: tuple index out of range
+
+In [9]: person.first_name
+Out[9]: 'Rishikesh'
+
+In [10]: person.last_name
+Out[10]: 'Agrawani'
+
+In [11]: person.age
+Out[11]: 32
+
+In [12]: person
+Out[12]: Person(first_name='Rishikesh', last_name='Agrawani', age=32)
+```
