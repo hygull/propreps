@@ -482,4 +482,43 @@ Out[11]: 32
 
 In [12]: person
 Out[12]: Person(first_name='Rishikesh', last_name='Agrawani', age=32)
+
+In [13]: person_details = person
+
+In [14]: for person_detail in person_details:
+    ...:     print(person_detail)
+    ...: 
+Rishikesh
+Agrawani
+32
+
+In [15]: person2 = Person("Hemkesh", "Agrawani", 30)
+
+In [16]: person2
+Out[16]: Person(first_name='Hemkesh', last_name='Agrawani', age=30)
+
+In [17]: person + person2
+Out[17]: ('Rishikesh', 'Agrawani', 32, 'Hemkesh', 'Agrawani', 30)
+
+In [18]: combined_details = person + person2
+
+In [19]: type(person)
+Out[19]: __main__.Person
+
+In [20]: type(person2)
+Out[20]: __main__.Person
+
+In [21]: type(combined_details)
+Out[21]: tuple
+
+In [22]: for combined_detail in combined_details:
+    ...:     print(combined_detail)
+    ...: 
+Rishikesh
+Agrawani
+32
+Hemkesh
+Agrawani
+30
+
 ```
