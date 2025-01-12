@@ -200,3 +200,145 @@ class deque(builtins.object)
  |  
  |  __hash__ = None
 ```
+
+### `ChainMap`
+```
+Help on class ChainMap in module collections:
+
+class ChainMap(collections.abc.MutableMapping)
+ |  A ChainMap groups multiple dicts (or other mappings) together
+ |  to create a single, updateable view.
+ |  
+ |  The underlying mappings are stored in a list.  That list is public and can
+ |  be accessed or updated using the *maps* attribute.  There is no other
+ |  state.
+ |  
+ |  Lookups search the underlying mappings successively until a key is found.
+ |  In contrast, writes, updates, and deletions only operate on the first
+ |  mapping.
+ |  
+ |  Method resolution order:
+ |      ChainMap
+ |      collections.abc.MutableMapping
+ |      collections.abc.Mapping
+ |      collections.abc.Collection
+ |      collections.abc.Sized
+ |      collections.abc.Iterable
+ |      collections.abc.Container
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __bool__(self)
+ |  
+ |  __contains__(self, key)
+ |  
+ |  __copy__ = copy(self)
+ |  
+ |  __delitem__(self, key)
+ |  
+ |  __getitem__(self, key)
+ |  
+ |  __init__(self, *maps)
+ |      Initialize a ChainMap by setting *maps* to the given mappings.
+ |      If no mappings are provided, a single empty dictionary is used.
+ |  
+ |  __iter__(self)
+ |  
+ |  __len__(self)
+ |  
+ |  __missing__(self, key)
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  __setitem__(self, key, value)
+ |  
+ |  clear(self)
+ |      Clear maps[0], leaving maps[1:] intact.
+ |  
+ |  copy(self)
+ |      New ChainMap or subclass with a new copy of maps[0] and refs to maps[1:]
+ |  
+ |  get(self, key, default=None)
+ |      D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.
+ |  
+ |  new_child(self, m=None)
+ |      New ChainMap with a new map followed by all previous maps.
+ |      If no map is provided, an empty dict is used.
+ |  
+ |  pop(self, key, *args)
+ |      Remove *key* from maps[0] and return its value. Raise KeyError if *key* not in maps[0].
+ |  
+ |  popitem(self)
+ |      Remove and return an item pair from maps[0]. Raise KeyError is maps[0] is empty.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  fromkeys(iterable, *args) from abc.ABCMeta
+ |      Create a ChainMap with a single dict created from the iterable.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  parents
+ |      New ChainMap from maps[1:].
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __abstractmethods__ = frozenset()
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from collections.abc.MutableMapping:
+ |  
+ |  setdefault(self, key, default=None)
+ |      D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D
+ |  
+ |  update(*args, **kwds)
+ |      D.update([E, ]**F) -> None.  Update D from mapping/iterable E and F.
+ |      If E present and has a .keys() method, does:     for k in E: D[k] = E[k]
+ |      If E present and lacks .keys() method, does:     for (k, v) in E: D[k] = v
+ |      In either case, this is followed by: for k, v in F.items(): D[k] = v
+ |  
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from collections.abc.Mapping:
+ |  
+ |  __eq__(self, other)
+ |      Return self==value.
+ |  
+ |  items(self)
+ |      D.items() -> a set-like object providing a view on D's items
+ |  
+ |  keys(self)
+ |      D.keys() -> a set-like object providing a view on D's keys
+ |  
+ |  values(self)
+ |      D.values() -> an object providing a view on D's values
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from collections.abc.Mapping:
+ |  
+ |  __hash__ = None
+ |  
+ |  __reversed__ = None
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from collections.abc.Collection:
+ |  
+ |  __subclasshook__(C) from abc.ABCMeta
+ |      Abstract classes can override this to customize issubclass().
+ |      
+ |      This is invoked early on by abc.ABCMeta.__subclasscheck__().
+ |      It should return True, False or NotImplemented.  If it returns
+ |      NotImplemented, the normal algorithm is used.  Otherwise, it
+ |      overrides the normal algorithm (and the outcome is cached).
+```
