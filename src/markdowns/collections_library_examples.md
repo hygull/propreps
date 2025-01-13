@@ -520,5 +520,85 @@ Agrawani
 Hemkesh
 Agrawani
 30
+```
 
+# collections - ChainMap
+
+```shell
+In [1]: from collections import ChainMap
+
+In [2]: even_numbers = {2: "two", 4: "four", 8: "eight", 10: "ten"}
+
+In [3]: even_numbers
+Out[3]: {2: 'two', 4: 'four', 8: 'eight', 10: 'ten'}
+
+In [4]: odd_numbers = {1: "one", 5: "five", 9: "nine", 11: "eleven"}
+
+In [5]: odd_numbers
+Out[5]: {1: 'one', 5: 'five', 9: 'nine', 11: 'eleven'}
+
+In [6]: fav_numbers = {1 + 1: "two.2nd", 7+ 2: "nine.2nd"}
+
+In [7]: chainmap = ChainMap(even_numbers, odd_numbers, fav_numbers)
+
+In [8]: chainmap
+Out[8]: ChainMap({2: 'two', 4: 'four', 8: 'eight', 10: 'ten'}, {1: 'one', 5: 'five', 9: 'nine', 11: 'eleven'}, {2: 'two.2nd', 9: 'nine.2nd'})
+
+In [9]: chainmap[2]
+Out[9]: 'two'
+
+In [10]: chainmap[9]
+Out[10]: 'nine'
+
+In [11]: chainmap[10]
+Out[11]: 'ten'
+
+In [12]: 
+
+In [12]: chainmap = ChainMap(fav_numbers, even_numbers, odd_numbers)
+
+In [13]: chainmap[2]
+Out[13]: 'two.2nd'
+
+In [14]: chainmap[9]
+Out[14]: 'nine.2nd'
+
+In [15]: chainmap[10]
+Out[15]: 'ten'
+
+In [16]: 
+
+In [16]: chainmap.new_child({12: "twelve", 14: "fourteen", 15: "fifteen"})
+Out[16]: ChainMap({12: 'twelve', 14: 'fourteen', 15: 'fifteen'}, {2: 'two.2nd', 9: 'nine.2nd'}, {2: 'two', 4: 'four', 8: 'eight', 10: 'ten'}, {1: 'one', 5: 'five', 9: 'nine', 11: 'eleven'})
+
+In [17]: chainmap
+Out[17]: ChainMap({2: 'two.2nd', 9: 'nine.2nd'}, {2: 'two', 4: 'four', 8: 'eight', 10: 'ten'}, {1: 'one', 5: 'five', 9: 'nine', 11: 'eleven'})
+
+In [18]: chainmap = chainmap.new_child({12: "twelve", 14: "fourteen", 15: "fifteen"})
+
+In [19]: chainmap
+Out[19]: ChainMap({12: 'twelve', 14: 'fourteen', 15: 'fifteen'}, {2: 'two.2nd', 9: 'nine.2nd'}, {2: 'two', 4: 'four', 8: 'eight', 10: 'ten'}, {1: 'one', 5: 'five', 9: 'nine', 11: 'eleven'})
+
+In [20]: chainmap[11]
+Out[20]: 'eleven'
+
+In [21]: chainmap[12]
+Out[21]: 'twelve'
+
+In [22]: 
+
+In [22]: for k, v in chainmap.items():
+    ...:     print(k, v)
+    ...: 
+1 one
+2 two.2nd
+4 four
+5 five
+8 eight
+9 nine.2nd
+10 ten
+11 eleven
+12 twelve
+14 fourteen
+15 fifteen
 ```
