@@ -342,3 +342,122 @@ class ChainMap(collections.abc.MutableMapping)
  |      NotImplemented, the normal algorithm is used.  Otherwise, it
  |      overrides the normal algorithm (and the outcome is cached).
 ```
+
+### `UserDict`
+
+```shell
+Help on class UserDict in module collections:
+
+class UserDict(collections.abc.MutableMapping)
+ |  Method resolution order:
+ |      UserDict
+ |      collections.abc.MutableMapping
+ |      collections.abc.Mapping
+ |      collections.abc.Collection
+ |      collections.abc.Sized
+ |      collections.abc.Iterable
+ |      collections.abc.Container
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __contains__(self, key)
+ |      # Modify __contains__ to work correctly when __missing__ is present
+ |  
+ |  __delitem__(self, key)
+ |  
+ |  __getitem__(self, key)
+ |  
+ |  __init__(*args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __iter__(self)
+ |  
+ |  __len__(self)
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  __setitem__(self, key, item)
+ |  
+ |  copy(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  fromkeys(iterable, value=None) from abc.ABCMeta
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __abstractmethods__ = frozenset()
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from collections.abc.MutableMapping:
+ |  
+ |  clear(self)
+ |      D.clear() -> None.  Remove all items from D.
+ |  
+ |  pop(self, key, default=<object object at 0x7f90780a3050>)
+ |      D.pop(k[,d]) -> v, remove specified key and return the corresponding value.
+ |      If key is not found, d is returned if given, otherwise KeyError is raised.
+ |  
+ |  popitem(self)
+ |      D.popitem() -> (k, v), remove and return some (key, value) pair
+ |      as a 2-tuple; but raise KeyError if D is empty.
+ |  
+ |  setdefault(self, key, default=None)
+ |      D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D
+ |  
+ |  update(*args, **kwds)
+ |      D.update([E, ]**F) -> None.  Update D from mapping/iterable E and F.
+ |      If E present and has a .keys() method, does:     for k in E: D[k] = E[k]
+ |      If E present and lacks .keys() method, does:     for (k, v) in E: D[k] = v
+ |      In either case, this is followed by: for k, v in F.items(): D[k] = v
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from collections.abc.Mapping:
+ |  
+ |  __eq__(self, other)
+ |      Return self==value.
+ |  
+ |  get(self, key, default=None)
+ |      D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.
+ |  
+ |  items(self)
+ |      D.items() -> a set-like object providing a view on D's items
+ |  
+ |  
+ |  keys(self)
+ |      D.keys() -> a set-like object providing a view on D's keys
+ |  
+ |  values(self)
+ |      D.values() -> an object providing a view on D's values
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from collections.abc.Mapping:
+ |  
+ |  __hash__ = None
+ |  
+ |  __reversed__ = None
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from collections.abc.Collection:
+ |  
+ |  __subclasshook__(C) from abc.ABCMeta
+ |      Abstract classes can override this to customize issubclass().
+ |      
+ |      This is invoked early on by abc.ABCMeta.__subclasscheck__().
+ |      It should return True, False or NotImplemented.  If it returns
+ |      NotImplemented, the normal algorithm is used.  Otherwise, it
+ |      overrides the normal algorithm (and the outcome is cached).
+```
