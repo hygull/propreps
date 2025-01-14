@@ -461,3 +461,140 @@ class UserDict(collections.abc.MutableMapping)
  |      NotImplemented, the normal algorithm is used.  Otherwise, it
  |      overrides the normal algorithm (and the outcome is cached).
 ```
+
+
+### `UserList`
+
+```shell
+Help on class UserList in module collections:
+
+class UserList(collections.abc.MutableSequence)
+ |  A more or less complete user-defined wrapper around list objects.
+ |  
+ |  Method resolution order:
+ |      UserList
+ |      collections.abc.MutableSequence
+ |      collections.abc.Sequence
+ |      collections.abc.Reversible
+ |      collections.abc.Collection
+ |      collections.abc.Sized
+ |      collections.abc.Iterable
+ |      collections.abc.Container
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, other)
+ |  
+ |  __contains__(self, item)
+ |  
+ |  __delitem__(self, i)
+ |  
+ |  __eq__(self, other)
+ |      Return self==value.
+ |  
+ |  __ge__(self, other)
+ |      Return self>=value.
+ |  
+ |  __getitem__(self, i)
+ |  
+ |  __gt__(self, other)
+ |      Return self>value.
+ |  
+ |  __iadd__(self, other)
+ |  
+ |  __imul__(self, n)
+ |  
+ |  __init__(self, initlist=None)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __le__(self, other)
+ |      Return self<=value.
+ |  
+ |  __len__(self)
+ |  
+ |  __lt__(self, other)
+ |      Return self<value.
+ |  
+ |  __mul__(self, n)
+ |  
+ |  __radd__(self, other)
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  __rmul__ = __mul__(self, n)
+ |  
+ |  __setitem__(self, i, item)
+ |  
+ |  append(self, item)
+ |      S.append(value) -- append value to the end of the sequence
+ |  
+ |  clear(self)
+ |      S.clear() -> None -- remove all items from S
+ |  
+ |  copy(self)
+ |  
+ |  count(self, item)
+ |      S.count(value) -> integer -- return number of occurrences of value
+ |  
+ |  extend(self, other)
+ |      S.extend(iterable) -- extend sequence by appending elements from the iterable
+ |  
+ |  index(self, item, *args)
+ |      S.index(value, [start, [stop]]) -> integer -- return first index of value.
+ |      Raises ValueError if the value is not present.
+ |      
+ |      Supporting start and stop arguments is optional, but
+ |      recommended.
+ |  
+ |  insert(self, i, item)
+ |      S.insert(index, value) -- insert value before index
+ |  
+ |  pop(self, i=-1)
+ |      S.pop([index]) -> item -- remove and return item at index (default last).
+ |      Raise IndexError if list is empty or index is out of range.
+ |  
+ |  remove(self, item)
+ |      S.remove(value) -- remove first occurrence of value.
+ |      Raise ValueError if the value is not present.
+ |  
+ |  reverse(self)
+ |      S.reverse() -- reverse *IN PLACE*
+ |  
+ |  sort(self, *args, **kwds)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __abstractmethods__ = frozenset()
+ |  
+ |  __hash__ = None
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from collections.abc.Sequence:
+ |  
+ |  __iter__(self)
+ |  
+ |  __reversed__(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from collections.abc.Reversible:
+ |  
+ |  __subclasshook__(C) from abc.ABCMeta
+ |      Abstract classes can override this to customize issubclass().
+ |      
+ |      This is invoked early on by abc.ABCMeta.__subclasscheck__().
+ |      It should return True, False or NotImplemented.  If it returns
+ |      NotImplemented, the normal algorithm is used.  Otherwise, it
+ |      overrides the normal algorithm (and the outcome is cached).
+```
