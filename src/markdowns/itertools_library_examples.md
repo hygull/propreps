@@ -47,3 +47,20 @@ In [11]: for tup in numbers_islice:
 
 In [12]: 
 ```
+
+```bash
+In [21]: itertools.permutations([1, 2, 3], 2)
+Out[21]: <itertools.permutations at 0x7fe239a2efc0>
+
+In [22]: list(itertools.permutations([1, 2, 3], 2))
+Out[22]: [(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)]
+
+In [23]: list(itertools.combinations([1, 2, 3], 2))
+Out[23]: [(1, 2), (1, 3), (2, 3)]
+
+In [24]: list(itertools.permutations([1, 2, 3], 3))
+Out[24]: [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
+
+In [25]: list(itertools.combinations([1, 2, 3], 3))
+Out[25]: [(1, 2, 3)]
+```

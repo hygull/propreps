@@ -185,3 +185,135 @@ class combinations(builtins.object)
  |  __sizeof__(...)
  |      Returns size in memory, in bytes.
 ```
+
+### `itertools.repeat`
+```bash
+Help on class repeat in module itertools:
+
+class repeat(builtins.object)
+ |  repeat(object [,times]) -> create an iterator which returns the object
+ |  for the specified number of times.  If not specified, returns the object
+ |  endlessly.
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __length_hint__(...)
+ |      Private method returning an estimate of len(list(it)).
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+```
+
+### `itertools.accumulate`
+
+```bash
+Help on class accumulate in module itertools:
+
+class accumulate(builtins.object)
+ |  accumulate(iterable[, func]) --> accumulate object
+ |  
+ |  Return series of accumulated sums (or other binary function results).
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |  
+ |  __setstate__(...)
+ |      Set state information for unpickling.
+```
+
+### `itertools.chain`
+
+```bash
+Help on class chain in module itertools:
+
+class chain(builtins.object)
+ |  chain(*iterables) --> chain object
+ |  
+ |  Return a chain object whose .__next__() method returns elements from the
+ |  first iterable until it is exhausted, then elements from the next
+ |  iterable, until all of the iterables are exhausted.
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |  
+ |  __setstate__(...)
+ |      Set state information for unpickling.
+ |  
+ |  from_iterable(...) from builtins.type
+ |      chain.from_iterable(iterable) --> chain object
+ |      
+ |      Alternate chain() constructor taking a single iterable argument
+ |      that evaluates lazily.
+```
+
+### `itertools.starmap`
+
+```bash
+Help on class starmap in module itertools:
+
+class starmap(builtins.object)
+ |  starmap(function, sequence) --> starmap object
+ |  
+ |  Return an iterator whose values are returned from the function evaluated
+ |  with an argument tuple taken from the given sequence.
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+```
