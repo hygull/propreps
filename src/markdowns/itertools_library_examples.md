@@ -64,3 +64,28 @@ Out[24]: [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
 In [25]: list(itertools.combinations([1, 2, 3], 3))
 Out[25]: [(1, 2, 3)]
 ```
+
+
+```bash
+In [5]: acc = itertools.accumulate([1, 40, 51, 62, 73, 84, 11, 23, 17])
+
+In [6]: acc
+Out[6]: <itertools.accumulate at 0x7fcda800db48>
+
+In [7]: for item in acc:
+   ...:     print(item)
+   ...: 
+1
+41
+92
+154
+227
+311
+322
+345
+362
+```
+
+```bash
+
+```

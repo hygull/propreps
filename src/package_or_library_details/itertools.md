@@ -317,3 +317,36 @@ class starmap(builtins.object)
  |  __reduce__(...)
  |      Return state information for pickling.
 ```
+
+
+### `itertools.accumulate`
+
+```shell
+Help on class accumulate in module itertools:
+
+class accumulate(builtins.object)
+ |  accumulate(iterable[, func]) --> accumulate object
+ |  
+ |  Return series of accumulated sums (or other binary function results).
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |  
+ |  __setstate__(...)
+ |      Set state information for unpickling.
+```
+
