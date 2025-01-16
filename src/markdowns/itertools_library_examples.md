@@ -87,5 +87,45 @@ In [7]: for item in acc:
 ```
 
 ```bash
+In [10]: even_numbers = [2, 80, 4, 46, 8, 16, 10, 12, 100]
 
+In [11]: odd_numbers = [27, 89, 11, 45, 9, 15, 101, 23, 1]
+
+In [12]: mixed_numbers = [99, 45, 68, 22, 31, 90, 67, 1]
+
+In [13]: 
+
+In [13]: chained = itertools.chain(even_numbers, odd_numbers, mixed_numbers)
+
+In [14]: for item in chained:
+    ...:     print(item)
+    ...: 
+2
+80
+4
+46
+8
+16
+10
+12
+100
+27
+89
+11
+45
+9
+15
+101
+23
+1
+99
+45
+68
+22
+31
+90
+67
+1
+
+In [15]: 
 ```
