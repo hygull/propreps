@@ -382,4 +382,40 @@ class cycle(builtins.object)
  |      Set state information for unpickling.
 ```
 
-### 
+### `itertools.count`
+
+```shell
+Help on class count in module itertools:
+
+class count(builtins.object)
+ |  count(start=0, step=1) --> count object
+ |  
+ |  Return a count object whose .__next__() method returns consecutive values.
+ |  Equivalent to:
+ |  
+ |      def count(firstval=0, step=1):
+ |          x = firstval
+ |          while 1:
+ |              yield x
+ |              x += step
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+```

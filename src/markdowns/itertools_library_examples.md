@@ -163,3 +163,36 @@ In [11]: for item in icycle:
 1
 5
 ```
+
+```shell
+In [13]: icount = itertools.count(5, 4)
+
+In [14]: count = 0
+
+In [15]: for item in icount:
+    ...:     if count == 20:
+    ...:         break
+    ...:     print(item)
+    ...:     count += 1
+    ...: 
+5
+9
+13
+17
+21
+25
+29
+33
+37
+41
+45
+49
+53
+57
+61
+65
+69
+73
+77
+81
+```
