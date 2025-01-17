@@ -350,3 +350,36 @@ class accumulate(builtins.object)
  |      Set state information for unpickling.
 ```
 
+### `itertools.cycle`
+
+```shell
+Help on class cycle in module itertools:
+
+class cycle(builtins.object)
+ |  cycle(iterable) --> cycle object
+ |  
+ |  Return elements from the iterable until it is exhausted.
+ |  Then repeat the sequence indefinitely.
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |  
+ |  __setstate__(...)
+ |      Set state information for unpickling.
+```
+
+### 

@@ -129,3 +129,37 @@ In [14]: for item in chained:
 
 In [15]: 
 ```
+
+
+```shell
+In [9]: icycle = itertools.cycle([1, 5, 7, 8, 9, 10])
+
+In [10]: count = 0
+
+In [11]: for item in icycle:
+    ...:     if count == 20:
+    ...:         break
+    ...:     print(item)
+    ...:     count += 1
+    ...: 
+1
+5
+7
+8
+9
+10
+1
+5
+7
+8
+9
+10
+1
+5
+7
+8
+9
+10
+1
+5
+```
