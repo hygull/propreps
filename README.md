@@ -34,3 +34,9 @@ ___
 ---
 
 ![Find first non repeating characters in a string](./assets/images/code_snippets/2024/06_find_first_non_repeating_characters.png)
+
+
+
+# pandas
+
+![pandas's loc]{./assets/images/code_snippets/2025/pandas_loc.png}
