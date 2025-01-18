@@ -39,4 +39,6 @@ ___
 
 # pandas
 
-![pandas's loc]{./assets/images/code_snippets/2025/pandas_loc.png}
+![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)
+
+![pandas's iloc](./assets/images/code_snippets/2025/pandas_iloc.png)
