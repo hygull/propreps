@@ -5,7 +5,7 @@ In [1]: import pandas as pd
 
 In [2]: persons_df = pd.DataFrame({
    ...:     "first_name": ["Malinikesh", "Hemkesh", "Rishikesh"],
-   ...:     "last_name": ["Agrawani", "Agrawani", "Agarwani"],
+   ...:     "last_name": ["Agrawani", "Agrawani", "Agrawani"],
    ...:     "age": [28, 30, 32],
    ...: })
 
@@ -14,7 +14,7 @@ Out[3]:
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
-2   Rishikesh  Agarwani   32
+2   Rishikesh  Agrawani   32
 
 In [4]: persons_df.loc[0] # 1st row
 Out[4]: 
@@ -47,13 +47,13 @@ In [8]: persons_df.loc[[1, 2], "first_name":"age"]
 Out[8]: 
   first_name last_name  age
 1    Hemkesh  Agrawani   30
-2  Rishikesh  Agarwani   32
+2  Rishikesh  Agrawani   32
 
 In [9]: persons_df.loc[[1, 2], "first_name":"last_name"]
 Out[9]: 
   first_name last_name
 1    Hemkesh  Agrawani
-2  Rishikesh  Agarwani
+2  Rishikesh  Agrawani
 
 In [10]: persons_df.loc[0:1, "first_name":"last_name"]
 Out[10]: 
@@ -66,14 +66,14 @@ Out[11]:
    first_name last_name
 0  Malinikesh  Agrawani
 1     Hemkesh  Agrawani
-2   Rishikesh  Agarwani
+2   Rishikesh  Agrawani
 
 In [12]: persons_df.loc[0:, "first_name":]
 Out[12]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
-2   Rishikesh  Agarwani   32
+2   Rishikesh  Agrawani   32
 
 In [13]: 
 ```
@@ -94,7 +94,7 @@ Out[15]:
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
-2   Rishikesh  Agarwani   32
+2   Rishikesh  Agrawani   32
 
 In [16]: persons_df.iloc[0:1]
 Out[16]: 
@@ -112,7 +112,7 @@ Out[18]:
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
-2   Rishikesh  Agarwani   32
+2   Rishikesh  Agrawani   32
 
 In [19]: persons_df.iloc[0:3, 0:1]
 Out[19]: 
@@ -126,7 +126,7 @@ Out[20]:
    first_name last_name
 0  Malinikesh  Agrawani
 1     Hemkesh  Agrawani
-2   Rishikesh  Agarwani
+2   Rishikesh  Agrawani
 
 In [21]: persons_df.iloc[0:3, "first_name"]
 ---------------------------------------------------------------------------
