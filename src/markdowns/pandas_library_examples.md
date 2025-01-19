@@ -188,3 +188,45 @@ Out[28]:
 ```
 
 
+```shell
+In [29]: persons_df.loc[persons_df["age"] <= 30]
+Out[29]: 
+   first_name last_name  age
+0  Malinikesh  Agrawani   28
+1     Hemkesh  Agrawani   30
+
+In [30]: persons_df.loc[persons_df["age"] == 30, "first_name"] = "Hem"
+
+In [31]: persons_df
+Out[31]: 
+   first_name last_name  age
+0  Malinikesh  Agrawani   28
+1         Hem  Agrawani   30
+2   Rishikesh  Agrawani   32
+
+In [32]: persons_df.loc[persons_df["age"] == 32, "first_name"] = "Rishi"
+
+In [33]: persons_df.loc[persons_df["age"] == 28, "first_name"] = "Malini"
+
+In [34]: persons_df
+Out[34]: 
+  first_name last_name  age
+0     Malini  Agrawani   28
+1        Hem  Agrawani   30
+2      Rishi  Agrawani   32
+```
+
+```shell
+In [35]: persons_df.index
+Out[35]: RangeIndex(start=0, stop=3, step=1)
+
+In [36]: persons_df.index.tolist()
+Out[36]: [0, 1, 2]
+
+In [37]: persons_df.columns.tolist()
+Out[37]: ['first_name', 'last_name', 'age']
+
+In [38]: persons_df.columns
+Out[38]: Index(['first_name', 'last_name', 'age'], dtype='object')
+```
+
