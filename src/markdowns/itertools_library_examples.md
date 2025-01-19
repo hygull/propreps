@@ -131,7 +131,7 @@ In [15]:
 ```
 
 
-```shell
+```bash
 In [9]: icycle = itertools.cycle([1, 5, 7, 8, 9, 10])
 
 In [10]: count = 0
@@ -164,7 +164,7 @@ In [11]: for item in icycle:
 5
 ```
 
-```shell
+```bash
 In [13]: icount = itertools.count(5, 4)
 
 In [14]: count = 0

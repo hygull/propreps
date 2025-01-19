@@ -81,7 +81,7 @@ In [13]:
 
 ### DataFrame's iloc (Integer-location based indexing)
 
-```shell
+```bash
 In [14]: persons_df.iloc[0]
 Out[14]: 
 first_name    Malinikesh
