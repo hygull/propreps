@@ -1,6 +1,6 @@
 ### DataFrame's loc (Label based indexing)
 
-```shell
+```python
 In [1]: import pandas as pd
 
 In [2]: persons_df = pd.DataFrame({
@@ -141,9 +141,9 @@ ValueError: Location based indexing can only have [integer, integer slice (START
 In [22]: 
 ```
 
-# Filtering
+### Filtering examples
 
-```shell
+```python
 In [21]: persons_df
 Out[21]: 
    first_name last_name  age
@@ -173,7 +173,7 @@ Out[25]:
 1     Hemkesh  Agrawani   30
 ```
 
-```shell
+```python
 In [27]: persons_df.loc[(persons_df["age"] <= 30) & (persons_df["first_name"].isin(["Malinikesh  Agrawani", "Hemkesh  Agrawani"]))]
 Out[27]: 
 Empty DataFrame
@@ -188,7 +188,7 @@ Out[28]:
 ```
 
 
-```shell
+```python
 In [29]: persons_df.loc[persons_df["age"] <= 30]
 Out[29]: 
    first_name last_name  age
@@ -216,7 +216,8 @@ Out[34]:
 2      Rishi  Agrawani   32
 ```
 
-```shell
+### Index and columns
+```python
 In [35]: persons_df.index
 Out[35]: RangeIndex(start=0, stop=3, step=1)
 
