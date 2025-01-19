@@ -140,3 +140,51 @@ ValueError: Location based indexing can only have [integer, integer slice (START
 
 In [22]: 
 ```
+
+# Filtering
+
+```shell
+In [21]: persons_df
+Out[21]: 
+   first_name last_name  age
+0  Malinikesh  Agrawani   28
+1     Hemkesh  Agrawani   30
+2   Rishikesh  Agrawani   32
+
+In [22]: persons_df.loc[persons_df["age"] > 30]
+Out[22]: 
+  first_name last_name  age
+2  Rishikesh  Agrawani   32
+
+In [23]: persons_df.loc[persons_df["age"] == 30]
+Out[23]: 
+  first_name last_name  age
+1    Hemkesh  Agrawani   30
+
+In [24]: persons_df.loc[persons_df["age"] < 30]
+Out[24]: 
+   first_name last_name  age
+0  Malinikesh  Agrawani   28
+
+In [25]: persons_df.loc[persons_df["age"] <= 30]
+Out[25]: 
+   first_name last_name  age
+0  Malinikesh  Agrawani   28
+1     Hemkesh  Agrawani   30
+```
+
+```shell
+In [27]: persons_df.loc[(persons_df["age"] <= 30) & (persons_df["first_name"].isin(["Malinikesh  Agrawani", "Hemkesh  Agrawani"]))]
+Out[27]: 
+Empty DataFrame
+Columns: [first_name, last_name, age]
+Index: []
+
+In [28]: persons_df.loc[(persons_df["age"] <= 30) & (persons_df["first_name"].isin(["Malinikesh", "Hemkesh"]))]
+Out[28]: 
+   first_name last_name  age
+0  Malinikesh  Agrawani   28
+1     Hemkesh  Agrawani   30
+```
+
+
