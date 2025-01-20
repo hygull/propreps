@@ -42,3 +42,5 @@ ___
 ![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)
 
 ![pandas's iloc](./assets/images/code_snippets/2025/pandas_iloc.png)
+
+![pandas's styling](./assets/images/code_snippets/2025/pandas_styling_1.png)
