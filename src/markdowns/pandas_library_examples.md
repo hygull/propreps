@@ -231,3 +231,43 @@ In [38]: persons_df.columns
 Out[38]: Index(['first_name', 'last_name', 'age'], dtype='object')
 ```
 
+```python
+In [39]: persons_df
+Out[39]: 
+  first_name last_name  age
+0     Malini  Agrawani   28
+1        Hem  Agrawani   30
+2      Rishi  Agrawani   32
+
+In [40]: persons_df["village"] = "Risgaon"
+
+In [41]: persons_df
+Out[41]: 
+  first_name last_name  age  village
+0     Malini  Agrawani   28  Risgaon
+1        Hem  Agrawani   30  Risgaon
+2      Rishi  Agrawani   32  Risgaon
+
+In [42]: persons_df["age"].gt(30)
+Out[42]: 
+0    False
+1    False
+2     True
+Name: age, dtype: bool
+
+In [44]: persons_df["age"].lt(30)
+Out[44]: 
+0     True
+1    False
+2    False
+Name: age, dtype: bool
+
+In [45]: persons_df["age"].gt(30).sum()
+Out[45]: 1
+
+In [46]: persons_df["age"].lt(30).sum()
+Out[46]: 1
+
+In [47]: persons_df["age"].gt(25).sum()
+Out[47]: 3
+```
