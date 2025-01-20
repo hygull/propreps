@@ -1,6 +1,6 @@
 ### collections - Counter
 
-```shell
+```bash
 In [1]: from collections import Counter
 
 In [2]: c = Counter([1, 4, 5, 6, 7, 1, 9 + 1, 90, 10, 0 + 1, 8 - 2, 45 * 2])
@@ -34,7 +34,7 @@ In [5]: for key, value in c.items():
 
 ### collections - OrderedDict
 
-```shell
+```bash
 In [1]: from collections import OrderedDict
 
 In [2]: d = OrderedDict()
@@ -89,7 +89,7 @@ sister_age           -> 28
 
 # collections - deque
 
-```shell
+```bash
 In [5]: from collections import deque
 
 In [6]: fruits_dq = deque(["Apple", "Banana", "Pine apple", "Papaya", "Grape"])
@@ -267,7 +267,7 @@ Banana
 
 # collections - defaultdict
 
-```shell
+```bash
 In [1]: from collections import defaultdict
 
 In [2]: fruits_dict = defaultdict(int)
@@ -315,7 +315,7 @@ In [15]: fruits_dict
 Out[15]: defaultdict(int, {})
 ```
 
-```shell
+```bash
 In [25]: numbers_dict = defaultdict(list)
 
 In [26]: numbers_dict
@@ -334,7 +334,7 @@ defaultdict(list,
             {'even_numbers': [2, 4, 6, 8, 10], 'odd_numbers': [1, 3, 5, 7, 9]})
 ```
 
-```shell
+```bash
 In [31]: books_dict = defaultdict(tuple)
 
 In [32]: books_dict
@@ -360,7 +360,7 @@ defaultdict(tuple,
              'poetry_books': ()})
 ```
 
-```shell
+```bash
 In [39]: class Person:
     ...:     def __init__(self, first_name, last_name, age):
     ...:         self.first_name = first_name
@@ -444,7 +444,7 @@ Out[55]: {'first_name': 'Hemkesh', 'last_name': None, 'age': None}
 
 # collections - namedtuple
 
-```shell
+```bash
 In [1]: from collections import namedtuple
 
 In [2]: Person = namedtuple("Person", ["first_name", "last_name", "age"])
@@ -524,7 +524,7 @@ Agrawani
 
 # collections - ChainMap
 
-```shell
+```bash
 In [1]: from collections import ChainMap
 
 In [2]: even_numbers = {2: "two", 4: "four", 8: "eight", 10: "ten"}
@@ -601,5 +601,46 @@ In [22]: for k, v in chainmap.items():
 12 twelve
 14 fourteen
 15 fifteen
+```
+
+```python
+In [39]: persons_df
+Out[39]: 
+  first_name last_name  age
+0     Malini  Agrawani   28
+1        Hem  Agrawani   30
+2      Rishi  Agrawani   32
+
+In [40]: persons_df["village"] = "Risgaon"
+
+In [41]: persons_df
+Out[41]: 
+  first_name last_name  age  village
+0     Malini  Agrawani   28  Risgaon
+1        Hem  Agrawani   30  Risgaon
+2      Rishi  Agrawani   32  Risgaon
+
+In [42]: persons_df["age"].gt(30)
+Out[42]: 
+0    False
+1    False
+2     True
+Name: age, dtype: bool
+
+In [44]: persons_df["age"].lt(30)
+Out[44]: 
+0     True
+1    False
+2    False
+Name: age, dtype: bool
+
+In [45]: persons_df["age"].gt(30).sum()
+Out[45]: 1
+
+In [46]: persons_df["age"].lt(30).sum()
+Out[46]: 1
+
+In [47]: persons_df["age"].gt(25).sum()
+Out[47]: 3
 ```
 
