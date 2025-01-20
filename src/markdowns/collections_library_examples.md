@@ -1,6 +1,6 @@
 ### collections - Counter
 
-```bash
+```python
 In [1]: from collections import Counter
 
 In [2]: c = Counter([1, 4, 5, 6, 7, 1, 9 + 1, 90, 10, 0 + 1, 8 - 2, 45 * 2])
@@ -34,7 +34,7 @@ In [5]: for key, value in c.items():
 
 ### collections - OrderedDict
 
-```bash
+```python
 In [1]: from collections import OrderedDict
 
 In [2]: d = OrderedDict()
@@ -89,7 +89,7 @@ sister_age           -> 28
 
 # collections - deque
 
-```bash
+```python
 In [5]: from collections import deque
 
 In [6]: fruits_dq = deque(["Apple", "Banana", "Pine apple", "Papaya", "Grape"])
@@ -267,7 +267,7 @@ Banana
 
 # collections - defaultdict
 
-```bash
+```python
 In [1]: from collections import defaultdict
 
 In [2]: fruits_dict = defaultdict(int)
@@ -315,7 +315,7 @@ In [15]: fruits_dict
 Out[15]: defaultdict(int, {})
 ```
 
-```bash
+```python
 In [25]: numbers_dict = defaultdict(list)
 
 In [26]: numbers_dict
@@ -334,7 +334,7 @@ defaultdict(list,
             {'even_numbers': [2, 4, 6, 8, 10], 'odd_numbers': [1, 3, 5, 7, 9]})
 ```
 
-```bash
+```python
 In [31]: books_dict = defaultdict(tuple)
 
 In [32]: books_dict
@@ -360,7 +360,7 @@ defaultdict(tuple,
              'poetry_books': ()})
 ```
 
-```bash
+```python
 In [39]: class Person:
     ...:     def __init__(self, first_name, last_name, age):
     ...:         self.first_name = first_name
@@ -444,7 +444,7 @@ Out[55]: {'first_name': 'Hemkesh', 'last_name': None, 'age': None}
 
 # collections - namedtuple
 
-```bash
+```python
 In [1]: from collections import namedtuple
 
 In [2]: Person = namedtuple("Person", ["first_name", "last_name", "age"])
@@ -524,7 +524,7 @@ Agrawani
 
 # collections - ChainMap
 
-```bash
+```python
 In [1]: from collections import ChainMap
 
 In [2]: even_numbers = {2: "two", 4: "four", 8: "eight", 10: "ten"}
