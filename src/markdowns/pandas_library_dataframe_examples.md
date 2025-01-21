@@ -3,7 +3,7 @@
 ```python
 In [1]: import pandas as pd
 
-In [2]: persons_df = pd.DataFrame({
+In [2]: persons_persons_df.= pd.DataFrame({
    ...:     "first_name": ["Malinikesh", "Hemkesh", "Rishikesh"],
    ...:     "last_name": ["Agrawani", "Agrawani", "Agrawani"],
    ...:     "age": [28, 30, 32],
@@ -16,59 +16,59 @@ Out[3]:
 1     Hemkesh  Agrawani   30
 2   Rishikesh  Agrawani   32
 
-In [4]: persons_df.loc[0] # 1st row
+In [4]: persons_persons_df.loc[0] # 1st row
 Out[4]: 
 first_name    Malinikesh
 last_name       Agrawani
 age                   28
 Name: 0, dtype: object
 
-In [5]: persons_df.loc[:, "first_name"] # 1st column
+In [5]: persons_persons_df.loc[:, "first_name"] # 1st column
 Out[5]: 
 0    Malinikesh
 1       Hemkesh
 2     Rishikesh
 Name: first_name, dtype: object
 
-In [6]: persons_df.loc[:, ["first_name", "age"]] # 2 columns
+In [6]: persons_persons_df.loc[:, ["first_name", "age"]] # 2 columns
 Out[6]: 
    first_name  age
 0  Malinikesh   28
 1     Hemkesh   30
 2   Rishikesh   32
 
-In [7]: persons_df.loc[[1, 2], ["first_name", "age"]] # 2 columns, 2 rows
+In [7]: persons_persons_df.loc[[1, 2], ["first_name", "age"]] # 2 columns, 2 rows
 Out[7]: 
   first_name  age
 1    Hemkesh   30
 2  Rishikesh   32
 
-In [8]: persons_df.loc[[1, 2], "first_name":"age"]
+In [8]: persons_persons_df.loc[[1, 2], "first_name":"age"]
 Out[8]: 
   first_name last_name  age
 1    Hemkesh  Agrawani   30
 2  Rishikesh  Agrawani   32
 
-In [9]: persons_df.loc[[1, 2], "first_name":"last_name"]
+In [9]: persons_persons_df.loc[[1, 2], "first_name":"last_name"]
 Out[9]: 
   first_name last_name
 1    Hemkesh  Agrawani
 2  Rishikesh  Agrawani
 
-In [10]: persons_df.loc[0:1, "first_name":"last_name"]
+In [10]: persons_persons_df.loc[0:1, "first_name":"last_name"]
 Out[10]: 
    first_name last_name
 0  Malinikesh  Agrawani
 1     Hemkesh  Agrawani
 
-In [11]: persons_df.loc[0:, "first_name":"last_name"]
+In [11]: persons_persons_df.loc[0:, "first_name":"last_name"]
 Out[11]: 
    first_name last_name
 0  Malinikesh  Agrawani
 1     Hemkesh  Agrawani
 2   Rishikesh  Agrawani
 
-In [12]: persons_df.loc[0:, "first_name":]
+In [12]: persons_persons_df.loc[0:, "first_name":]
 Out[12]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
@@ -82,53 +82,53 @@ In [13]:
 ### DataFrame's iloc (Integer-location based indexing)
 
 ```bash
-In [14]: persons_df.iloc[0]
+In [14]: persons_persons_df.iloc[0]
 Out[14]: 
 first_name    Malinikesh
 last_name       Agrawani
 age                   28
 Name: 0, dtype: object
 
-In [15]: persons_df.iloc[0:]
+In [15]: persons_persons_df.iloc[0:]
 Out[15]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
 2   Rishikesh  Agrawani   32
 
-In [16]: persons_df.iloc[0:1]
+In [16]: persons_persons_df.iloc[0:1]
 Out[16]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 
-In [17]: persons_df.iloc[0:2]
+In [17]: persons_persons_df.iloc[0:2]
 Out[17]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
 
-In [18]: persons_df.iloc[0:3]
+In [18]: persons_persons_df.iloc[0:3]
 Out[18]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
 2   Rishikesh  Agrawani   32
 
-In [19]: persons_df.iloc[0:3, 0:1]
+In [19]: persons_persons_df.iloc[0:3, 0:1]
 Out[19]: 
    first_name
 0  Malinikesh
 1     Hemkesh
 2   Rishikesh
 
-In [20]: persons_df.iloc[0:3, 0:2]
+In [20]: persons_persons_df.iloc[0:3, 0:2]
 Out[20]: 
    first_name last_name
 0  Malinikesh  Agrawani
 1     Hemkesh  Agrawani
 2   Rishikesh  Agrawani
 
-In [21]: persons_df.iloc[0:3, "first_name"]
+In [21]: persons_persons_df.iloc[0:3, "first_name"]
 ---------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
 /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/indexing.py in _has_valid_tuple(self, key)
@@ -151,22 +151,22 @@ Out[21]:
 1     Hemkesh  Agrawani   30
 2   Rishikesh  Agrawani   32
 
-In [22]: persons_df.loc[persons_df["age"] > 30]
+In [22]: persons_persons_df.loc[persons_persons_df."age"] > 30]
 Out[22]: 
   first_name last_name  age
 2  Rishikesh  Agrawani   32
 
-In [23]: persons_df.loc[persons_df["age"] == 30]
+In [23]: persons_persons_df.loc[persons_persons_df."age"] == 30]
 Out[23]: 
   first_name last_name  age
 1    Hemkesh  Agrawani   30
 
-In [24]: persons_df.loc[persons_df["age"] < 30]
+In [24]: persons_persons_df.loc[persons_persons_df."age"] < 30]
 Out[24]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 
-In [25]: persons_df.loc[persons_df["age"] <= 30]
+In [25]: persons_persons_df.loc[persons_persons_df."age"] <= 30]
 Out[25]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
@@ -174,13 +174,13 @@ Out[25]:
 ```
 
 ```python
-In [27]: persons_df.loc[(persons_df["age"] <= 30) & (persons_df["first_name"].isin(["Malinikesh  Agrawani", "Hemkesh  Agrawani"]))]
+In [27]: persons_persons_df.loc[(persons_persons_df."age"] <= 30) & (persons_persons_df."first_name"].isin(["Malinikesh  Agrawani", "Hemkesh  Agrawani"]))]
 Out[27]: 
 Empty DataFrame
 Columns: [first_name, last_name, age]
 Index: []
 
-In [28]: persons_df.loc[(persons_df["age"] <= 30) & (persons_df["first_name"].isin(["Malinikesh", "Hemkesh"]))]
+In [28]: persons_persons_df.loc[(persons_persons_df."age"] <= 30) & (persons_persons_df."first_name"].isin(["Malinikesh", "Hemkesh"]))]
 Out[28]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
@@ -189,13 +189,13 @@ Out[28]:
 
 
 ```python
-In [29]: persons_df.loc[persons_df["age"] <= 30]
+In [29]: persons_persons_df.loc[persons_persons_df."age"] <= 30]
 Out[29]: 
    first_name last_name  age
 0  Malinikesh  Agrawani   28
 1     Hemkesh  Agrawani   30
 
-In [30]: persons_df.loc[persons_df["age"] == 30, "first_name"] = "Hem"
+In [30]: persons_persons_df.loc[persons_persons_df."age"] == 30, "first_name"] = "Hem"
 
 In [31]: persons_df
 Out[31]: 
@@ -204,9 +204,9 @@ Out[31]:
 1         Hem  Agrawani   30
 2   Rishikesh  Agrawani   32
 
-In [32]: persons_df.loc[persons_df["age"] == 32, "first_name"] = "Rishi"
+In [32]: persons_persons_df.loc[persons_persons_df."age"] == 32, "first_name"] = "Rishi"
 
-In [33]: persons_df.loc[persons_df["age"] == 28, "first_name"] = "Malini"
+In [33]: persons_persons_df.loc[persons_persons_df."age"] == 28, "first_name"] = "Malini"
 
 In [34]: persons_df
 Out[34]: 
@@ -218,16 +218,16 @@ Out[34]:
 
 ### Index and columns
 ```python
-In [35]: persons_df.index
+In [35]: persons_persons_df.index
 Out[35]: RangeIndex(start=0, stop=3, step=1)
 
-In [36]: persons_df.index.tolist()
+In [36]: persons_persons_df.index.tolist()
 Out[36]: [0, 1, 2]
 
-In [37]: persons_df.columns.tolist()
+In [37]: persons_persons_df.columns.tolist()
 Out[37]: ['first_name', 'last_name', 'age']
 
-In [38]: persons_df.columns
+In [38]: persons_persons_df.columns
 Out[38]: Index(['first_name', 'last_name', 'age'], dtype='object')
 ```
 
@@ -239,7 +239,7 @@ Out[39]:
 1        Hem  Agrawani   30
 2      Rishi  Agrawani   32
 
-In [40]: persons_df["village"] = "Risgaon"
+In [40]: persons_persons_df."village"] = "Risgaon"
 
 In [41]: persons_df
 Out[41]: 
@@ -248,26 +248,50 @@ Out[41]:
 1        Hem  Agrawani   30  Risgaon
 2      Rishi  Agrawani   32  Risgaon
 
-In [42]: persons_df["age"].gt(30)
+In [42]: persons_persons_df."age"].gt(30)
 Out[42]: 
 0    False
 1    False
 2     True
 Name: age, dtype: bool
 
-In [44]: persons_df["age"].lt(30)
+In [44]: persons_persons_df."age"].lt(30)
 Out[44]: 
 0     True
 1    False
 2    False
 Name: age, dtype: bool
 
-In [45]: persons_df["age"].gt(30).sum()
+In [45]: persons_persons_df."age"].gt(30).sum()
 Out[45]: 1
 
-In [46]: persons_df["age"].lt(30).sum()
+In [46]: persons_persons_df."age"].lt(30).sum()
 Out[46]: 1
 
-In [47]: persons_df["age"].gt(25).sum()
+In [47]: persons_persons_df."age"].gt(25).sum()
 Out[47]: 3
+```
+
+```python
+In [1]: persons_df.= pd.DataFrame(columns=["column1", "column2"])
+
+In [2]: df
+Out[2]: 
+Empty DataFrame
+Columns: [column1, column2]
+Index: []
+
+In [3]: persons_df.empty
+Out[3]: True
+
+In [4]: persons_df.shape
+Out[4]: (0, 2)
+
+In [5]: persons_df.shape[0]
+Out[5]: 0
+```
+
+```python
+
+
 ```
