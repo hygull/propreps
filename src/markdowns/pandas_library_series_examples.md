@@ -1,4 +1,6 @@
 ```python
+In [5]: import pandas as pd
+
 In [6]: numbers = pd.Series([1, 45, 89, 90, -1, 5.6, 91, 34, -9, -8, 90, 88, 90])
 
 In [7]: numbers
@@ -85,7 +87,9 @@ Out[15]: 1.0
 
 In [16]: numbers.iloc[0]
 Out[16]: 1.0
+```
 
+```python
 In [17]: numbers.iloc["INDEX-0"]
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
@@ -105,7 +109,63 @@ File ~/Projects/Backend/AiPalette/venvs/topgun_venv3.12.1/lib/python3.12/site-pa
    1714 self._validate_integer(key, axis)
 
 TypeError: Cannot index by location index with a non-integer key
+```
 
+```python
 In [18]: numbers.loc["INDEX-0"]
 Out[18]: 1.0
+```
+
+```python
+In [19]: numbers.index
+Out[19]: 
+Index(['INDEX-0', 'INDEX-1', 'INDEX-2', 'INDEX-3', 'INDEX-4', 'INDEX-5',
+       'INDEX-6', 'INDEX-7', 'INDEX-8', 'INDEX-9', 'INDEX-10', 'INDEX-11',
+       'INDEX-12'],
+      dtype='object')
+
+In [20]: numbers.index.tolist()
+Out[20]: 
+['INDEX-0',
+ 'INDEX-1',
+ 'INDEX-2',
+ 'INDEX-3',
+ 'INDEX-4',
+ 'INDEX-5',
+ 'INDEX-6',
+ 'INDEX-7',
+ 'INDEX-8',
+ 'INDEX-9',
+ 'INDEX-10',
+ 'INDEX-11',
+ 'INDEX-12']
+
+In [21]: numbers.index = [f"{idx}-X" for idx in numbers.index.tolist()]
+
+In [22]: numbers
+Out[22]: 
+INDEX-0-X      1.0
+INDEX-1-X     45.0
+INDEX-2-X     89.0
+INDEX-3-X     90.0
+INDEX-4-X     -1.0
+INDEX-5-X      5.6
+INDEX-6-X     91.0
+INDEX-7-X     34.0
+INDEX-8-X     -9.0
+INDEX-9-X     -8.0
+INDEX-10-X    90.0
+INDEX-11-X    88.0
+INDEX-12-X    90.0
+dtype: float64
+```
+
+```python
+In [23]: numbers.sum()
+Out[23]: 605.6
+```
+
+```python
+In [26]: numbers.count()
+Out[26]: 13
 ```
