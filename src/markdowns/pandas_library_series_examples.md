@@ -169,3 +169,136 @@ Out[23]: 605.6
 In [26]: numbers.count()
 Out[26]: 13
 ```
+
+```python
+In [30]: numbers.duplicated
+Out[30]: 
+<bound method Series.duplicated of INDEX-0-X      1.0
+INDEX-1-X     45.0
+INDEX-2-X     89.0
+INDEX-3-X     90.0
+INDEX-4-X     -1.0
+INDEX-5-X      5.6
+INDEX-6-X     91.0
+INDEX-7-X     34.0
+INDEX-8-X     -9.0
+INDEX-9-X     -8.0
+INDEX-10-X    90.0
+INDEX-11-X    88.0
+INDEX-12-X    90.0
+dtype: float64>
+
+In [31]: numbers.duplicated()
+Out[31]: 
+INDEX-0-X     False
+INDEX-1-X     False
+INDEX-2-X     False
+INDEX-3-X     False
+INDEX-4-X     False
+INDEX-5-X     False
+INDEX-6-X     False
+INDEX-7-X     False
+INDEX-8-X     False
+INDEX-9-X     False
+INDEX-10-X     True
+INDEX-11-X    False
+INDEX-12-X     True
+dtype: bool
+
+In [32]: numbers[numbers.duplicated()]
+Out[32]: 
+INDEX-10-X    90.0
+INDEX-12-X    90.0
+dtype: float64
+
+In [33]: numbers[numbers.duplicated(keep=True)]
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[33], line 1
+----> 1 numbers[numbers.duplicated(keep=True)]
+
+File ~/Projects/Backend/AiPalette/venvs/topgun_venv3.12.1/lib/python3.12/site-packages/pandas/core/series.py:2484, in Series.duplicated(self, keep)
+   2408 def duplicated(self, keep: DropKeep = "first") -> Series:
+   2409     """
+   2410     Indicate duplicate Series values.
+   2411 
+   (...)
+   2482     dtype: bool
+   2483     """
+-> 2484     res = self._duplicated(keep=keep)
+   2485     result = self._constructor(res, index=self.index, copy=False)
+   2486     return result.__finalize__(self, method="duplicated")
+
+File ~/Projects/Backend/AiPalette/venvs/topgun_venv3.12.1/lib/python3.12/site-packages/pandas/core/base.py:1368, in IndexOpsMixin._duplicated(self, keep)
+   1366 @final
+   1367 def _duplicated(self, keep: DropKeep = "first") -> npt.NDArray[np.bool_]:
+-> 1368     return algorithms.duplicated(self._values, keep=keep)
+
+File ~/Projects/Backend/AiPalette/venvs/topgun_venv3.12.1/lib/python3.12/site-packages/pandas/core/algorithms.py:1011, in duplicated(values, keep)
+   1008         return htable.duplicated(values._data, keep=keep, mask=values._mask)
+   1010 values = _ensure_data(values)
+-> 1011 return htable.duplicated(values, keep=keep)
+
+File pandas/_libs/hashtable_func_helper.pxi:2568, in pandas._libs.hashtable.__pyx_fuse_9duplicated()
+
+File pandas/_libs/hashtable_func_helper.pxi:2591, in pandas._libs.hashtable.duplicated()
+
+File pandas/_libs/hashtable_func_helper.pxi:473, in pandas._libs.hashtable.duplicated_float64()
+
+ValueError: keep must be either "first", "last" or False
+
+In [34]: numbers[numbers.duplicated(keep=False)]
+Out[34]: 
+INDEX-3-X     90.0
+INDEX-10-X    90.0
+INDEX-12-X    90.0
+dtype: float64
+
+In [35]: numbers[numbers.duplicated(keep='first')]
+Out[35]: 
+INDEX-10-X    90.0
+INDEX-12-X    90.0
+dtype: float64
+
+In [36]: numbers[numbers.duplicated(keep='last')]
+Out[36]: 
+INDEX-3-X     90.0
+INDEX-10-X    90.0
+dtype: float64
+
+In [37]: numbers.duplicated(keep='first')
+Out[37]: 
+INDEX-0-X     False
+INDEX-1-X     False
+INDEX-2-X     False
+INDEX-3-X     False
+INDEX-4-X     False
+INDEX-5-X     False
+INDEX-6-X     False
+INDEX-7-X     False
+INDEX-8-X     False
+INDEX-9-X     False
+INDEX-10-X     True
+INDEX-11-X    False
+INDEX-12-X     True
+dtype: bool
+
+In [38]: numbers.duplicated(keep='last')
+Out[38]: 
+INDEX-0-X     False
+INDEX-1-X     False
+INDEX-2-X     False
+INDEX-3-X      True
+INDEX-4-X     False
+INDEX-5-X     False
+INDEX-6-X     False
+INDEX-7-X     False
+INDEX-8-X     False
+INDEX-9-X     False
+INDEX-10-X     True
+INDEX-11-X    False
+INDEX-12-X    False
+dtype: bool
+
+In [39]: 
+```
