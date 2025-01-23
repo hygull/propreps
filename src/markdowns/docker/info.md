@@ -108,3 +108,65 @@ For local development, it points to the db: service.
 
 3. Avoid Hardcoding RDS Details:
 	- Dynamically load the connection details using environment variables or configuration files.
+
+
+# If db-data is there in the volumes so is it like docker will not reseed the data using init.sql?
+
+You're absolutely correct! If the database container uses a persistent volume like db-data, Docker will not re-run the init.sql script if the volume already exists. Here's why:
+
+How Database Initialization Works in Docker
+1. Initialization on First Run:
+
+- When the database container starts for the first time and the db-data volume is empty:
+	- Docker runs any SQL scripts found in /docker-entrypoint-initdb.d/ (e.g., init.sql) to initialize the database.
+	- The database is created, and the data is seeded as per the scripts.
+
+2. Subsequent Runs:
+
+- If the db-data volume already exists (i.e., the database files are present in /var/lib/postgresql/data):
+	- Docker skips the initialization scripts in /docker-entrypoint-initdb.d/.
+	- This behavior prevents accidental overwriting of existing data.
+
+#### Why Doesn't Docker Re-Seed the Data?
+Docker's database images (e.g., Postgres, MySQL) are designed to prioritize data integrity:
+
+- When a volume like db-data is attached, Docker assumes the data in the volume is the "source of truth."
+- Re-running initialization scripts could overwrite or duplicate data, leading to inconsistencies.
+
+
+#### How to Force Re-Seeding (If Needed)?
+If you want to re-run the init.sql script, you can:
+
+1. Delete the Volume:
+
+`docker-compose down -v`
+This removes the container and deletes the db-data volume.
+
+2. Restart the Services:
+
+`docker-compose up -d`
+Docker will recreate the `db-data` volume, and the `init.sql` script will be executed again.
+
+
+Alternatives for Controlled Data Seeding
+1. Manual Script Execution: Instead of relying on /docker-entrypoint-initdb.d/, you can run the SQL script manually:
+
+```shell
+docker exec -i postgres_db psql -U user -d mydatabase < init.sql
+```
+
+2. Application-Based Seeding: Use your application's migration or seeding mechanisms to initialize or update the database.
+
+Example (Django):
+```shell
+docker exec -it web python manage.py migrate
+docker exec -it web python manage.py loaddata initial_data.json
+```
+
+#### Summary
+- If the volume db-data exists, Docker will skip re-running init.sql.
+- To force re-seeding:
+	- Delete the volume and restart the container.
+	- Or, run the SQL script manually.
+	
+Let me know if you'd like further clarification or additional examples! 😊
