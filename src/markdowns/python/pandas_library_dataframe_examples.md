@@ -292,6 +292,115 @@ Out[5]: 0
 ```
 
 ```python
+In [1]: import pandas as pd
 
+In [2]: data = {
+   ...:     "name": "Alice",
+   ...:     "age": 30,
+   ...:     "address": {
+   ...:         "city": "Wonderland",
+   ...:         "zip": "12345"
+   ...:     }
+   ...: }
+
+In [3]: df = pd.json_normalize(data)
+
+In [4]: df
+Out[4]: 
+    name  age address.city address.zip
+0  Alice   30   Wonderland       12345
+
+In [5]: 
+
+In [5]: data = {
+   ...:     "school": "Springfield Elementary",
+   ...:     "students": [
+   ...:         {"name": "Bart", "grade": 4},
+   ...:         {"name": "Lisa", "grade": 3}
+   ...:     ]
+   ...: }
+
+In [6]: df = pd.json_normalize(data, record_path='students')
+
+In [7]: df
+Out[7]: 
+   name  grade
+0  Bart      4
+1  Lisa      3
+
+In [8]: df = pd.json_normalize(data, record_path='students', meta='school')
+
+In [9]: df
+Out[9]: 
+   name  grade                  school
+0  Bart      4  Springfield Elementary
+1  Lisa      3  Springfield Elementary
+
+In [10]: 
+
+In [10]: {
+    ...:   "name": "Alice",
+    ...:   "age": 30,
+    ...:   "address": {
+    ...:     "city": "Wonderland",
+    ...:     "zip": "12345"
+    ...:   }
+    ...: }
+Out[10]: {'name': 'Alice', 'age': 30, 'address': {'city': 'Wonderland', 'zip': '12345'}}
+
+In [11]: data = {
+    ...:     "name": "Alice",
+    ...:     "age": 30,
+    ...:     "address": {
+    ...:         "city": "Wonderland",
+    ...:         "zip": "12345"
+    ...:     }
+    ...: }
+
+In [12]: df = pd.json_normalize(data)
+
+In [13]: df
+Out[13]: 
+    name  age address.city address.zip
+0  Alice   30   Wonderland       12345
+```
+
+
+```python
+In [16]: data = {
+    ...:     "company": "Tech Co",
+    ...:     "employees": [
+    ...:         {
+    ...:             "name": "John",
+    ...:             "role": "Developer",
+    ...:             "projects": [
+    ...:                 {"title": "Website Revamp", "hours": 120},
+    ...:                 {"title": "App Development", "hours": 200}
+    ...:             ]
+    ...:         },
+    ...:         {
+    ...:             "name": "Jane",
+    ...:             "role": "Designer",
+    ...:             "projects": [
+    ...:                 {"title": "Logo Design", "hours": 80}
+    ...:             ]
+    ...:         }
+    ...:     ]
+    ...: }
+
+In [17]: df = pd.json_normalize(
+    ...:     data,
+    ...:     record_path=['employees', 'projects'],
+    ...:     meta=[['employees', 'name'], ['employees', 'role'], 'company']
+    ...: )
+
+In [18]: df
+Out[18]: 
+             title  hours employees.name employees.role  company
+0   Website Revamp    120           John      Developer  Tech Co
+1  App Development    200           John      Developer  Tech Co
+2      Logo Design     80           Jane       Designer  Tech Co
+
+In [19]: 
 
 ```
