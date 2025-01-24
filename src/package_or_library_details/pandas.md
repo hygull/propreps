@@ -863,3 +863,35 @@ Out[29]:
  'where',
  'xs']
 ```
+
+```python
+In [1]: "2024-01-15"
+Out[1]: '2024-01-15'
+
+In [2]: pd.to_datetime("2024-01-15")
+Out[2]: Timestamp('2024-01-15 00:00:00')
+
+In [3]: pd.to_datetime("2024-01-15 00:59:00")
+Out[3]: Timestamp('2024-01-15 00:59:00')
+
+In [4]: pd.to_datetime("2024-01-15 00:59:00.000001")
+Out[4]: Timestamp('2024-01-15 00:59:00.000001')
+
+In [5]: pd.to_datetime("2024-01-31 00:59:00.000001")
+Out[5]: Timestamp('2024-01-31 00:59:00.000001')
+
+In [7]: pd.to_datetime("2024-01-31 00:59:00.000001")
+Out[7]: Timestamp('2024-01-31 00:59:00.000001')
+```
+
+```python
+In [12]: pd.to_datetime("2024-01-32 00:59:00.000001")
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/dateutil/
+...
+...
+...
+ParserError: day is out of range for month: 2024-01-32 00:59:00.000001
+```
+
