@@ -445,4 +445,110 @@ Out[8]:
 2            8           7
 3           10          19
 4           22          21
+
+In [9]: df2 =  pd.DataFrame({"even_number": [28, 42, 90, 2, 44], "odd_number": [31, 25, 17, 1, 11]})
+
+In [10]: df2
+Out[10]: 
+   even_number  odd_number
+0           28          31
+1           42          25
+2           90          17
+3            2           1
+4           44          11
+
+In [11]: df.append(df2)
+Out[11]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+0           28          31
+1           42          25
+2           90          17
+3            2           1
+4           44          11
+
+In [12]: df
+Out[12]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+
+In [13]: df3 = df.append(df2)
+
+In [14]: df3
+Out[14]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+0           28          31
+1           42          25
+2           90          17
+3            2           1
+4           44          11
+
+In [15]: df3.head()
+Out[15]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+
+In [16]: df3.head(n=2)
+Out[16]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+
+In [17]: df3.head(2)
+Out[17]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+
+In [18]: df3.head(3)
+Out[18]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+
+In [19]: df3.tail(3)
+Out[19]: 
+   even_number  odd_number
+2           90          17
+3            2           1
+4           44          11
+
+In [20]: df3.tail(2)
+Out[20]: 
+   even_number  odd_number
+3            2           1
+4           44          11
+
+In [21]: df3.tail(n=2)
+Out[21]: 
+   even_number  odd_number
+3            2           1
+4           44          11
+
+In [22]: df3.tail()
+Out[22]: 
+   even_number  odd_number
+0           28          31
+1           42          25
+2           90          17
+3            2           1
+4           44          11
 ```
