@@ -1,4 +1,4 @@
-```bash
+```python
 In [1]: import itertools
 
 In [2]: numbers = [1, 3, 5, 6, 8, 10, 15, 11, 12, 13, 2, 7, 9]
@@ -48,7 +48,7 @@ In [11]: for tup in numbers_islice:
 In [12]: 
 ```
 
-```bash
+```python
 In [21]: itertools.permutations([1, 2, 3], 2)
 Out[21]: <itertools.permutations at 0x7fe239a2efc0>
 
@@ -66,7 +66,7 @@ Out[25]: [(1, 2, 3)]
 ```
 
 
-```bash
+```python
 In [5]: acc = itertools.accumulate([1, 40, 51, 62, 73, 84, 11, 23, 17])
 
 In [6]: acc
@@ -86,7 +86,7 @@ In [7]: for item in acc:
 362
 ```
 
-```bash
+```python
 In [10]: even_numbers = [2, 80, 4, 46, 8, 16, 10, 12, 100]
 
 In [11]: odd_numbers = [27, 89, 11, 45, 9, 15, 101, 23, 1]
@@ -131,7 +131,7 @@ In [15]:
 ```
 
 
-```bash
+```python
 In [9]: icycle = itertools.cycle([1, 5, 7, 8, 9, 10])
 
 In [10]: count = 0
@@ -164,7 +164,7 @@ In [11]: for item in icycle:
 5
 ```
 
-```bash
+```python
 In [13]: icount = itertools.count(5, 4)
 
 In [14]: count = 0
