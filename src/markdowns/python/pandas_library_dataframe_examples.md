@@ -648,3 +648,63 @@ Out[32]:
 3            2           1
 4           44          11
 ```
+
+```python
+In [35]: df3
+Out[35]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+0           28          31
+1           42          25
+2           90          17
+3            2           1
+4           44          11
+
+In [36]: df3.reset_index(drop=True)
+Out[36]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+5           28          31
+6           42          25
+7           90          17
+8            2           1
+9           44          11
+
+In [37]: df3
+Out[37]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+0           28          31
+1           42          25
+2           90          17
+3            2           1
+4           44          11
+
+In [38]: df3.reset_index(drop=True, inplace=True)
+
+In [39]: df3
+Out[39]: 
+   even_number  odd_number
+0           55           1
+1            4           5
+2            8           7
+3           10          19
+4           22          21
+5           28          31
+6           42          25
+7           90          17
+8            2           1
+9           44          11
+```
