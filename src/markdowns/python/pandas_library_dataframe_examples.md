@@ -708,3 +708,56 @@ Out[39]:
 8            2           1
 9           44          11
 ```
+
+```python
+In [44]: df = pd.DataFrame({"even_number": [np.nan, 4, np.nan, 10, 22], "odd_number": [1, 5, 7, 19, np.nan]})
+
+In [45]: df
+Out[45]: 
+   even_number  odd_number
+0          NaN         1.0
+1          4.0         5.0
+2          NaN         7.0
+3         10.0        19.0
+4         22.0         NaN
+
+In [46]: df.fillna(0)
+Out[46]: 
+   even_number  odd_number
+0          0.0         1.0
+1          4.0         5.0
+2          0.0         7.0
+3         10.0        19.0
+4         22.0         0.0
+
+In [47]: df.fillna(11)
+Out[47]: 
+   even_number  odd_number
+0         11.0         1.0
+1          4.0         5.0
+2         11.0         7.0
+3         10.0        19.0
+4         22.0        11.0
+
+In [48]: df
+Out[48]: 
+   even_number  odd_number
+0          NaN         1.0
+1          4.0         5.0
+2          NaN         7.0
+3         10.0        19.0
+4         22.0         NaN
+
+In [49]: df.fillna(0, inplace=True)
+
+In [50]: df
+Out[50]: 
+   even_number  odd_number
+0          0.0         1.0
+1          4.0         5.0
+2          0.0         7.0
+3         10.0        19.0
+4         22.0         0.0
+
+In [51]: 
+```
