@@ -831,3 +831,91 @@ Out[11]:
 
 In [12]: 
 ```
+
+```python
+In [13]: df4 = pd.concat([df, df2, df3])
+
+In [14]: df4
+Out[14]: 
+   odd_number  even_number
+0           1           12
+1           7           14
+2           9           16
+3           3           20
+0           1            4
+1           9           10
+2           3           18
+3           5           22
+0          11           48
+1          99           72
+2          13           88
+3          55           90
+
+In [15]: df4.reset_index()
+Out[15]: 
+    index  odd_number  even_number
+0       0           1           12
+1       1           7           14
+2       2           9           16
+3       3           3           20
+4       0           1            4
+5       1           9           10
+6       2           3           18
+7       3           5           22
+8       0          11           48
+9       1          99           72
+10      2          13           88
+11      3          55           90
+
+In [16]: df4.reset_index(drop=True)
+Out[16]: 
+    odd_number  even_number
+0            1           12
+1            7           14
+2            9           16
+3            3           20
+4            1            4
+5            9           10
+6            3           18
+7            5           22
+8           11           48
+9           99           72
+10          13           88
+11          55           90
+
+In [17]: df4
+Out[17]: 
+   odd_number  even_number
+0           1           12
+1           7           14
+2           9           16
+3           3           20
+0           1            4
+1           9           10
+2           3           18
+3           5           22
+0          11           48
+1          99           72
+2          13           88
+3          55           90
+
+In [18]: df4.reset_index(drop=True, inplace=True)
+
+In [19]: df4
+Out[19]: 
+    odd_number  even_number
+0            1           12
+1            7           14
+2            9           16
+3            3           20
+4            1            4
+5            9           10
+6            3           18
+7            5           22
+8           11           48
+9           99           72
+10          13           88
+11          55           90
+
+In [20]: 
+```
