@@ -761,3 +761,73 @@ Out[50]:
 
 In [51]: 
 ```
+
+```python
+In [1]: df = pd.DataFrame({"odd_number": [1, 7, 9, 3], "even_number": [12, 14, 16, 20]})
+
+In [2]: df
+Out[2]: 
+   odd_number  even_number
+0           1           12
+1           7           14
+2           9           16
+3           3           20
+
+In [3]: df2 = pd.DataFrame({"odd_number": [1, 9, 3, 5], "even_number": [4, 10, 18, 22]})
+
+In [4]: df2
+Out[4]: 
+   odd_number  even_number
+0           1            4
+1           9           10
+2           3           18
+3           5           22
+
+In [5]: df3 = pd.DataFrame({"odd_number": [11, 99, 13, 55], "even_number": [48, 72, 88, 90]})
+
+In [6]: df3
+Out[6]: 
+   odd_number  even_number
+0          11           48
+1          99           72
+2          13           88
+3          55           90
+
+In [7]: df4 = pd.concat([df, df2, df3])
+
+In [8]: df4
+Out[8]: 
+   odd_number  even_number
+0           1           12
+1           7           14
+2           9           16
+3           3           20
+0           1            4
+1           9           10
+2           3           18
+3           5           22
+0          11           48
+1          99           72
+2          13           88
+3          55           90
+
+In [10]: df4 = pd.concat([df, df2, df3], ignore_index=True)
+
+In [11]: df4
+Out[11]: 
+    odd_number  even_number
+0            1           12
+1            7           14
+2            9           16
+3            3           20
+4            1            4
+5            9           10
+6            3           18
+7            5           22
+8           11           48
+9           99           72
+10          13           88
+11          55           90
+
+In [12]: 
+```
