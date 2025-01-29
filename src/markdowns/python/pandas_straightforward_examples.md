@@ -158,3 +158,32 @@ Out[29]:
 1  Agrawani
 2    Pujari
 ```
+
+```python
+
+In [34]: persons_df.iloc[[0,1]]
+Out[34]: 
+  first_name last_name  age
+0  Rishikesh    Thakur   32
+1    Hemkesh  Agrawani   30
+
+In [35]: persons_df.iloc[[0,1],:]
+Out[35]: 
+  first_name last_name  age
+0  Rishikesh    Thakur   32
+1    Hemkesh  Agrawani   30
+
+In [36]: persons_df.iloc[:,:]
+Out[36]: 
+  first_name last_name  age
+0  Rishikesh    Thakur   32
+1    Hemkesh  Agrawani   30
+2  Malnikesh    Pujari   28
+
+In [39]: persons_df.iloc[:,:]
+Out[39]: 
+  first_name last_name  age
+0  Rishikesh    Thakur   32
+1    Hemkesh  Agrawani   30
+2  Malnikesh    Pujari   28
+```
