@@ -145,3 +145,63 @@ In [20]: details["first_name"] = "Rishikesh"
 In [21]: details
 Out[21]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
 ```
+
+```python
+In [22]: details2 = details.copy()
+
+In [23]: details2
+Out[23]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [24]: details2["first_name"] = "Hemkesh"
+
+In [25]: details2
+Out[25]: {'first_name': 'Hemkesh', 'last_name': 'Agrawani'}
+
+In [26]: details
+Out[26]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [27]: details.get("first_name")
+Out[27]: 'Rishikesh'
+
+In [28]: details
+Out[28]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [29]: details.fromkeys()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-29-41ddd82735ed> in <module>
+----> 1 details.fromkeys()
+
+TypeError: fromkeys expected at least 1 arguments, got 0
+
+In [30]: details.fromkeys("4")
+Out[30]: {'4': None}
+
+In [31]: dict.fromkeys("4")
+Out[31]: {'4': None}
+
+In [32]: dict.fromkeys(4)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-32-706043d1721f> in <module>
+----> 1 dict.fromkeys(4)
+
+TypeError: 'int' object is not iterable
+
+In [33]: dict.fromkeys(["rishikesh"])
+Out[33]: {'rishikesh': None}
+
+In [34]: dict.fromkeys("rishikesh")
+Out[34]: {'r': None, 'i': None, 's': None, 'h': None, 'k': None, 'e': None}
+
+In [35]: dict.fromkeys(["rishikesh", "hemkesh", "malinikesh"])
+Out[35]: {'rishikesh': None, 'hemkesh': None, 'malinikesh': None}
+
+In [36]: details
+Out[36]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [37]: dict.fromkeys(details)
+Out[37]: {'first_name': None, 'last_name': None}
+
+In [38]: 
+```
