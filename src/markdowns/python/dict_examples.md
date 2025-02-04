@@ -205,3 +205,23 @@ Out[37]: {'first_name': None, 'last_name': None}
 
 In [38]: 
 ```
+
+```bash
+In [40]: dict.fromkeys(["age", "salary"], 0)
+Out[40]: {'age': 0, 'salary': 0}
+
+In [41]: {**dict.fromkeys(["age", "salary"], 0), **details}
+Out[41]: {'age': 0, 'salary': 0, 'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [42]: dict(first_name="Rishikesh", last_name="Agrawani")
+Out[42]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [43]: dict([("first_name", "Rishikesh"), ("last_name", "Agrawani")])
+Out[43]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [45]: dict(**details)
+Out[45]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [46]: {**details}
+Out[46]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+```
