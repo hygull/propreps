@@ -225,3 +225,37 @@ Out[45]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
 In [46]: {**details}
 Out[46]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
 ```
+
+```python
+In [1]: details = {"city": "Raipur", "state": "Chhattisgarh"}
+
+In [2]: details
+Out[2]: {'city': 'Raipur', 'state': 'Chhattisgarh'}
+
+In [3]: details2 = details
+
+In [4]: details["state"] = "CG"
+
+In [5]: details
+Out[5]: {'city': 'Raipur', 'state': 'CG'}
+
+In [6]: details2
+Out[6]: {'city': 'Raipur', 'state': 'CG'}
+
+In [7]: # 2nd try
+
+In [8]: details = {"city": "Raipur", "state": "Chhattisgarh"}
+
+In [9]: details
+Out[9]: {'city': 'Raipur', 'state': 'Chhattisgarh'}
+
+In [10]: details2 = details.copy()
+
+In [11]: details["state"] = "CG"
+
+In [12]: details
+Out[12]: {'city': 'Raipur', 'state': 'CG'}
+
+In [13]: details2
+Out[13]: {'city': 'Raipur', 'state': 'Chhattisgarh'}
+```
