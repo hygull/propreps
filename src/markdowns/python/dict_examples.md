@@ -259,3 +259,34 @@ Out[12]: {'city': 'Raipur', 'state': 'CG'}
 In [13]: details2
 Out[13]: {'city': 'Raipur', 'state': 'Chhattisgarh'}
 ```
+
+```python
+In [21]: details
+Out[21]: {'city': 'Raipur', 'state': 'CG'}
+
+In [22]: details.setdefault(9)
+
+In [23]: details
+Out[23]: {'city': 'Raipur', 'state': 'CG', 9: None}
+
+In [24]: details.setdefault(9, 78)
+
+In [25]: details
+Out[25]: {'city': 'Raipur', 'state': 'CG', 9: None}
+
+In [26]: details.setdefault(10, 78)
+Out[26]: 78
+
+In [27]: details
+Out[27]: {'city': 'Raipur', 'state': 'CG', 9: None, 10: 78}
+```
+
+```python
+In [29]: details
+Out[29]: {'city': 'Raipur', 'state': 'CG', 9: None, 10: 78}
+
+In [30]: details.clear()
+
+In [31]: details
+Out[31]: {}
+```
