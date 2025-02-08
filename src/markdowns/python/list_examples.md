@@ -174,3 +174,33 @@ In [34]: print(id(list()))
 In [35]: print(id([]))
 140489457264520
 ```
+```python
+In [1]: numbers = [1, 5, 8, 9, 12, 3, 6, 7, 0]
+
+In [2]: numbers.sort(key=lambda number: number % 2)
+
+In [3]: numbers
+Out[3]: [8, 12, 6, 0, 1, 5, 9, 3, 7]
+
+In [4]: numbers = [1, 5, 8, 9, 12, 3, 6, 7, 0, "13", "100", "14", "3", "5", "11", "4"]
+
+In [5]: numbers
+Out[5]: [1, 5, 8, 9, 12, 3, 6, 7, 0, '13', '100', '14', '3', '5', '11', '4']
+```
+
+```python
+In [6]: numbers.sort()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-6-52f87dfc1b99> in <module>
+----> 1 numbers.sort()
+
+TypeError: '<' not supported between instances of 'str' and 'int'
+```
+
+```python
+In [7]: numbers.sort(key=lambda number: int(number))
+
+In [8]: numbers
+Out[8]: [0, 1, 3, '3', '4', 5, '5', 6, 7, 8, 9, '11', 12, '13', '14', '100']
+```
