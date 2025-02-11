@@ -35,6 +35,8 @@ ___
 
 ![Find first non repeating characters in a string](./assets/images/code_snippets/2024/06_find_first_non_repeating_characters.png)
 
+### Random examples
+![Tau expenses till 11 JAN](./assets/images/code_snippets/2025/tau_expenses_till_11_jan.png)
 
 ![Generator example in Python -> v1](./assets/images/code_snippets/2025/generator_example_v1.png)
 
