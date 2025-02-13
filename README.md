@@ -40,6 +40,8 @@ ___
 
 ![Generator example in Python -> v1](./assets/images/code_snippets/2025/generator_example_v1.png)
 
+![Dict comprehension example -> v1](./assets/images/code_snippets/2025/dict_comprehension_exmaples.png)
+
 # pandas
 
 ![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)
