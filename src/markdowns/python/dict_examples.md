@@ -319,3 +319,54 @@ In [5]: numbers_vs_sum_map = {numbers_tup: _sum for numbers_tup, _sum in numbers
 In [6]: numbers_vs_sum_map
 Out[6]: {(1, 2): 3, (5, 4): 9, (87, 5): 92}
 ```
+
+```python
+In [6]: numbers_vs_sum_map
+Out[6]: {(1, 2): 3, (5, 4): 9, (87, 5): 92}
+
+In [7]: numbers_vs_sum_map.pop()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-7-9af81089ff3e> in <module>
+----> 1 numbers_vs_sum_map.pop()
+
+TypeError: pop expected at least 1 arguments, got 0
+```
+
+```python
+In [8]: numbers_vs_sum_map.pop((87, 5))
+Out[8]: 92
+
+
+In [10]: numbers_vs_sum_map
+Out[10]: {(1, 2): 3, (5, 4): 9}
+
+In [11]: numbers_vs_sum_map.pop((5, 4))
+Out[11]: 9
+
+In [12]: numbers_vs_sum_map
+Out[12]: {(1, 2): 3}
+
+In [13]: numbers_vs_sum_map.pop((1, 2))
+Out[13]: 3
+
+In [14]: numbers_vs_sum_map
+Out[14]: {}
+
+In [15]: numbers_vs_sum_map == dict
+Out[15]: False
+
+In [16]: numbers_vs_sum_map == dict()
+Out[16]: True
+
+In [17]: numbers_vs_sum_map == {}
+Out[17]: True
+
+In [18]: type(numbers_vs_sum_map) == dict
+Out[18]: True
+
+In [19]: type(numbers_vs_sum_map) is dict
+Out[19]: True
+
+In [20]: 
+```
