@@ -292,3 +292,30 @@ Out[31]: {}
 ```
 
 
+```python
+In [1]: numbers_vs_sum_map = {(1, 2): 3, (5, 4): 9, (56, 7): 90, (87, 5): 92}
+
+In [2]: numbers_vs_sum_map
+Out[2]: {(1, 2): 3, (5, 4): 9, (56, 7): 90, (87, 5): 92}
+
+In [3]: for numbers_tup, _sum in numbers_vs_sum_map.items():
+   ...:     print(numbers_tup, _sum)
+   ...: 
+(1, 2) 3
+(5, 4) 9
+(56, 7) 90
+(87, 5) 92
+
+In [4]: for numbers_tup, _sum in numbers_vs_sum_map.items():
+   ...:     print(numbers_tup, _sum, sum(numbers_tup) == _sum)
+   ...: 
+(1, 2) 3 True
+(5, 4) 9 True
+(56, 7) 90 False
+(87, 5) 92 True
+
+In [5]: numbers_vs_sum_map = {numbers_tup: _sum for numbers_tup, _sum in numbers_vs_sum_map.items() if sum(numbers_tup) == _sum}
+
+In [6]: numbers_vs_sum_map
+Out[6]: {(1, 2): 3, (5, 4): 9, (87, 5): 92}
+```
