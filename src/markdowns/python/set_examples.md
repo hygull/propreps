@@ -188,3 +188,72 @@ Out[32]: {19, 50}
 In [33]: type(numbers)
 Out[33]: set
 ```
+
+```python
+In [1]: numbers = range(1, 21)
+
+In [2]: numbers
+Out[2]: range(1, 21)
+
+In [3]: type(numbers)
+Out[3]: range
+
+In [4]: len(numbers)
+Out[4]: 20
+
+In [5]: for number in numbers:
+   ...:     print(number)
+   ...: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+In [6]: even_numbers = range(0, 23, 2)
+
+In [7]: even_numbers
+Out[7]: range(0, 23, 2)
+
+In [8]: list(even_numbers)
+Out[8]: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
+
+In [9]: list(numbers)
+Out[9]: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+In [10]: s1 = set(even_numbers)
+
+In [12]: s2 = set(numbers)
+
+In [13]: s1
+Out[13]: {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22}
+
+In [14]: s2
+Out[14]: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+
+In [15]: s1 & s2
+Out[15]: {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+
+In [16]: s1 - s2
+Out[16]: {0, 22}
+
+In [17]: s2 - s1
+Out[17]: {1, 3, 5, 7, 9, 11, 13, 15, 17, 19}
+
+In [18]: 
+```
