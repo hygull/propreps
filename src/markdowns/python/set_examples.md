@@ -315,3 +315,49 @@ Out[36]: 1
 In [37]: {5, 6, 90, 1, 11, -2, -1, 6}.pop()
 Out[37]: 1
 ```
+
+```python
+In [1]: odd_numbers = {11, 5, 3, 1, 9, 7}
+
+In [2]: even_numbers = {2, 4, 8, 6, 10, 14}
+
+In [3]: print(odd_numbers)
+{1, 3, 5, 7, 9, 11}
+
+In [4]: odd_numbers
+Out[4]: {1, 3, 5, 7, 9, 11}
+
+In [5]: print(even_numbers)
+{2, 4, 6, 8, 10, 14}
+
+In [6]: even_numbers
+Out[6]: {2, 4, 6, 8, 10, 14}
+
+In [7]: zip_obj = zip(even_numbers, odd_numbers)
+
+In [8]: zip_obj
+Out[8]: <zip at 0x1177c7d80>
+
+In [9]: list(zip_obj)
+Out[9]: [(2, 1), (4, 3), (6, 5), (8, 7), (10, 9), (14, 11)]
+
+In [10]: for tup in zip_obj:
+    ...:     print(tup)
+    ...: 
+
+In [11]: zip_obj = zip(even_numbers, odd_numbers)
+
+In [12]: for tup in zip_obj:
+    ...:     print(tup)
+    ...: 
+(2, 1)
+(4, 3)
+(6, 5)
+(8, 7)
+(10, 9)
+(14, 11)
+
+In [13]: for tup in zip_obj:
+    ...:     print(tup)
+    ...: 
+```
