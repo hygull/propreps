@@ -552,3 +552,52 @@ In [14]: print(list(s))
 
 In [15]: 
 ```
+
+
+```python
+In [14]: first, *rest, last = [1, 56, 34, 21, 89, 10, 100]
+
+In [15]: rest
+Out[15]: [56, 34, 21, 89, 10]
+
+In [16]: first
+Out[16]: 1
+
+In [17]: last
+Out[17]: 100
+
+In [18]: len(rest)
+Out[18]: 5
+
+In [19]: rest.append(101)
+
+In [21]: rest.insert(len(rest) - 1, 102)
+
+In [22]: rest
+Out[22]: [56, 34, 21, 89, 10, 102, 101]
+
+In [23]: rest.insert(len(rest) - 1, 103)
+
+In [24]: rest
+Out[24]: [56, 34, 21, 89, 10, 102, 103, 101]
+
+In [25]: rest.insert(len(rest), 103)
+
+In [26]: rest
+Out[26]: [56, 34, 21, 89, 10, 102, 103, 101, 103]
+
+In [27]: rest.insert(len(rest), 104)
+
+In [28]: rest
+Out[28]: [56, 34, 21, 89, 10, 102, 103, 101, 103, 104]
+
+In [29]: rest.extend({12, 67, 89, 1, 3,})
+
+In [30]: rest
+Out[30]: [56, 34, 21, 89, 10, 102, 103, 101, 103, 104, 1, 67, 3, 89, 12]
+
+In [31]: rest.extend({1: "one", 2: "two", 201: "two_zero_one"})
+
+In [32]: rest
+Out[32]: [56, 34, 21, 89, 10, 102, 103, 101, 103, 104, 1, 67, 3, 89, 12, 1, 2, 201]
+```
