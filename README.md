@@ -42,6 +42,8 @@ ___
 
 ![Dict comprehension example -> v1](./assets/images/code_snippets/2025/dict_comprehension_exmaples.png)
 
+![String formatting examples](./assets/images/code_snippets/2025/string_formatting_examples.png)
+
 # pandas
 
 ![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)

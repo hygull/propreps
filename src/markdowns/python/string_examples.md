@@ -162,3 +162,28 @@ Out[18]: 'H'
 In [19]: "Hello" 'programmers' '!'
 Out[19]: 'Helloprogrammers!'
 ```
+
+
+```python
+In [19]: "Hello" 'programmers' '!'
+Out[19]: 'Helloprogrammers!'
+
+In [20]: "Hello" + 'programmers' + '!'
+Out[20]: 'Helloprogrammers!'
+
+In [21]: f"{'Hello' + 'programmers' + '!'}"
+Out[21]: 'Helloprogrammers!'
+```
+
+```python
+In [22]: "%s" % ("Rishikesh")
+Out[22]: 'Rishikesh'
+
+In [23]: "%s %s %d %s" % ("Rishikesh", "is", 32, "years old")
+Out[23]: 'Rishikesh is 32 years old'
+```
+
+```python
+In [24]: "{first_name} is {age} years old".format(first_name="Rishikesh", age=10)
+Out[24]: 'Rishikesh is 10 years old'
+```
