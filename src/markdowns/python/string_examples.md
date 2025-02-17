@@ -101,3 +101,64 @@ Out[16]: 'RishikeshHemkeshRishikeshHemkeshRishikeshHemkeshRishikeshHemkeshRishik
 In [18]: "Rishikesh" * len("Hemkesh")
 Out[18]: 'RishikeshRishikeshRishikeshRishikeshRishikeshRishikeshRishikesh'
 ```
+
+
+```python
+In [1]: "Rishkesh"[0]
+Out[1]: 'R'
+
+In [2]: "Rishkesh"[1]
+Out[2]: 'i'
+
+In [3]: "Rishkesh"[-1]
+Out[3]: 'h'
+
+In [4]: "Rishkesh"[-2]
+Out[4]: 's'
+
+In [5]: "Rishkesh"[-3]
+Out[5]: 'e'
+
+In [6]: "Rishkesh"[-4]
+Out[6]: 'k'
+
+In [7]: first_name = "Rishikesh"
+
+In [8]: first_name[-1]
+Out[8]: 'h'
+
+In [9]: first_name[5]
+Out[9]: 'k'
+
+In [10]: first_name[2]
+Out[10]: 's'
+
+In [11]: first_name[0]
+Out[11]: 'R'
+
+In [12]: first_name[:-3]
+Out[12]: 'Rishik'
+
+In [13]: first_name[:-4]
+Out[13]: 'Rishi'
+
+In [14]: first_name[-3:-4]
+Out[14]: ''
+
+In [15]: first_name[-3:-5]
+Out[15]: ''
+
+In [16]: first_name[-3: -1]
+Out[16]: 'es'
+```
+
+```python
+In [17]: "Hello" 'programmers' '!'[-1]
+Out[17]: '!'
+
+In [18]: "Hello" 'programmers' '!'[0]
+Out[18]: 'H'
+
+In [19]: "Hello" 'programmers' '!'
+Out[19]: 'Helloprogrammers!'
+```
