@@ -370,3 +370,83 @@ Out[19]: True
 
 In [20]: 
 ```
+
+```python
+In [1]: details = {"city": "Raipur", "state": "Chhattisgarh"}
+
+In [2]: details
+Out[2]: {'city': 'Raipur', 'state': 'Chhattisgarh'}
+
+In [3]: details["city"]
+Out[3]: 'Raipur'
+
+In [4]: details["city"] + details["state"]
+Out[4]: 'RaipurChhattisgarh'
+```
+
+```python
+In [5]: details["city"]  details["state"]
+  Cell In[5], line 1
+    details["city"]  details["state"]
+                     ^
+SyntaxError: invalid syntax
+```
+
+```python
+In [6]: details["city"]
+Out[6]: 'Raipur'
+
+In [7]: details["state"]
+Out[7]: 'Chhattisgarh'
+
+In [8]: 'Raipur'  'Chhattisgarh'
+Out[8]: 'RaipurChhattisgarh'
+
+In [9]: details["city"] +  details["state"]
+Out[9]: 'RaipurChhattisgarh'
+```
+
+```python
+In [11]: details
+Out[11]: {'city': 'Raipur', 'state': 'Chhattisgarh'}
+
+In [12]: city = details["city"]
+
+In [13]: city
+Out[13]: 'Raipur'
+```
+
+```python
+In [18]: city[:len(city)//2]
+Out[18]: 'Rai'
+
+In [19]: city[len(city)//2:]
+Out[19]: 'pur'
+
+In [20]: len(city)
+Out[20]: 6
+
+In [21]: state = details.get("state")
+
+In [22]: state
+Out[22]: 'Chhattisgarh'
+
+In [23]: len(state)
+Out[23]: 12
+
+In [24]: state = state + "!"
+
+In [25]: len(state)
+Out[25]: 13
+
+In [26]: state
+Out[26]: 'Chhattisgarh!'
+
+In [27]: state[: len(state) // 2]
+Out[27]: 'Chhatt'
+
+In [28]: state[len(state) // 2:]
+Out[28]: 'isgarh!'
+
+In [29]: 
+```
