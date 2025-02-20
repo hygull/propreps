@@ -495,3 +495,43 @@ Out[39]: '<RISHI'
 In [40]: "RISHI".join("<>..").split(">")[-1]
 Out[40]: 'RISHI.RISHI.'
 ```
+
+
+```python
+In [3]: all_details = {"details": {}}
+
+In [4]: all_details
+Out[4]: {'details': {}}
+
+In [5]: all_details.setdefault("details", {"first_name": "Rishikesh"})
+Out[5]: {}
+
+In [6]: all_details
+Out[6]: {'details': {}}
+
+In [7]: all_details.setdefault("details", {})["first_name"] = "Rishikesh"
+
+In [8]: all_details
+Out[8]: {'details': {'first_name': 'Rishikesh'}}
+
+In [9]: all_details.setdefault("details")
+Out[9]: {'first_name': 'Rishikesh'}
+
+In [10]: all_details.setdefault("details")["last_name"] = "Agrawani"
+
+In [11]: all_details.setdefault("details")["age"] = 32
+
+In [12]: all_details
+Out[12]: {'details': {'first_name': 'Rishikesh', 'last_name': 'Agrawani', 'age': 32}}
+
+In [13]: import json
+
+In [14]: print(json.dumps(all_details, indent=4))
+{
+    "details": {
+        "first_name": "Rishikesh",
+        "last_name": "Agrawani",
+        "age": 32
+    }
+}
+```
