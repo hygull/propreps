@@ -535,3 +535,27 @@ In [14]: print(json.dumps(all_details, indent=4))
     }
 }
 ```
+
+```python
+In [15]: all_details = {}
+
+In [16]: all_details
+Out[16]: {}
+
+In [17]: all_details.setdefault("details", {}).setdefault("first_name", "Agrawani")
+Out[17]: 'Agrawani'
+
+In [18]: all_details
+Out[18]: {'details': {'first_name': 'Agrawani'}}
+
+In [19]: all_details["details"]["first_name"] = "Rishikesh"
+
+In [20]: all_details
+Out[20]: {'details': {'first_name': 'Rishikesh'}}
+
+In [21]: all_details.setdefault("details", {}).setdefault("last_name", "Agrawani")
+Out[21]: 'Agrawani'
+
+In [22]: all_details
+Out[22]: {'details': {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}}
+```
