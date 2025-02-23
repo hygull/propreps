@@ -65,3 +65,41 @@ Out[21]: '0xa'
 In [22]: hex(9)
 Out[22]: '0x9'
 ```
+
+```python
+In [24]: ord('A')
+Out[24]: 65
+
+In [25]: ord('B')
+Out[25]: 66
+
+In [26]: ord('Z')
+Out[26]: 90
+
+In [27]: chr(65)
+Out[27]: 'A'
+
+In [28]: chr(66)
+Out[28]: 'B'
+
+In [29]: chr(90)
+Out[29]: 'Z'
+
+In [30]: ord('a')
+Out[30]: 97
+
+In [31]: ord('b')
+Out[31]: 98
+
+In [32]: ord('c')
+Out[32]: 99
+
+In [33]: ord('z')
+Out[33]: 122
+
+In [34]: chr(90)
+Out[34]: 'Z'
+
+In [35]: chr(122)
+Out[35]: 'z'
+```
