@@ -103,3 +103,43 @@ Out[34]: 'Z'
 In [35]: chr(122)
 Out[35]: 'z'
 ```
+
+```python
+In [6]: chr(1)
+Out[6]: '\x01'
+
+In [7]: chr(11)
+Out[7]: '\x0b'
+
+In [8]: chr(0)
+Out[8]: '\x00'
+
+In [11]: chr(3)
+Out[11]: '\x03'
+
+In [12]: chr(5)
+Out[12]: '\x05'
+
+In [13]: chr(9)
+Out[13]: '\t'
+
+In [14]: chr(10)
+Out[14]: '\n'
+
+In [15]: chr(13)
+Out[15]: '\r'
+
+In [16]: chr(15)
+Out[16]: '\x0f'
+```
+
+```python
+In [19]: ord('\t')
+Out[19]: 9
+
+In [20]: ord('\n')
+Out[20]: 10
+
+In [21]: ord('\r')
+Out[21]: 13
+```
