@@ -602,3 +602,38 @@ In [22]: for k, v in chainmap.items():
 14 fourteen
 15 fifteen
 ```
+
+
+```python
+In [1]: import collections
+
+In [2]: collections.Counter([1, 3, 5, 6, 8, 19, 1, 3, 5, 7, 90])
+Out[2]: Counter({1: 2, 3: 2, 5: 2, 6: 1, 8: 1, 19: 1, 7: 1, 90: 1})
+
+In [3]: numbers_dict = collections.Counter([1, 3, 5, 6, 8, 19, 1, 3, 5, 7, 90])
+
+In [4]: for number, freq in numbers_dict.items():
+   ...:     print(number, freq)
+   ...: 
+1 2
+3 2
+5 2
+6 1
+8 1
+19 1
+7 1
+90 1
+
+In [5]: for number, freq in numbers_dict.items():
+   ...:     print(number, '->', freq)
+   ...: 
+1 -> 2
+3 -> 2
+5 -> 2
+6 -> 1
+8 -> 1
+19 -> 1
+7 -> 1
+90 -> 1
+```
+
