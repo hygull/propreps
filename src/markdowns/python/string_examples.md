@@ -187,3 +187,40 @@ Out[23]: 'Rishikesh is 32 years old'
 In [24]: "{first_name} is {age} years old".format(first_name="Rishikesh", age=10)
 Out[24]: 'Rishikesh is 10 years old'
 ```
+
+```python
+In [1]: "Ram"[0]
+Out[1]: 'R'
+
+In [2]: "Ram"[-1]
+Out[2]: 'm'
+
+In [3]: "Ram"[1]
+Out[3]: 'a'
+
+In [4]: "Ram"[:1]
+Out[4]: 'R'
+
+In [5]: "Ram"[0:1]
+Out[5]: 'R'
+
+In [6]: "Ram"[0:-11]
+Out[6]: ''
+
+In [8]: "Ram"[0:-1]
+Out[8]: 'Ra'
+
+In [9]: "Ram"[0:-2]
+Out[9]: 'R'
+
+In [10]: "Ram"[0:-3]
+Out[10]: ''
+```
+
+```python
+In [11]: "Shiva" "Ram" "Krishna"
+Out[11]: 'ShivaRamKrishna'
+
+In [13]: "Shiva"[:-1] + "Ram"[:-1] + "Krishna"[:-1]
+Out[13]: 'ShivRaKrishn'
+```
