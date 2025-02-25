@@ -224,3 +224,32 @@ Out[11]: 'ShivaRamKrishna'
 In [13]: "Shiva"[:-1] + "Ram"[:-1] + "Krishna"[:-1]
 Out[13]: 'ShivRaKrishn'
 ```
+
+```python
+In [14]: "Lord Shiva Jee"
+Out[14]: 'Lord Shiva Jee'
+
+In [15]: "Lord Shiva Jee"[-2:-1]
+Out[15]: 'e'
+
+In [16]: "Lord Shiva Jee"[-3:-1]
+Out[16]: 'Je'
+
+In [17]: "Lord Shiva Jee"[-3:]
+Out[17]: 'Jee'
+
+In [18]: "Lord Shiva Jee"[-3:0]
+Out[18]: ''
+
+In [19]: "Lord Shiva Jee"[0:-3]
+Out[19]: 'Lord Shiva '
+
+In [20]: "Lord Shiva Jee"[0:-2]
+Out[20]: 'Lord Shiva J'
+
+In [21]: "Lord Shiva Jee"[0:-1]
+Out[21]: 'Lord Shiva Je'
+
+In [22]: "Lord Shiva Jee"[0:]
+Out[22]: 'Lord Shiva Jee'
+```
