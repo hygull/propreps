@@ -48,6 +48,8 @@ ___
 
 ![dataclass example no 1](./assets/images/code_snippets/2025/datalass_basic_example_1.png)
 
+![dataclass example no 2](./assets/images/code_snippets/2025/datalass_basic_example_2.png)
+
 # pandas
 
 ![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)

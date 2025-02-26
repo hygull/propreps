@@ -26,3 +26,29 @@ In [8]: rishi.languages
 Out[8]: ['Python']
 ```
 
+```python
+In [10]: hem = Person(first_name="Hemkesh", last_name="Agrawani", age=30)
+
+In [11]: hem.first_name
+Out[11]: 'Hemkesh'
+
+In [12]: hem.last_name
+Out[12]: 'Agrawani'
+
+In [13]: hem.age
+Out[13]: 30
+
+In [14]: hem.languages
+Out[14]: []
+
+In [15]: hem.languages.append("C")
+
+In [16]: hem.languages
+Out[16]: ['C']
+
+In [17]: hem.languages.extend(["C++", "Python"])
+
+In [18]: hem.languages
+Out[18]: ['C', 'C++', 'Python']
+```
+
