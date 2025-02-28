@@ -253,3 +253,38 @@ Out[21]: 'Lord Shiva Je'
 In [22]: "Lord Shiva Jee"[0:]
 Out[22]: 'Lord Shiva Jee'
 ```
+
+```python
+In [4]: "-------------".split()
+Out[4]: ['-------------']
+
+In [5]: "-------------".split("-")
+Out[5]: ['', '', '', '', '', '', '', '', '', '', '', '', '', '']
+
+In [6]: "+".join("-------------".split("-"))
+Out[6]: '+++++++++++++'
+```
+
+```python
+In [13]: def update_name(name):
+    ...:     return f"{name}, you are awe!"
+    ...: 
+
+In [14]: map(update_name, ["Rishikesh", "Hemkesh", "Malinikesh"])
+Out[14]: <map at 0x7fc5a8e18668>
+
+In [15]: list(map(update_name, ["Rishikesh", "Hemkesh", "Malinikesh"]))
+Out[15]: 
+['Rishikesh, you are awe!',
+ 'Hemkesh, you are awe!',
+ 'Malinikesh, you are awe!']
+```
+
+```python
+In [16]: pd.DataFrame(map(update_name, ["Rishikesh", "Hemkesh", "Malinikesh"]), columns=["message"])
+Out[16]: 
+                    message
+0   Rishikesh, you are awe!
+1     Hemkesh, you are awe!
+2  Malinikesh, you are awe!
+```
