@@ -601,3 +601,63 @@ In [31]: rest.extend({1: "one", 2: "two", 201: "two_zero_one"})
 In [32]: rest
 Out[32]: [56, 34, 21, 89, 10, 102, 103, 101, 103, 104, 1, 67, 3, 89, 12, 1, 2, 201]
 ```
+
+```python
+In [1]: numbers = []
+
+In [2]: numbers.append(90)
+
+In [3]: numbers
+Out[3]: [90]
+
+In [4]: numbers.extend([11, 45, 67])
+
+In [5]: numbers
+Out[5]: [90, 11, 45, 67]
+
+In [6]: numbers.extend([10, 9, 8])
+
+In [7]: numbers
+Out[7]: [90, 11, 45, 67, 10, 9, 8]
+
+In [8]: numbers[:-1]
+Out[8]: [90, 11, 45, 67, 10, 9]
+
+In [9]: numbers[:]
+Out[9]: [90, 11, 45, 67, 10, 9, 8]
+
+In [10]: numbers[0:]
+Out[10]: [90, 11, 45, 67, 10, 9, 8]
+
+In [11]: numbers[::-1]
+Out[11]: [8, 9, 10, 67, 45, 11, 90]
+```
+
+```python
+In [12]: numbers.pop()
+Out[12]: 8
+
+In [13]: numbers.pop()
+Out[13]: 9
+
+In [14]: numbers.pop()
+Out[14]: 10
+
+In [15]: numbers.pop()
+Out[15]: 67
+
+In [16]: numbers.insert(-1, 77)
+
+In [17]: numbers
+Out[17]: [90, 11, 77, 45]
+
+In [18]: numbers.insert(-1, 88)
+
+In [19]: numbers
+Out[19]: [90, 11, 77, 88, 45]
+
+In [20]: numbers.insert(len(numbers), 987)
+
+In [21]: numbers
+Out[21]: [90, 11, 77, 88, 45, 987]
+```

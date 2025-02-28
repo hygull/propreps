@@ -266,14 +266,14 @@ Out[6]: '+++++++++++++'
 ```
 
 ```python
-In [13]: def update_name(name):
+In [13]: def get_message(name):
     ...:     return f"{name}, you are awe!"
     ...: 
 
-In [14]: map(update_name, ["Rishikesh", "Hemkesh", "Malinikesh"])
+In [14]: map(get_message, ["Rishikesh", "Hemkesh", "Malinikesh"])
 Out[14]: <map at 0x7fc5a8e18668>
 
-In [15]: list(map(update_name, ["Rishikesh", "Hemkesh", "Malinikesh"]))
+In [15]: list(map(get_message, ["Rishikesh", "Hemkesh", "Malinikesh"]))
 Out[15]: 
 ['Rishikesh, you are awe!',
  'Hemkesh, you are awe!',
@@ -281,7 +281,7 @@ Out[15]:
 ```
 
 ```python
-In [16]: pd.DataFrame(map(update_name, ["Rishikesh", "Hemkesh", "Malinikesh"]), columns=["message"])
+In [16]: pd.DataFrame(map(get_message, ["Rishikesh", "Hemkesh", "Malinikesh"]), columns=["message"])
 Out[16]: 
                     message
 0   Rishikesh, you are awe!
