@@ -288,3 +288,47 @@ Out[16]:
 1     Hemkesh, you are awe!
 2  Malinikesh, you are awe!
 ```
+
+```python
+In [17]: "(+)".replace("(", "[").replace(")", "]")
+Out[17]: '[+]'
+
+In [18]: "(+)".replace("(", "[").replace(")", "]").split("+")
+Out[18]: ['[', ']']
+```
+
+```python
+In [20]: "abcdefabc".strip("a")
+Out[20]: 'bcdefabc'
+
+In [21]: "aaaaabcdefabc".strip("a")
+Out[21]: 'bcdefabc'
+
+In [22]: "aaaaaybcdefabcxaaaaaaaa".strip("a")
+Out[22]: 'ybcdefabcx'
+```
+
+```python
+In [23]: "aaaaaybcdefabcxaaaaaaaa".lstrip("a")
+Out[23]: 'ybcdefabcxaaaaaaaa'
+
+In [24]: "aaaaaybcdefabcxaaaaaaaa".rstrip("a")
+Out[24]: 'aaaaaybcdefabcx'
+```
+
+```python
+In [26]: "a" * 2
+Out[26]: 'aa'
+
+In [27]: "a" * 5
+Out[27]: 'aaaaa'
+
+In [28]: "a" * 10
+Out[28]: 'aaaaaaaaaa'
+```
+
+```python
+In [29]: "python->" * 5
+Out[29]: 'python->python->python->python->python->'
+```
+
