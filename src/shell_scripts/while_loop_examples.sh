@@ -22,7 +22,6 @@ done
 # Couner 9
 # Couner 10
 
-#!/bin/bash
 counter=0
 
 while [ $counter -lt 11 ]; do
