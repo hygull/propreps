@@ -50,6 +50,8 @@ ___
 
 ![dataclass example no 2](./assets/images/code_snippets/2025/datalass_basic_example_2.png)
 
+![Star pattern, just 1 go](./assets/images/code_snippets/2025/star_patterns_1_go.png)
+
 # pandas
 
 ![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)
