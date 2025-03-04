@@ -57,3 +57,36 @@ Out[3]: (1, 4, 'ABC')
 In [4]: (1, 4) + tuple() + tuple([11, 67, 89, 0])
 Out[4]: (1, 4, 11, 67, 89, 0)
 ```
+
+
+```python
+In [5]: 1 in (1,)
+Out[5]: True
+
+In [6]: 1 in (1, 3)
+Out[6]: True
+
+In [7]: 1 in (1, 3, 89)
+Out[7]: True
+
+In [8]: 89 not in (1, 3, 89)
+Out[8]: False
+
+In [9]: not 89 in (1, 3, 89)
+Out[9]: False
+
+In [10]: 1 in tuple(range(1, 10))
+Out[10]: True
+
+In [11]: "i" in tuple("Rishikesh")
+Out[11]: True
+
+In [12]: "I" in tuple("Rishikesh")
+Out[12]: False
+
+In [13]: "R" in tuple("Rishikesh")
+Out[13]: True
+
+In [14]: "R" in "Rishikesh"
+Out[14]: True
+```
