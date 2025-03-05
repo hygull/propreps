@@ -919,3 +919,68 @@ Out[19]:
 
 In [20]: 
 ```
+
+```python
+In [1]: import pandas as pd
+
+In [2]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 80], "odd": [3, 1, 9, 11, 15]})
+
+In [3]: df
+Out[3]: 
+   even  odd
+0    12    3
+1     0    1
+2    22    9
+3    56   11
+4    80   15
+
+In [4]: df.set_index("even")
+Out[4]: 
+      odd
+even     
+12      3
+0       1
+22      9
+56     11
+80     15
+
+In [5]: df.set_index("even")["odd"]
+Out[5]: 
+even
+12     3
+0      1
+22     9
+56    11
+80    15
+Name: odd, dtype: int64
+
+In [6]: df.set_index("even")[["odd"]]
+Out[6]: 
+      odd
+even     
+12      3
+0       1
+22      9
+56     11
+80     15
+
+In [7]: type(df.set_index("even")["odd"])
+Out[7]: pandas.core.series.Series
+
+In [8]: type(df.set_index("even")[["odd"]])
+Out[8]: pandas.core.frame.DataFrame
+
+In [9]: df.set_index("even")["odd"].to_dict()
+Out[9]: {12: 3, 0: 1, 22: 9, 56: 11, 80: 15}
+
+In [10]: df.set_index("even")[["odd"]].to_dict(orient="index")
+Out[10]: 
+{12: {'odd': 3},
+ 0: {'odd': 1},
+ 22: {'odd': 9},
+ 56: {'odd': 11},
+ 80: {'odd': 15}}
+
+In [11]: df.set_index("even")[["odd"]].to_dict(orient="records")
+Out[11]: [{'odd': 3}, {'odd': 1}, {'odd': 9}, {'odd': 11}, {'odd': 15}]
+```
