@@ -984,3 +984,86 @@ Out[10]:
 In [11]: df.set_index("even")[["odd"]].to_dict(orient="records")
 Out[11]: [{'odd': 3}, {'odd': 1}, {'odd': 9}, {'odd': 11}, {'odd': 15}]
 ```
+
+```python
+In [13]: df["random"] = [1, 10,  5, 7, 8]
+
+In [14]: df
+Out[14]: 
+   even  odd  random
+0    12    3       1
+1     0    1      10
+2    22    9       5
+3    56   11       7
+4    80   15       8
+
+In [15]: df.set_index(["even", "odd"])
+Out[15]: 
+          random
+even odd        
+12   3         1
+0    1        10
+22   9         5
+56   11        7
+80   15        8
+
+In [16]: df.set_index(["odd", "even"])
+Out[16]: 
+          random
+odd even        
+3   12         1
+1   0         10
+9   22         5
+11  56         7
+15  80         8
+```
+
+```python
+In [20]: new_df.loc[(3, 12)]
+Out[20]: 
+random    1
+Name: (3, 12), dtype: int64
+
+In [21]: new_df.loc[(3, 12), "random"]
+Out[21]: 1
+
+In [22]: new_df.loc[(3, 12), "random"]
+```
+
+```python
+In [22]: new_df
+Out[22]: 
+          random
+odd even        
+3   12         1
+1   0         10
+9   22         5
+11  56         7
+15  80         8
+
+In [23]: new_df.loc[3]
+Out[23]: 
+      random
+even        
+12         1
+
+In [24]: new_df.loc[11]
+Out[24]: 
+      random
+even        
+56         7
+```
+
+```python
+In [25]: new_df.xs(3, level="odd")
+Out[25]: 
+      random
+even        
+12         1
+
+In [26]: new_df.xs(22, level="even")
+Out[26]: 
+     random
+odd        
+9         5     
+```
