@@ -302,3 +302,82 @@ dtype: bool
 
 In [39]: 
 ```
+
+```python
+In [1]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 80], "odd": [3, 1, 9, 11, 15]})
+
+In [2]: df
+Out[2]: 
+   even  odd
+0    12    3
+1     0    1
+2    22    9
+3    56   11
+4    80   15
+
+In [3]: df["even"].nlargest(3)
+Out[3]: 
+4    80
+3    56
+2    22
+Name: even, dtype: int64
+
+In [4]: df["even"].nlargest(4)
+Out[4]: 
+4    80
+3    56
+2    22
+0    12
+Name: even, dtype: int64
+
+In [5]: df["even"].nlargest(5)
+Out[5]: 
+4    80
+3    56
+2    22
+0    12
+1     0
+Name: even, dtype: int64
+
+In [6]: df["even"].nlargest(6)
+Out[6]: 
+4    80
+3    56
+2    22
+0    12
+1     0
+Name: even, dtype: int64
+
+In [7]: df["even"].head(3)
+Out[7]: 
+0    12
+1     0
+2    22
+Name: even, dtype: int64
+
+In [8]: df["even"].head(4)
+Out[8]: 
+0    12
+1     0
+2    22
+3    56
+Name: even, dtype: int64
+
+In [9]: df["even"].head(5)
+Out[9]: 
+0    12
+1     0
+2    22
+3    56
+4    80
+Name: even, dtype: int64
+
+In [10]: df["even"].head(6)
+Out[10]: 
+0    12
+1     0
+2    22
+3    56
+4    80
+Name: even, dtype: int64
+```
