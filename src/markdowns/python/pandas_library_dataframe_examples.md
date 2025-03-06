@@ -1067,3 +1067,164 @@ Out[26]:
 odd        
 9         5     
 ```
+
+```python
+In [12]: df
+Out[12]: 
+   even  odd
+0    12    3
+1     0    1
+2    22    9
+3    56   11
+4    80   15
+
+In [13]: df.nlargest(3, columns=["even", "odd"])
+Out[13]: 
+   even  odd
+4    80   15
+3    56   11
+2    22    9
+
+In [14]: df.nlargest(3, columns=["even", "odd"])
+Out[14]: 
+   even  odd
+4    80   15
+3    56   11
+2    22    9
+
+In [15]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 80], "odd": [84, 1, 90, 2, 80]})
+
+In [16]: df
+Out[16]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4    80   80
+
+In [17]: df.nlargest(3, columns=["even", "odd"])
+Out[17]: 
+   even  odd
+4    80   80
+3    56    2
+2    22   90
+
+In [18]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 80], "odd": [84, 1, 90, 2, 99]})
+
+In [19]: df
+Out[19]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4    80   99
+
+In [20]: df.nlargest(3, columns=["even", "odd"])
+Out[20]: 
+   even  odd
+4    80   99
+3    56    2
+2    22   90
+
+In [21]: df.nlargest(3, columns=["odd", "even"])
+Out[21]: 
+   even  odd
+4    80   99
+2    22   90
+0    12   84
+
+In [22]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 80, 1, 3], "odd": [84, 1, 90, 2, 99, 3, 99]})
+
+In [23]: df
+Out[23]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4    80   99
+5     1    3
+6     3   99
+
+In [24]: df.nlargest(3, columns=["odd", "even"])
+Out[24]: 
+   even  odd
+4    80   99
+6     3   99
+2    22   90
+
+In [25]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 3, 1, 80], "odd": [84, 1, 90, 2, 99, 3, 99]})
+
+In [26]: df
+Out[26]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4     3   99
+5     1    3
+6    80   99
+
+In [27]: df.nlargest(3, columns=["odd", "even"])
+Out[27]: 
+   even  odd
+6    80   99
+4     3   99
+2    22   90
+```
+
+```python
+In [1]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 3, 1, 80], "odd": [84, 1, 90, 2, 99, 3, 99]})
+
+In [2]: df
+Out[2]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4     3   99
+5     1    3
+6    80   99
+
+In [3]: df.head()
+Out[3]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4     3   99
+
+In [4]: df.head(6)
+Out[4]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4     3   99
+5     1    3
+
+In [5]: df.head(n=6)
+Out[5]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4     3   99
+5     1    3
+
+In [6]: df.head(n=5)
+Out[6]: 
+   even  odd
+0    12   84
+1     0    1
+2    22   90
+3    56    2
+4     3   99
+```
