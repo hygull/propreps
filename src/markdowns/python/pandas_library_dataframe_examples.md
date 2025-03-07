@@ -1268,3 +1268,28 @@ B      50.5
 C      50.0
 ```
 
+```python
+In [15]: odd_mean_df
+Out[15]: 
+        odd
+group      
+A      59.0
+B      50.5
+C      50.0
+
+In [16]: odd_mean_df.loc["A", "odd"]
+Out[16]: 59.0
+
+In [17]: odd_mean_df.iloc[0, 0]
+Out[17]: 59.0
+
+In [18]: odd_mean_df.iloc[0]
+Out[18]: 
+odd    59.0
+Name: A, dtype: float64
+
+In [20]: odd_mean_df.loc["A"]
+Out[20]: 
+odd    59.0
+Name: A, dtype: float64
+```
