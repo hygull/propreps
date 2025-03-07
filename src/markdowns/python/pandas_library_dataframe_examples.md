@@ -1228,3 +1228,43 @@ Out[6]:
 3    56    2
 4     3   99
 ```
+
+```python
+In [9]: df =  pd.DataFrame({"even": [12, 0, 22, 56, 3, 1, 80], "odd": [84, 1, 90, 2, 99, 3, 99], "group": ["A", "C", "A", "B", "B", "A", "C"]})
+
+In [10]: df
+Out[10]: 
+   even  odd group
+0    12   84     A
+1     0    1     C
+2    22   90     A
+3    56    2     B
+4     3   99     B
+5     1    3     A
+6    80   99     C
+
+In [11]: df.groupby("group").agg({"even": "sum", "odd": "mean"})
+Out[11]: 
+       even   odd
+group            
+A        35  59.0
+B        59  50.5
+C        80  50.0
+
+In [12]: df.groupby("group").agg({"even": "sum"})
+Out[12]: 
+       even
+group      
+A        35
+B        59
+C        80
+
+In [13]: df.groupby("group").agg({"odd": "mean"})
+Out[13]: 
+        odd
+group      
+A      59.0
+B      50.5
+C      50.0
+```
+
