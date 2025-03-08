@@ -1293,3 +1293,69 @@ Out[20]:
 odd    59.0
 Name: A, dtype: float64
 ```
+
+```python
+In [1]: df = pd.DataFrame({"even": [2, 6, 90, 10, 44], "odd": [1, 5, 9, 19, 27]})
+
+In [2]: df
+Out[2]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [3]: df.keys()
+Out[3]: Index(['even', 'odd'], dtype='object')
+
+In [4]: df.columns
+Out[4]: Index(['even', 'odd'], dtype='object')
+
+In [5]: df.items()
+Out[5]: <generator object DataFrame.items at 0x7fc980d50e60>
+
+In [6]: for item in df.items():
+   ...:     print(item)
+   ...: 
+('even', 0     2
+1     6
+2    90
+3    10
+4    44
+Name: even, dtype: int64)
+('odd', 0     1
+1     5
+2     9
+3    19
+4    27
+Name: odd, dtype: int64)
+
+In [7]: for item in df.items():
+   ...:     print(item[0])
+   ...: 
+even
+odd
+
+In [8]: for item in df.items():
+   ...:     print(item[1])
+   ...: 
+0     2
+1     6
+2    90
+3    10
+4    44
+Name: even, dtype: int64
+0     1
+1     5
+2     9
+3    19
+4    27
+Name: odd, dtype: int64
+
+In [9]: for item in df.items():
+   ...:     print(type(item[1]))
+   ...: 
+<class 'pandas.core.series.Series'>
+<class 'pandas.core.series.Series'>
+```
