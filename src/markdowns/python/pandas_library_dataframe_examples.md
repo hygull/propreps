@@ -1507,3 +1507,32 @@ Number(even=90, odd=9)
 Number(even=10, odd=19)
 Number(even=44, odd=27)
 ```
+
+```python
+In [26]: for tup in df.itertuples(index=False, name="Number"):
+    ...:     print(tup[0])
+    ...: 
+2
+6
+90
+10
+44
+
+In [27]: for tup in df.itertuples(index=False, name="Number"):
+    ...:     print(tup[0], tup.even)
+    ...: 
+2 2
+6 6
+90 90
+10 10
+44 44
+
+In [28]: for tup in df.itertuples(index=False, name="Number"):
+    ...:     print(tup[1], tup.odd)
+    ...: 
+1 1
+5 5
+9 9
+19 19
+27 27
+```
