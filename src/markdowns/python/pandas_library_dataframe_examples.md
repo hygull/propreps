@@ -1359,3 +1359,151 @@ In [9]: for item in df.items():
 <class 'pandas.core.series.Series'>
 <class 'pandas.core.series.Series'>
 ```
+
+```python
+In [10]: for i, row in df.iterrows():
+    ...:     print(i)
+    ...: 
+0
+1
+2
+3
+4
+
+In [11]: for i, row in df.iterrows():
+    ...:     print(row)
+    ...: 
+even    2
+odd     1
+Name: 0, dtype: int64
+even    6
+odd     5
+Name: 1, dtype: int64
+even    90
+odd      9
+Name: 2, dtype: int64
+even    10
+odd     19
+Name: 3, dtype: int64
+even    44
+odd     27
+Name: 4, dtype: int64
+
+In [12]: for i, row in df.iterrows():
+    ...:     print(row.index)
+    ...: 
+Index(['even', 'odd'], dtype='object')
+Index(['even', 'odd'], dtype='object')
+Index(['even', 'odd'], dtype='object')
+Index(['even', 'odd'], dtype='object')
+Index(['even', 'odd'], dtype='object')
+
+In [13]: for i, row in df.iterrows():
+    ...:     print(row["even"])
+    ...: 
+2
+6
+90
+10
+44
+
+In [14]: for i, row in df.iterrows():
+    ...:     print(row["odd"])
+    ...: 
+1
+5
+9
+19
+27
+
+In [15]: for i, row in df.iterrows():
+    ...:     print(row.odd)
+    ...: 
+1
+5
+9
+19
+27
+
+In [16]: for i, row in df.iterrows():
+    ...:     print(row.even)
+    ...: 
+2
+6
+90
+10
+44
+
+
+In [18]: for tup in df.itertuples():
+    ...:     print(tup)
+    ...: 
+Pandas(Index=0, even=2, odd=1)
+Pandas(Index=1, even=6, odd=5)
+Pandas(Index=2, even=90, odd=9)
+Pandas(Index=3, even=10, odd=19)
+Pandas(Index=4, even=44, odd=27)
+
+In [19]: for tup in df.itertuples():
+    ...:     print(type(tup))
+    ...: 
+<class 'pandas.core.frame.Pandas'>
+<class 'pandas.core.frame.Pandas'>
+<class 'pandas.core.frame.Pandas'>
+<class 'pandas.core.frame.Pandas'>
+<class 'pandas.core.frame.Pandas'>
+
+In [20]: for tup in df.itertuples():
+    ...:     print(tup.Index)
+    ...: 
+0
+1
+2
+3
+4
+
+In [21]: for tup in df.itertuples():
+    ...:     print(tup.even)
+    ...: 
+2
+6
+90
+10
+44
+
+In [22]: for tup in df.itertuples():
+    ...:     print(tup.odd)
+    ...: 
+1
+5
+9
+19
+27
+
+In [23]: for tup in df.itertuples():
+    ...:     print(tup)
+    ...: 
+Pandas(Index=0, even=2, odd=1)
+Pandas(Index=1, even=6, odd=5)
+Pandas(Index=2, even=90, odd=9)
+Pandas(Index=3, even=10, odd=19)
+Pandas(Index=4, even=44, odd=27)
+
+In [24]: for tup in df.itertuples(index=False):
+    ...:     print(tup)
+    ...: 
+Pandas(even=2, odd=1)
+Pandas(even=6, odd=5)
+Pandas(even=90, odd=9)
+Pandas(even=10, odd=19)
+Pandas(even=44, odd=27)
+
+In [25]: for tup in df.itertuples(index=False, name="Number"):
+    ...:     print(tup)
+    ...: 
+Number(even=2, odd=1)
+Number(even=6, odd=5)
+Number(even=90, odd=9)
+Number(even=10, odd=19)
+Number(even=44, odd=27)
+```
