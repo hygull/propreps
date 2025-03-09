@@ -1536,3 +1536,48 @@ In [28]: for tup in df.itertuples(index=False, name="Number"):
 19 19
 27 27
 ```
+
+```python
+In [1]: df = pd.DataFrame({"even": [2, 6, 90, 10, 44], "odd": [1, 5, 9, 19, 27]})
+
+In [2]: df
+Out[2]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [3]: df[df["even"] > 2]
+Out[3]: 
+   even  odd
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [4]: df[df["odd"] > 2]
+Out[4]: 
+   even  odd
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [5]: df[df["odd"] < 2]
+Out[5]: 
+   even  odd
+0     2    1
+
+In [6]: df[df["even"] < 2]
+Out[6]: 
+Empty DataFrame
+Columns: [even, odd]
+Index: []
+
+In [7]: df[df["even"] == 2]
+Out[7]: 
+   even  odd
+0     2    1
+```
