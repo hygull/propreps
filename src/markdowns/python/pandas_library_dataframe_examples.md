@@ -1581,3 +1581,80 @@ Out[7]:
    even  odd
 0     2    1
 ```
+
+```python
+In [8]: df
+Out[8]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [9]: df.apply(lambda x: [1, 2], axis=1)
+Out[9]: 
+0    [1, 2]
+1    [1, 2]
+2    [1, 2]
+3    [1, 2]
+4    [1, 2]
+dtype: object
+
+In [10]: df.apply(lambda x: [1, 2], axis=0)
+Out[10]: 
+   even  odd
+0     1    1
+1     2    2
+
+In [11]: df.apply(lambda x: [13, 22, 99], axis=0)
+Out[11]: 
+   even  odd
+0    13   13
+1    22   22
+2    99   99
+
+In [12]: import numpy as np
+
+In [13]: df.apply(np.sum, axis=0)
+Out[13]: 
+even    152
+odd      61
+dtype: int64
+
+In [14]: df.apply(np.sum, axis=1)
+Out[14]: 
+0     3
+1    11
+2    99
+3    29
+4    71
+dtype: int64
+
+In [15]: df
+Out[15]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [16]: df.apply(np.sqrt, axis=0)
+Out[16]: 
+       even       odd
+0  1.414214  1.000000
+1  2.449490  2.236068
+2  9.486833  3.000000
+3  3.162278  4.358899
+4  6.633250  5.196152
+
+In [17]: df.apply(np.sqrt, axis=1)
+Out[17]: 
+       even       odd
+0  1.414214  1.000000
+1  2.449490  2.236068
+2  9.486833  3.000000
+3  3.162278  4.358899
+4  6.633250  5.196152
+```
