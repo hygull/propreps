@@ -1687,3 +1687,89 @@ In [7]: df.iat[3, 1]
 Out[7]: 19
 ```
 
+```python
+In [8]: df.iat[3, 1] = 999
+
+In [9]: df
+Out[9]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10  999
+4    44   27
+
+In [10]: df.at[2, "odd"] = 191
+
+In [11]: df
+Out[11]: 
+   even  odd
+0     2    1
+1     6    5
+2    90  191
+3    10  999
+4    44   27
+```
+
+```python
+In [13]: df
+Out[13]: 
+   even  odd
+0     2    1
+1     6    5
+2    90  191
+3    10  999
+4    44   27
+
+In [14]: df.iloc[0, 1]
+Out[14]: 1
+
+In [15]: df.iat[0, 1]
+Out[15]: 1
+```
+
+```python
+In [16]: df.iloc[1:3,]
+Out[16]: 
+   even  odd
+1     6    5
+2    90  191
+
+In [17]: df.iloc[1:3, :1]
+Out[17]: 
+   even
+1     6
+2    90
+
+In [18]: df.iloc[1:3, :2]
+Out[18]: 
+   even  odd
+1     6    5
+2    90  191
+
+In [19]: df.iloc[1:3, 0:2]
+Out[19]: 
+   even  odd
+1     6    5
+2    90  191
+
+In [20]: df.loc[1:3]
+Out[20]: 
+   even  odd
+1     6    5
+2    90  191
+3    10  999
+
+In [22]: df.loc[1:3, "odd":"even"]
+Out[22]: 
+Empty DataFrame
+Columns: []
+Index: [1, 2, 3]
+
+In [23]: df.loc[1:3, "even": "odd"]
+Out[23]: 
+   even  odd
+1     6    5
+2    90  191
+3    10  999
+```
