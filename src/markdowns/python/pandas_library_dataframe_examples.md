@@ -1773,3 +1773,99 @@ Out[23]:
 2    90  191
 3    10  999
 ```
+
+```python
+In [1]: df = pd.DataFrame({"even": [2, 6, 90, 10, 44], "odd": [1, 5, 9, 19, 27]})
+
+In [2]: df
+Out[2]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [3]: df.get(["even"])
+Out[3]: 
+   even
+0     2
+1     6
+2    90
+3    10
+4    44
+
+In [4]: df.get(["even", "odd"])
+Out[4]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [6]: df[["even", "odd"]]
+Out[6]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+
+In [7]: df[["even"]]
+Out[7]: 
+   even
+0     2
+1     6
+2    90
+3    10
+4    44
+
+In [8]: df[["odd"]]
+Out[8]: 
+   odd
+0    1
+1    5
+2    9
+3   19
+4   27
+```
+
+```python
+In [9]: df.get("odd")
+Out[9]: 
+0     1
+1     5
+2     9
+3    19
+4    27
+Name: odd, dtype: int64
+
+In [10]: df.get("even")
+Out[10]: 
+0     2
+1     6
+2    90
+3    10
+4    44
+Name: even, dtype: int64
+
+In [11]: df.get(["odd", "even"])
+Out[11]: 
+   odd  even
+0    1     2
+1    5     6
+2    9    90
+3   19    10
+4   27    44
+
+In [12]: df.get(["even", "odd"])
+Out[12]: 
+   even  odd
+0     2    1
+1     6    5
+2    90    9
+3    10   19
+4    44   27
+```
