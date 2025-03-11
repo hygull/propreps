@@ -78,3 +78,68 @@ c -> 30
 d -> 15
 args -> (80, 90, 23)
 ```
+
+```python
+In [14]: def print_numbers(a, b, c, d, **kwargs):
+    ...:     # All positional arguments
+    ...:     print("a ->", a)
+    ...:     print("b ->", b)
+    ...:     print("c ->", c)
+    ...:     print("d ->", d)
+    ...:     print("kwargs ->", kwargs)
+    ...: 
+```
+
+```python
+In [15]: print_numbers(c=30, d=40, b=20, a=10)
+a -> 10
+b -> 20
+c -> 30
+d -> 40
+kwargs -> {}
+```
+
+```python
+In [16]: print_numbers(c=30, d=40, b=20, a=10, e=90)
+a -> 10
+b -> 20
+c -> 30
+d -> 40
+kwargs -> {'e': 90}
+```
+
+```python
+In [19]: print_numbers(c=30, d=40, b=20, a=10, e=90, f=101)
+a -> 10
+b -> 20
+c -> 30
+d -> 40
+kwargs -> {'e': 90, 'f': 101}
+```
+
+```python
+In [20]: print_numbers(c=30, d=40, b=20, a=10, e=90, f=101, num1=44)
+a -> 10
+b -> 20
+c -> 30
+d -> 40
+kwargs -> {'e': 90, 'f': 101, 'num1': 44}
+```
+
+```python
+In [21]: print_numbers(c=30, d=40, b=20, a=10, e=90, f=101, num1=44, even_num=2)
+a -> 10
+b -> 20
+c -> 30
+d -> 40
+kwargs -> {'e': 90, 'f': 101, 'num1': 44, 'even_num': 2}
+```
+
+```python
+In [22]: print_numbers(c=30, d=40, b=20, a=10, e=90, f=101, num1=44, even_num=2, odd_num=90)
+a -> 10
+b -> 20
+c -> 30
+d -> 40
+kwargs -> {'e': 90, 'f': 101, 'num1': 44, 'even_num': 2, 'odd_num': 90}
+```
