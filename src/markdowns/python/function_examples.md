@@ -80,8 +80,7 @@ args -> (80, 90, 23)
 ```
 
 ```python
-In [14]: def print_numbers(a, b, c, d, **kwargs):
-    ...:     # All positional arguments
+In [14]: def print_numbers(a, b, c, d, **kwargs): # Arbitrary keyword arguments
     ...:     print("a ->", a)
     ...:     print("b ->", b)
     ...:     print("c ->", c)
@@ -142,4 +141,61 @@ b -> 20
 c -> 30
 d -> 40
 kwargs -> {'e': 90, 'f': 101, 'num1': 44, 'even_num': 2, 'odd_num': 90}
+```
+
+```python
+In [23]: def print_numbers(a=10, b=40, c=60, d=100): # Default parameters
+    ...:     print("a ->", a)
+    ...:     print("b ->", b)
+    ...:     print("c ->", c)
+    ...:     print("d ->", d)
+    ...: 
+
+In [24]: print_numbers()
+a -> 10
+b -> 40
+c -> 60
+d -> 100
+
+In [25]: print_numbers(a=777)
+a -> 777
+b -> 40
+c -> 60
+d -> 100
+
+In [26]: print_numbers(b=999)
+a -> 10
+b -> 999
+c -> 60
+d -> 100
+
+In [27]: print_numbers(c=666)
+a -> 10
+b -> 40
+c -> 666
+d -> 100
+
+In [28]: print_numbers(d=222)
+a -> 10
+b -> 40
+c -> 60
+d -> 222
+
+In [29]: print_numbers(a=444, d=222)
+a -> 444
+b -> 40
+c -> 60
+d -> 222
+
+In [30]: print_numbers(a=444, d=222, b=111)
+a -> 444
+b -> 111
+c -> 60
+d -> 222
+
+In [31]: print_numbers(a=444, d=222, b=111, c=888)
+a -> 444
+b -> 111
+c -> 888
+d -> 222
 ```
