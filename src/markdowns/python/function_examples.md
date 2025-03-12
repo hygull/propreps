@@ -288,3 +288,76 @@ Cell In[46], line 1
 
 TypeError: print_numbers() takes 0 positional arguments but 2 were given
 ```
+
+### To know more about the different use cases of calling the function
+
+```python
+In [47]: def print_numbers(a, b, c, d):
+    ...:     print("a ->", a)
+    ...:     print("b ->", b)
+    ...:     print("c ->", c)
+    ...:     print("d ->", d)
+    ...: 
+
+In [48]: print_numbers(a=10, b=20, c=30, d=40)
+a -> 10
+b -> 20
+c -> 30
+d -> 40
+```
+
+```python
+In [49]: print_numbers(100, 200, c=30, d=40)
+a -> 100
+b -> 200
+c -> 30
+d -> 40
+```
+
+```python
+In [50]: print_numbers(100, 200, 300, d=40)
+a -> 100
+b -> 200
+c -> 300
+d -> 40
+```
+
+```python
+In [51]: print_numbers(100, 200, 300, 400)
+a -> 100
+b -> 200
+c -> 300
+d -> 400
+```
+
+```python
+In [52]: print_numbers(a=100, 200, 300, 400)
+  Cell In[52], line 1
+    print_numbers(a=100, 200, 300, 400)
+                                      ^
+SyntaxError: positional argument follows keyword argument
+```
+
+```python
+In [53]: print_numbers(d=111, b=222, a=444, c=555)
+a -> 444
+b -> 222
+c -> 555
+d -> 111
+```
+
+```python
+In [54]: print_numbers(d=111, b=222, a=444, c=555, d=90)
+  Cell In[54], line 1
+    print_numbers(d=111, b=222, a=444, c=555, d=90)
+                                              ^
+SyntaxError: keyword argument repeated: d
+```
+
+```python
+In [55]: print_numbers(111, b=222, a=444, c=555, a=90)
+  Cell In[55], line 1
+    print_numbers(111, b=222, a=444, c=555, a=90)
+                                            ^
+SyntaxError: keyword argument repeated: a
+```
