@@ -199,3 +199,51 @@ b -> 111
 c -> 888
 d -> 222
 ```
+
+### Positional-only arguments
+
+```python
+In [34]: def print_numbers(a, b):
+    ...:     print("a ->", a)
+    ...:     print("b ->", b)
+    ...: 
+
+In [35]: print_numbers(a=444, b=222)
+a -> 444
+b -> 222
+```
+
+```python
+In [36]: # Positional-only arguments
+
+In [37]: def print_numbers(a, b, /):
+    ...:     print("a ->", a)
+    ...:     print("b ->", b)
+    ...: 
+```
+
+```python
+In [38]: print_numbers(a=444, b=222)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[38], line 1
+----> 1 print_numbers(a=444, b=222)
+
+TypeError: print_numbers() got some positional-only arguments passed as keyword arguments: 'a, b'
+```
+
+```python
+In [39]: print_numbers(444, 222)
+a -> 444
+b -> 222
+```
+
+```python
+In [40]: print_numbers(444, b=222)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[40], line 1
+----> 1 print_numbers(444, b=222)
+
+TypeError: print_numbers() got some positional-only arguments passed as keyword arguments: 'b'
+```
