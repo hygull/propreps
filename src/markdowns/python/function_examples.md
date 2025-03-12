@@ -247,3 +247,44 @@ Cell In[40], line 1
 
 TypeError: print_numbers() got some positional-only arguments passed as keyword arguments: 'b'
 ```
+
+### Keyword-only arguments
+
+```python
+In [41]: # Keyword-only arguments
+
+In [42]: def print_numbers(*, a, b):
+    ...:     print("a ->", a)
+    ...:     print("b ->", b)
+    ...: 
+
+In [43]: print_numbers(444, b=222)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[43], line 1
+----> 1 print_numbers(444, b=222)
+
+TypeError: print_numbers() takes 0 positional arguments but 1 positional argument (and 1 keyword-only argument) were given
+```
+
+```python
+In [44]: print_numbers(a=444, b=222)
+a -> 444
+b -> 222
+```
+
+```python
+In [45]: print_numbers(b=333, a=888)
+a -> 888
+b -> 333
+```
+
+```python
+In [46]: print_numbers(1, 5)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[46], line 1
+----> 1 print_numbers(1, 5)
+
+TypeError: print_numbers() takes 0 positional arguments but 2 were given
+```
