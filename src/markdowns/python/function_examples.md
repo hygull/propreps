@@ -200,7 +200,7 @@ c -> 888
 d -> 222
 ```
 
-### Positional-only arguments
+### Positional-Only arguments
 
 ```python
 In [34]: def print_numbers(a, b):
@@ -214,7 +214,7 @@ b -> 222
 ```
 
 ```python
-In [36]: # Positional-only arguments
+In [36]: # Positional-Only arguments
 
 In [37]: def print_numbers(a, b, /):
     ...:     print("a ->", a)
@@ -229,7 +229,7 @@ TypeError                                 Traceback (most recent call last)
 Cell In[38], line 1
 ----> 1 print_numbers(a=444, b=222)
 
-TypeError: print_numbers() got some positional-only arguments passed as keyword arguments: 'a, b'
+TypeError: print_numbers() got some positional-Only arguments passed as keyword arguments: 'a, b'
 ```
 
 ```python
@@ -245,13 +245,13 @@ TypeError                                 Traceback (most recent call last)
 Cell In[40], line 1
 ----> 1 print_numbers(444, b=222)
 
-TypeError: print_numbers() got some positional-only arguments passed as keyword arguments: 'b'
+TypeError: print_numbers() got some positional-Only arguments passed as keyword arguments: 'b'
 ```
 
-### Keyword-only arguments
+### Keyword-Only arguments
 
 ```python
-In [41]: # Keyword-only arguments
+In [41]: # Keyword-Only arguments
 
 In [42]: def print_numbers(*, a, b):
     ...:     print("a ->", a)
@@ -264,7 +264,7 @@ TypeError                                 Traceback (most recent call last)
 Cell In[43], line 1
 ----> 1 print_numbers(444, b=222)
 
-TypeError: print_numbers() takes 0 positional arguments but 1 positional argument (and 1 keyword-only argument) were given
+TypeError: print_numbers() takes 0 positional arguments but 1 positional argument (and 1 keyword-Only argument) were given
 ```
 
 ```python
@@ -360,4 +360,49 @@ In [55]: print_numbers(111, b=222, a=444, c=555, a=90)
     print_numbers(111, b=222, a=444, c=555, a=90)
                                             ^
 SyntaxError: keyword argument repeated: a
+```
+
+### Combine Positional-Only and Keyword-Only
+
+```python
+In [58]: def print_numbers(a, b, /, *, c, d):
+    ...:     print("a ->", a)
+    ...:     print("b ->", b)
+    ...:     print("c ->", c)
+    ...:     print("d ->", d)
+    ...: 
+
+In [59]: print_numbers(a=111, b=222, d=444, c=555)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[59], line 1
+----> 1 print_numbers(a=111, b=222, d=444, c=555)
+```
+
+```python
+TypeError: print_numbers() got some positional-only arguments passed as keyword arguments: 'a, b'
+
+In [60]: print_numbers(111, 222, d=444, c=555)
+a -> 111
+b -> 222
+c -> 555
+d -> 444
+```
+
+```python
+In [61]: print_numbers(111, 222, c=444, d=555)
+a -> 111
+b -> 222
+c -> 444
+d -> 555
+```
+
+```python
+In [62]: print_numbers(111, 222, 444, d=555)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[62], line 1
+----> 1 print_numbers(111, 222, 444, d=555)
+
+TypeError: print_numbers() takes 2 positional arguments but 3 positional arguments (and 1 keyword-only argument) were given
 ```
