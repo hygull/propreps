@@ -22,3 +22,20 @@ In [7]: get_sum(100, 300)
 Out[7]: 400
 ```
 
+```python
+In [15]: print_numbers = lambda even, odd, temp: print(f"odd -> {odd}, even ->{even}, temp -> {temp}")
+
+In [16]: print_numbers(12, 45, 67.0)
+odd -> 45, even ->12, temp -> 67.0
+```
+
+```python
+In [21]: def get_greeter(greet_beginner):
+    ...:     return lambda fullname: f"%s {fullname}! How are you doing?" % (greet_beginner)
+    ...: 
+
+In [22]: greeter = get_greeter("Hi")
+
+In [23]: greeter("Rishikesh")
+Out[23]: 'Hi Rishikesh! How are you doing?'
+```
