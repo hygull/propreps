@@ -52,6 +52,14 @@ ___
 
 ![Star pattern, just 1 go](./assets/images/code_snippets/2025/star_patterns_1_go.png)
 
+# re (regex)
+
+![Regex example 01](./assets/images/code_snippets/2025/regex_example_01.png)
+
+![Regex example 02](./assets/images/code_snippets/2025/regex_example_02.png)
+
+![Regex example 03](./assets/images/code_snippets/2025/regex_example_03.png)
+
 # pandas
 
 ![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)
