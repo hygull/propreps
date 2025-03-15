@@ -102,3 +102,36 @@ In [21]: str_numbers = [int(str_number) for str_number in str_numbers if str_num
 In [22]: print(str_numbers)
 [1, 2, 417, 987, 1789, 76, 123]
 ```
+
+```python
+In [1]: import re
+
+In [2]: sentence = "Rishikesh is 32 years old!"
+
+In [3]: match = re.match(r"(\w+) (\w+) (\d+) (.*)", sentence)
+
+In [4]: match.group(0) # The entire match
+Out[4]: 'Rishikesh is 32 years old!'
+
+In [5]: match.group(1) # The 1st parenthesized group
+Out[5]: 'Rishikesh'
+
+In [6]: match.group(2) # The 2nd parenthesized group
+Out[6]: 'is'
+
+In [7]: match.group(3) # The 3rd parenthesized group
+Out[7]: '32'
+
+In [8]: match.group(4) # The 4th parenthesized group
+Out[8]: 'years old!'
+```
+
+```python
+In [9]: match.group(5)
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[9], line 1
+----> 1 match.group(5)
+
+IndexError: no such group
+```

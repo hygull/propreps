@@ -60,6 +60,8 @@ ___
 
 ![Regex example 03](./assets/images/code_snippets/2025/regex_example_03.png)
 
+![Regex example 04](./assets/images/code_snippets/2025/regex_example_04.png)
+
 # pandas
 
 ![pandas's loc](./assets/images/code_snippets/2025/pandas_loc.png)
