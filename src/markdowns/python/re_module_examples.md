@@ -135,3 +135,38 @@ Cell In[9], line 1
 
 IndexError: no such group
 ```
+
+```python
+In [1]: import re
+
+In [2]: sentence = "Rishikesh is 32 years old!"
+
+In [3]: match = re.match(r"\d+", sentence)
+
+In [4]: match
+
+In [5]: print(match)
+None
+
+In [6]: search = re.search(r"\d+", sentence)
+
+In [7]: search
+Out[7]: <re.Match object; span=(13, 15), match='32'>
+
+In [8]: search.group(0)
+Out[8]: '32'
+
+In [9]: search.group()
+Out[9]: '32'
+
+In [10]: search = re.search(r"\d+ \w+", sentence)
+
+In [11]: search
+Out[11]: <re.Match object; span=(13, 21), match='32 years'>
+
+In [12]: search.group()
+Out[12]: '32 years'
+
+In [13]: search.group(0)
+Out[13]: '32 years'
+```
