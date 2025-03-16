@@ -170,3 +170,19 @@ Out[12]: '32 years'
 In [13]: search.group(0)
 Out[13]: '32 years'
 ```
+
+```python
+In [16]: sentence = "Rishikesh is a dev. RISHIKESH likes coding in the weekend!"
+
+In [17]: re.findall(r"rishikesh", sentence)
+Out[17]: []
+
+In [18]: re.findall(r"Rishikesh", sentence)
+Out[18]: ['Rishikesh']
+
+In [19]: re.findall(r"RISHIKESH", sentence)
+Out[19]: ['RISHIKESH']
+
+In [20]: re.findall(r"RISHIKESH", sentence, re.IGNORECASE)
+Out[20]: ['Rishikesh', 'RISHIKESH']
+```
