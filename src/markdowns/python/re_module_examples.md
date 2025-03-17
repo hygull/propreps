@@ -186,3 +186,37 @@ Out[19]: ['RISHIKESH']
 In [20]: re.findall(r"RISHIKESH", sentence, re.IGNORECASE)
 Out[20]: ['Rishikesh', 'RISHIKESH']
 ```
+
+```python
+In [1]: import re
+
+In [2]: sentence = "Rishikesh is 32 years old, and his birth year is 1992 and this is year 2025."
+
+In [3]: numbers = re.findall(r"\d+", sentence)
+
+In [4]: numbers
+Out[4]: ['32', '1992', '2025']
+
+In [5]: numbers = [number for number in numbers]
+
+In [6]: numbers
+Out[6]: ['32', '1992', '2025']
+
+In [7]: numbers = [int(number) for number in numbers]
+
+In [8]: numbers
+Out[8]: [32, 1992, 2025]
+
+In [9]: numbers = [float(number) for number in numbers]
+
+In [10]: numbers
+Out[10]: [32.0, 1992.0, 2025.0]
+
+In [11]: numbers = [bool(number) for number in numbers]
+
+In [12]: numbers
+Out[12]: [True, True, True]
+
+In [13]: sum(numbers)
+Out[13]: 3
+```
