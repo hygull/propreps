@@ -361,3 +361,63 @@ In [13]: for tup in zip_obj:
     ...:     print(tup)
     ...: 
 ```
+
+```python
+In [1]: points = set()
+
+In [2]: points
+Out[2]: set()
+
+In [3]: points.add(9)
+
+In [4]: points
+Out[4]: {9}
+
+In [5]: points.add(10)
+
+In [6]: points
+Out[6]: {9, 10}
+
+In [7]: sum(points)
+Out[7]: 19
+
+In [8]: points.pop()
+Out[8]: 9
+
+In [9]: points.pop()
+Out[9]: 10
+```
+
+```python
+In [11]: points = {2, 0, 5, 3, -1, 6, 8, 91, 100}
+
+In [12]: points
+Out[12]: {-1, 0, 2, 3, 5, 6, 8, 91, 100}
+
+In [13]: points.pop()
+Out[13]: 0
+
+In [14]: points.pop()
+Out[14]: 2
+
+In [15]: points.pop()
+Out[15]: 3
+
+In [16]: points.pop()
+Out[16]: 100
+
+In [17]: points.pop()
+Out[17]: 5
+
+In [18]: points.pop()
+Out[18]: 6
+
+In [19]: points.pop()
+Out[19]: 8
+
+In [20]: points.pop()
+Out[20]: 91
+
+In [21]: points.pop()
+Out[21]: -1
+```
