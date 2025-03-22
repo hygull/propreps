@@ -588,3 +588,61 @@ Out[9]: 99
 In [10]: data
 Out[10]: {'A': 12, 'B': 89, 'C': 99}
 ```
+
+```python
+In [12]: data.update({"D": data.pop("C") + 1})
+
+In [13]: data
+Out[13]: {'A': 12, 'B': 89, 'D': 100}
+```
+
+```python
+In [16]: def f(B, A, D):
+    ...:     print("D ->", D)
+    ...:     print("B ->", B)
+    ...:     print("A ->", A)
+    ...: 
+
+In [17]: f(**data)
+D -> 100
+B -> 89
+A -> 12
+```
+
+```python
+In [18]: def f(B, A, D, /):
+    ...:     print("D ->", D)
+    ...:     print("B ->", B)
+    ...:     print("A ->", A)
+    ...: 
+
+In [19]: f(**data)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[19], line 1
+----> 1 f(**data)
+
+TypeError: f() got some positional-only arguments passed as keyword arguments: 'B, A, D'
+```
+
+```python
+In [20]: f(10, 56, 77)
+D -> 77
+B -> 10
+A -> 56
+
+In [21]: f(*[11, 33, 103])
+D -> 103
+B -> 11
+A -> 33
+
+In [22]: f(*(12, 3, 13))
+D -> 13
+B -> 12
+A -> 3
+
+In [23]: f(*{14, 32, 9})
+D -> 14
+B -> 32
+A -> 9
+```
