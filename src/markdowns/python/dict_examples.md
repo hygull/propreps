@@ -559,3 +559,32 @@ Out[21]: 'Agrawani'
 In [22]: all_details
 Out[22]: {'details': {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}}
 ```
+
+```python
+In [1]: data = {"A": 12, "B": 89, "C": 90}
+
+In [2]: c = data.pop("C")
+
+In [3]: c
+Out[3]: 90
+
+In [4]: data
+Out[4]: {'A': 12, 'B': 89}
+
+In [5]: b = data.get("B")
+
+In [6]: b
+Out[6]: 89
+
+In [7]: data
+Out[7]: {'A': 12, 'B': 89}
+
+In [8]: data.setdefault("C", 99)
+Out[8]: 99
+
+In [9]: data.setdefault("C", 99)
+Out[9]: 99
+
+In [10]: data
+Out[10]: {'A': 12, 'B': 89, 'C': 99}
+```
