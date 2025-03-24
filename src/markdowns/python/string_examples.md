@@ -352,3 +352,51 @@ Out[7]: '+-+-+-+-+-+-+-+'
 In [8]: s[-1:]
 Out[8]: '-'
 ```
+
+```python
+In [1]: "AbcXyz".index("A") + 1
+Out[1]: 1
+
+In [2]: "AbcXyz".index("A")
+Out[2]: 0
+
+In [3]: "AbcXyz".index("X") + 3
+Out[3]: 6
+
+In [4]: "AbcXyz".index("A")
+Out[4]: 0
+
+In [5]: "AbcXyz".index("X")
+Out[5]: 3
+```
+
+```python
+In [6]: "Python"[: -2]
+Out[6]: 'Pyth'
+
+In [7]: "Python"[: -1]
+Out[7]: 'Pytho'
+
+In [8]: "Python"[: -1] + "nest"[:]
+Out[8]: 'Pythonest'
+
+In [9]: "Python"[: -1] + "nest"[1:2]
+Out[9]: 'Pythoe'
+
+In [10]: "Python"[: -1] + "nest"[0:1]
+Out[10]: 'Python'
+```
+
+```python
+In [11]: id("Python"[0])
+Out[11]: 4357474784
+
+In [12]: "Python"[0]
+Out[12]: 'P'
+
+In [13]: id("Python"[0])
+Out[13]: 4357474784
+
+In [14]: id("Python")
+Out[14]: 4357096560
+```
