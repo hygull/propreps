@@ -90,3 +90,27 @@ Out[13]: True
 In [14]: "R" in "Rishikesh"
 Out[14]: True
 ```
+
+```python
+In [1]: words = ("This", "Friday", "Was Finalised", "For Release!")
+
+In [2]: words2 = ("But", "That shpuld not be done!")
+
+In [3]: words
+Out[3]: ('This', 'Friday', 'Was Finalised', 'For Release!')
+
+In [4]: words2
+Out[4]: ('But', 'That shpuld not be done!')
+
+In [5]: words + words2
+Out[5]: 
+('This',
+ 'Friday',
+ 'Was Finalised',
+ 'For Release!',
+ 'But',
+ 'That shpuld not be done!')
+
+In [6]: " ".join(words + words2)
+Out[6]: 'This Friday Was Finalised For Release! But That shpuld not be done!'
+```
