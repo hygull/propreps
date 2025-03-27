@@ -400,3 +400,35 @@ Out[13]: 4357474784
 In [14]: id("Python")
 Out[14]: 4357096560
 ```
+
+```python
+In [2]: "3.12.1".split(".")
+Out[2]: ['3', '12', '1']
+
+In [3]: [int(number) for number in "3.12.1".split(".")]
+Out[3]: [3, 12, 1]
+
+In [4]: list(map(lambda number: int(number), "3.12.1".split(".")))
+Out[4]: [3, 12, 1]
+```
+
+```python
+In [5]: def get_number(number):
+   ...:     return int(number)
+   ...: 
+
+In [6]: list(map(get_number, "3.12.1".split(".")))
+Out[6]: [3, 12, 1]
+```
+
+```python
+
+In [7]: numbers = []
+
+In [8]: for number_as_str in "3.12.1".split("."):
+   ...:     numbers.append(int(number_as_str))
+   ...: 
+
+In [9]: numbers
+Out[9]: [3, 12, 1]
+```
