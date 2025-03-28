@@ -432,3 +432,24 @@ In [8]: for number_as_str in "3.12.1".split("."):
 In [9]: numbers
 Out[9]: [3, 12, 1]
 ```
+
+```python
+In [1]: string  = "ABC-XYZ--PQR---MNO"
+
+In [2]: string
+Out[2]: 'ABC-XYZ--PQR---MNO'
+
+In [3]: string.split("-")
+Out[3]: ['ABC', 'XYZ', '', 'PQR', '', '', 'MNO']
+
+In [4]: [word for word in string.split("-") if word.strip()]
+Out[4]: ['ABC', 'XYZ', 'PQR', 'MNO']
+
+In [5]: [word for word in string.split("-") if word]
+Out[5]: ['ABC', 'XYZ', 'PQR', 'MNO']
+
+In [6]: import re
+
+In [7]: re.split(r"[\-]+", string)
+Out[7]: ['ABC', 'XYZ', 'PQR', 'MNO']
+```
