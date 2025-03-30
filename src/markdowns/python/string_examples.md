@@ -453,3 +453,30 @@ In [6]: import re
 In [7]: re.split(r"[\-]+", string)
 Out[7]: ['ABC', 'XYZ', 'PQR', 'MNO']
 ```
+
+```python
+In [1]: "NAVRATRI-2025"
+Out[1]: 'NAVRATRI-2025'
+
+In [2]: " NAVRATRI-2025 "
+Out[2]: ' NAVRATRI-2025 '
+
+In [3]: " NAVRATRI-2025 ".strip()
+Out[3]: 'NAVRATRI-2025'
+
+In [4]: " NAVRATRI-2025 ".strip().split('-')
+Out[4]: ['NAVRATRI', '2025']
+
+In [5]: " NAVRATRI-2025 ".strip().split()
+Out[5]: ['NAVRATRI-2025']
+
+In [6]: " NAVRATRI-2025 ".strip().split('-')[0]
+Out[6]: 'NAVRATRI'
+
+In [7]: " NAVRATRI-2025 ".strip().split('-')[1]
+Out[7]: '2025'
+
+In [8]: int(" NAVRATRI-2025 ".strip().split('-')[1])
+Out[8]: 2025
+```
+
