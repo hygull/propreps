@@ -646,3 +646,42 @@ D -> 14
 B -> 32
 A -> 9
 ```
+
+
+```python
+In [1]: {"num1": 12, "num2": 89}
+Out[1]: {'num1': 12, 'num2': 89}
+
+In [2]: {"num1": 12, "num2": 89}.keys()
+Out[2]: dict_keys(['num1', 'num2'])
+
+In [3]: {"num1": 12, "num2": 89}.values()
+Out[3]: dict_values([12, 89])
+
+In [4]: tuple({"num1": 12, "num2": 89}.values())
+Out[4]: (12, 89)
+
+In [5]: set({"num1": 12, "num2": 89}.values())
+Out[5]: {12, 89}
+
+In [6]: list({"num1": 12, "num2": 89}.keys())
+Out[6]: ['num1', 'num2']
+
+In [7]: frozenset({"num1": 12, "num2": 89}.keys())
+Out[7]: frozenset({'num1', 'num2'})
+
+In [8]: set({"num1": 12, "num2": 89}.keys())
+Out[8]: {'num1', 'num2'}
+
+In [9]: tuple({"num1": 12, "num2": 89}.keys())
+Out[9]: ('num1', 'num2')
+
+In [10]: tuple({"num1": 12, "num2": 89}.keys()) + (1,)
+Out[10]: ('num1', 'num2', 1)
+
+In [11]: tuple({"num1": 12, "num2": 89}.keys()) + (1, 3)
+Out[11]: ('num1', 'num2', 1, 3)
+
+In [12]: tuple({"num1": 12, "num2": 89}.keys()) + (1, 5, 6)
+Out[12]: ('num1', 'num2', 1, 5, 6)
+```
