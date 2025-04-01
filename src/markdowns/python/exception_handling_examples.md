@@ -166,3 +166,43 @@ Operation done..., value = 10
 No exception occured...
 I am invincible as I am always executed...
 ```
+
+```python
+In [17]: try:
+    ...:     print("Start...")
+    ...:     value = int("Rishi")
+    ...:     print(f"Operation done..., value = {value}")
+    ...: except ValueError as error:
+    ...:     raise RuntimeError("A runtime error occured!")
+    ...: except ZeroDivisionError as error:
+    ...:     print(f"Error => {error}")
+    ...: except Exception as error:
+    ...:     print(f"Error -> {error}")
+    ...: else:
+    ...:     print("No exception occured...")
+    ...: finally:
+    ...:     print("I am invincible as I am always executed...")
+    ...: 
+Start...
+I am invincible as I am always executed...
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[17], line 3
+      2 print("Start...")
+----> 3 value = int("Rishi")
+      4 print(f"Operation done..., value = {value}")
+
+ValueError: invalid literal for int() with base 10: 'Rishi'
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError                              Traceback (most recent call last)
+Cell In[17], line 6
+      4     print(f"Operation done..., value = {value}")
+      5 except ValueError as error:
+----> 6     raise RuntimeError("A runtime error occured!")
+      7 except ZeroDivisionError as error:
+      8     print(f"Error => {error}")
+
+RuntimeError: A runtime error occured!
+```
