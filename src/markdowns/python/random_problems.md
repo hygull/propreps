@@ -160,3 +160,18 @@ Out[21]: 'C'
 In [22]: d
 Out[22]: 'D'
 ```
+
+```python
+In [23]: a, b, c, d = list("ABCD")[::-1]
+
+In [24]: d, c, b, a
+Out[24]: ('A', 'B', 'C', 'D')
+
+In [25]: d, c, b, a,
+Out[25]: ('A', 'B', 'C', 'D')
+
+In [26]: a, b, c, d = list("ABCD")
+
+In [27]: d, c, b, a,
+Out[27]: ('D', 'C', 'B', 'A')
+```
