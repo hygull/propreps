@@ -192,3 +192,23 @@ Out[4]: [1, 3, 5, 7, 9]
 In [5]: {key: value for key, value in zip(["name", "age"], ["Rishikesh Agrawani", 32])}
 Out[5]: {'name': 'Rishikesh Agrawani', 'age': 32}
 ```
+
+```python
+In [6]: zip(["name", "age"], ["Rishikesh Agrawani", 32])
+Out[6]: <zip at 0x12c0efd80>
+
+In [7]: list(zip(["name", "age"], ["Rishikesh Agrawani", 32]))
+Out[7]: [('name', 'Rishikesh Agrawani'), ('age', 32)]
+
+In [8]: for tup in zip(["name", "age"], ["Rishikesh Agrawani", 32]):
+   ...:     print(tup)
+   ...: 
+('name', 'Rishikesh Agrawani')
+('age', 32)
+
+In [9]: tuple(zip(["name", "age"], ["Rishikesh Agrawani", 32]))
+Out[9]: (('name', 'Rishikesh Agrawani'), ('age', 32))
+
+In [10]: dict(zip(["name", "age"], ["Rishikesh Agrawani", 32]))
+Out[10]: {'name': 'Rishikesh Agrawani', 'age': 32}
+```
