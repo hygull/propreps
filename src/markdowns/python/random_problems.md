@@ -175,3 +175,20 @@ In [26]: a, b, c, d = list("ABCD")
 In [27]: d, c, b, a,
 Out[27]: ('D', 'C', 'B', 'A')
 ```
+
+```python
+In [1]: evens = [number for number in [1, 3, 4, 5, 6, 7, 8, 9] if number % 2 == 0]
+
+In [2]: evens
+Out[2]: [4, 6, 8]
+
+In [3]: odds = [number for number in [1, 3, 4, 5, 6, 7, 8, 9] if number % 2 != 0]
+
+In [4]: odds
+Out[4]: [1, 3, 5, 7, 9]
+```
+
+```python
+In [5]: {key: value for key, value in zip(["name", "age"], ["Rishikesh Agrawani", 32])}
+Out[5]: {'name': 'Rishikesh Agrawani', 'age': 32}
+```
