@@ -226,3 +226,17 @@ Out[13]: {'evens': (2, 4), 'odds': (5, 9)}
 In [14]: tuple(zip(["evens", "odds"], zip([2, 5], [4, 9])))
 Out[14]: (('evens', (2, 4)), ('odds', (5, 9)))
 ```
+
+```python
+In [1]: list(dict([("name", 'Rishikesh Agrawani'), ('age', 32)]))
+Out[1]: ['name', 'age']
+
+In [2]: dict([("name", 'Rishikesh Agrawani'), ('age', 32)])
+Out[2]: {'name': 'Rishikesh Agrawani', 'age': 32}
+
+In [3]: list(dict([("name", 'Rishikesh Agrawani'), ('age', 32)]).keys())
+Out[3]: ['name', 'age']
+
+In [4]: list(dict([("name", 'Rishikesh Agrawani'), ('age', 32)]).values())
+Out[4]: ['Rishikesh Agrawani', 32]
+```
