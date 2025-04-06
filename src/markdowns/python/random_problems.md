@@ -212,3 +212,17 @@ Out[9]: (('name', 'Rishikesh Agrawani'), ('age', 32))
 In [10]: dict(zip(["name", "age"], ["Rishikesh Agrawani", 32]))
 Out[10]: {'name': 'Rishikesh Agrawani', 'age': 32}
 ```
+
+```python
+In [11]: zip(["evens", "odds"], zip([2, 5], [4, 9]))
+Out[11]: <zip at 0x10ff8a540>
+
+In [12]: list(zip(["evens", "odds"], zip([2, 5], [4, 9])))
+Out[12]: [('evens', (2, 4)), ('odds', (5, 9))]
+
+In [13]: dict(zip(["evens", "odds"], zip([2, 5], [4, 9])))
+Out[13]: {'evens': (2, 4), 'odds': (5, 9)}
+
+In [14]: tuple(zip(["evens", "odds"], zip([2, 5], [4, 9])))
+Out[14]: (('evens', (2, 4)), ('odds', (5, 9)))
+```
