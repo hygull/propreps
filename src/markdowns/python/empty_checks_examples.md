@@ -32,3 +32,28 @@ In [9]: from collections import OrderedDict
 In [10]: OrderedDict() == dict()
 Out[10]: True
 ```
+
+```python
+
+In [11]: from collections import Counter
+
+In [12]: Counter() == dict()
+Out[12]: True
+
+In [13]: Counter() == OrderedDict()
+Out[13]: True
+```
+
+```python
+
+In [14]: from collections import defaultdict
+
+In [15]: defaultdict() == dict()
+Out[15]: True
+
+In [16]: defaultdict() == dict() == Counter()
+Out[16]: True
+
+In [17]: defaultdict() == dict() == Counter() == OrderedDict()
+Out[17]: True
+```
