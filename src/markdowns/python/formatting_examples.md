@@ -54,3 +54,31 @@ Out[13]:
 In [14]: "{full_name} is the combination of {first_name} and {last_name}".format(**kwargs)
 Out[14]: 'Rishikesh Agrawani is the combination of Rishikesh and Agrawani'
 ```
+
+### Error case -> KeyError
+
+```python
+In [16]: kwargs
+Out[16]: {'first_name': 'Rishikesh', 'last_name': 'Agrawani'}
+
+In [17]: "{full_name} is the combination of {first_name} and {last_name}".format(**kwargs)
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-17-4d2b69a71c4c> in <module>
+----> 1 "{full_name} is the combination of {first_name} and {last_name}".format(**kwargs)
+
+KeyError: 'full_name'
+```
+
+```python
+In [18]: kwargs = dict(first_name=first_name, last_name=last_name, full_name=f"{first_name} {last_name}")
+
+In [19]: kwargs
+Out[19]: 
+{'first_name': 'Rishikesh',
+ 'last_name': 'Agrawani',
+ 'full_name': 'Rishikesh Agrawani'}
+
+In [20]: "{full_name} is the combination of {first_name} and {last_name}".format(**kwargs)
+Out[20]: 'Rishikesh Agrawani is the combination of Rishikesh and Agrawani'
+```
