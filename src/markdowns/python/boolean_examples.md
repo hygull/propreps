@@ -74,3 +74,44 @@ In [47]: bool(0 + 1j)
 Out[47]: True
 ```
 
+```python
+In [1]: bool("")
+Out[1]: False
+
+In [2]: bool("-")
+Out[2]: True
+
+In [3]: bool(1)
+Out[3]: True
+
+In [4]: bool(0)
+Out[4]: False
+
+In [5]: bool(-1)
+Out[5]: True
+```
+
+```python
+In [7]: bool(10)
+Out[7]: True
+```
+
+```python
+In [8]: bool([1])
+Out[8]: True
+
+In [9]: bool([])
+Out[9]: False
+
+In [10]: bool(())
+Out[10]: False
+
+In [11]: bool(set())
+Out[11]: False
+
+In [12]: bool(list())
+Out[12]: False
+
+In [13]: bool(tuple())
+Out[13]: False
+```
