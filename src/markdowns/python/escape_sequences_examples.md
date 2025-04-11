@@ -59,3 +59,51 @@ In [15]: print("Abc\b\b\b\b\bDef")
 Def
 ```
 
+### Use of `\t`
+
+```python
+In [16]: print("Rishi\tkesh")
+Rishi kesh
+```
+
+### Use of `\r`
+
+```python
+In [17]: print("Rishi\rkesh")
+keshi
+
+In [18]: print("Rishi\rkesh\r")
+keshi
+
+In [19]: print("Rishikesh\r")
+Rishikesh
+
+In [20]: print("Rishikesh\rAgr")
+Agrhikesh
+```
+
+### Use of `\f`
+
+```python
+In [21]: print("Rishike\fsh")
+Rishike
+       sh
+
+In [22]: print("Rishike\fsh\fis\fgoing\fto\fdo")
+Rishike
+       sh
+         is
+           going
+                to
+                  do
+
+In [23]: print("Rishikesh\fis\fgoing\fto\fdo\fthe\fdeployment!")
+Rishikesh
+         is
+           going
+                to
+                  do
+                    the
+                       deployment!
+```
+```
