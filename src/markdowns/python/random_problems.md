@@ -240,3 +240,20 @@ Out[3]: ['name', 'age']
 In [4]: list(dict([("name", 'Rishikesh Agrawani'), ('age', 32)]).values())
 Out[4]: ['Rishikesh Agrawani', 32]
 ```
+
+```python
+In [40]: _222 = 555
+
+In [41]: print(_222)
+555
+
+In [42]: _d1992 = 90
+
+In [43]: print(_d1992)
+90
+
+In [44]: _a, _b, _c = 89, 45, 23
+
+In [45]: print(_a, _b, _c)
+89 45 23
+```
