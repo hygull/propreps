@@ -106,4 +106,50 @@ Rishikesh
                     the
                        deployment!
 ```
+
+```python
+In [24]: "A\bishi\thj"
+Out[24]: 'A\x08ishi\thj'
+
+In [25]: print("A\bishi\thj")
+ishi  hj
+
+In [26]: "Rishi\f\fThis is"
+Out[26]: 'Rishi\x0c\x0cThis is'
+
+In [27]: print("Rishi\f\fThis is")
+Rishi
+
+     This is
+
+In [28]: print("Rishi\f\f\fThis is")
+Rishi
+
+
+     This is
+
+In [30]: print("Rishi\fThis is")
+Rishi
+     This is
+````
+
+```python
+In [31]: print("Ui\fth\n")
+Ui
+  th
+
+
+In [32]: print("Ui\fth\nK")
+Ui
+  th
+K
+
+In [33]: print("Ui\f\ntn")
+Ui
+
+tn
+
+In [34]: print("Ui\f\rtn")
+Ui
+tn
 ```
