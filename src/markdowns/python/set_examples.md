@@ -421,3 +421,71 @@ Out[20]: 91
 In [21]: points.pop()
 Out[21]: -1
 ```
+
+```python
+In [46]: for number in set([1, 5, 7, 9, 11, 45, 56, 78]):
+    ...:     print(f"number -> {number}")
+    ...: 
+number -> 1
+number -> 5
+number -> 7
+number -> 9
+number -> 11
+number -> 45
+number -> 78
+number -> 56
+
+In [47]: set([1, 5, 7, 9, 11, 45, 56, 78])
+Out[47]: {1, 5, 7, 9, 11, 45, 56, 78}
+```
+
+```python
+In [50]: frozenset([1, 5, 7, 9, 11, 45, 56, 78])
+Out[50]: frozenset({1, 5, 7, 9, 11, 45, 56, 78})
+
+In [51]: frozenset("Apple")
+Out[51]: frozenset({'A', 'e', 'l', 'p'})
+
+In [52]: for ch in frozenset("Apple"):
+    ...:     print(ch)
+    ...: 
+p
+l
+A
+e
+```
+
+```python
+In [53]: {"Apple", "Boy", "Python", "October", "My", "State"}.pop()
+Out[53]: 'My'
+
+In [54]: {"Apple", "Boy", "C", "Python", "October", "My", "State"}.pop()
+Out[54]: 'My'
+
+In [55]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "State"}.pop()
+Out[55]: 'Pi'
+
+In [56]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "D", "State"}.pop()
+Out[56]: 'Pi'
+
+In [57]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "C", "State"}.pop()
+Out[57]: 'Pi'
+
+In [58]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "Cc", "State"}.pop()
+Out[58]: 'Cc'
+
+In [59]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "pc", "State"}.pop()
+Out[59]: 'Pi'
+
+In [60]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "pc", "State"}.pop()
+Out[60]: 'Pi'
+
+In [61]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "pc", "State"}.pop()
+Out[61]: 'Pi'
+
+In [62]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "Pc", "State"}.pop()
+Out[62]: 'Pi'
+
+In [63]: {"Apple", "Boy", "C", "Python", "October", "My", "Pi", "Hi", "State"}.pop()
+Out[63]: 'Pi'
+```
