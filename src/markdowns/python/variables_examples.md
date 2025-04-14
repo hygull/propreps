@@ -33,3 +33,30 @@ NameError                                 Traceback (most recent call last)
 
 NameError: name 'ooo' is not defined
 ```
+
+```python
+In [9]: locals()["ooo"] = "BBB"
+
+In [10]: print(ooo)
+BBB
+```
+
+```python
+
+In [11]: locals()["-a"] = "BBB"
+
+In [12]: -a
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-12-bd5f19dddee1> in <module>
+----> 1 -a
+
+NameError: name 'a' is not defined
+```
+
+```python
+In [13]: locals()["_a"] = "BBB"
+
+In [14]: _a
+Out[14]: 'BBB'
+```
