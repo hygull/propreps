@@ -581,3 +581,14 @@ In [13]: ones = [int(one) for one in ones if one]
 In [14]: print(ones)
 [1, 1, 111, 1, 1, 1, 1, 1, 1, 1, 1111, 1, 11, 1, 1, 1, 1, 11, 1, 1, 1111]
 ```
+
+```python
+In [15]: "<.>".replace("<", "{").replace(">", "}")
+Out[15]: '{.}'
+
+In [16]: "<A>".replace("<", "{").replace(">", "}")
+Out[16]: '{A}'
+
+In [17]: "<'A'>".replace("<", "{").replace(">", "}")
+Out[17]: "{'A'}"
+```
