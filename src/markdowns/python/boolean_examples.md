@@ -115,3 +115,26 @@ Out[12]: False
 In [13]: bool(tuple())
 Out[13]: False
 ```
+
+```python
+In [1]: 1 + int("1")
+Out[1]: 2
+
+In [2]: 1 + bool("")
+Out[2]: 1
+
+In [3]: 1 + bool("1")
+Out[3]: 2
+
+In [4]: 1 + bool("c")
+Out[4]: 2
+
+In [5]: 1 + bool("ABC")
+Out[5]: 2
+
+In [6]: 1 + bool([])
+Out[6]: 1
+
+In [7]: 1 + bool([1, 5])
+Out[7]: 2
+```
