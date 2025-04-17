@@ -100,3 +100,34 @@ Out[11]: 45
 In [12]: now.microsecond
 Out[12]: 583385
 ```
+
+```python
+In [13]: str(now)
+Out[13]: '2025-04-17 22:19:45.583385'
+
+In [14]: print(str(now))
+2025-04-17 22:19:45.583385
+```
+
+```python
+In [15]: now.strptime
+Out[15]: <function datetime.strptime>
+
+In [16]: now.strftime
+Out[16]: <function datetime.strftime>
+
+In [17]: now.strptime("2025-02-28", "%Y-%m-%d")
+Out[17]: datetime.datetime(2025, 2, 28, 0, 0)
+
+In [18]: datetime.strptime("2025-02-28", "%Y-%m-%d")
+Out[18]: datetime.datetime(2025, 2, 28, 0, 0)
+
+In [19]: now.strftime("%Y-%m-%d")
+Out[19]: '2025-04-17'
+
+In [20]: now.strftime("%Y-%m-%d--%H:%M:%S")
+Out[20]: '2025-04-17--22:19:45'
+
+In [21]: now.strftime("%Y-%m-%d--%H:%M:%S--%f")
+Out[21]: '2025-04-17--22:19:45--583385'
+```
