@@ -131,3 +131,38 @@ Out[20]: '2025-04-17--22:19:45'
 In [21]: now.strftime("%Y-%m-%d--%H:%M:%S--%f")
 Out[21]: '2025-04-17--22:19:45--583385'
 ```
+
+```python
+In [22]: now.timetuple
+Out[22]: <function datetime.timetuple>
+
+In [23]: now.timetuple()
+Out[23]: time.struct_time(tm_year=2025, tm_mon=4, tm_mday=17, tm_hour=22, tm_min=19, tm_sec=45, tm_wday=3, tm_yday=107, tm_isdst=-1)
+
+In [24]: now.timetuple().tm_year
+Out[24]: 2025
+
+In [25]: now.timetuple().tm_mon
+Out[25]: 4
+
+In [26]: now.timetuple().tm_mday
+Out[26]: 17
+
+In [27]: now.timetuple().tm_hour
+Out[27]: 22
+
+In [28]: now.timetuple().tm_min
+Out[28]: 19
+
+In [29]: now.timetuple().tm_sec
+Out[29]: 45
+
+In [30]: now.timetuple().tm_wday
+Out[30]: 3
+
+In [31]: now.timetuple().tm_yday
+Out[31]: 107
+
+In [32]: now.timetuple().tm_isdst
+Out[32]: -1
+```
