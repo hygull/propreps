@@ -166,3 +166,42 @@ Out[31]: 107
 In [32]: now.timetuple().tm_isdst
 Out[32]: -1
 ```
+
+```python
+In [33]: now.utcnow()
+Out[33]: datetime.datetime(2025, 4, 18, 17, 40, 42, 796545)
+
+In [34]: now
+Out[34]: datetime.datetime(2025, 4, 17, 22, 19, 45, 583385)
+```
+
+```python
+In [35]: now.utctimetuple()
+Out[35]: time.struct_time(tm_year=2025, tm_mon=4, tm_mday=17, tm_hour=22, tm_min=19, tm_sec=45, tm_wday=3, tm_yday=107, tm_isdst=0)
+
+In [36]: now.timetuple()
+Out[36]: time.struct_time(tm_year=2025, tm_mon=4, tm_mday=17, tm_hour=22, tm_min=19, tm_sec=45, tm_wday=3, tm_yday=107, tm_isdst=-1)
+```
+
+```python
+In [37]: now.date()
+Out[37]: datetime.date(2025, 4, 17)
+
+In [38]: now.date().year
+Out[38]: 2025
+
+In [39]: now.date().month
+Out[39]: 4
+
+In [40]: now.date().day
+Out[40]: 17
+
+In [41]: str(now)
+Out[41]: '2025-04-17 22:19:45.583385'
+
+In [42]: str(now.date())
+Out[42]: '2025-04-17'
+
+In [43]: f"{now.date()}"
+Out[43]: '2025-04-17'
+```
