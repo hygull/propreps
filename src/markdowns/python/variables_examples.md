@@ -60,3 +60,25 @@ In [13]: locals()["_a"] = "BBB"
 In [14]: _a
 Out[14]: 'BBB'
 ```
+
+```python
+In [55]: "numbers" in locals()
+Out[55]: True
+
+In [56]: numbers
+Out[56]: [6, 8, 2, 3, 4, 5, 10, 34, 100, 45, 1, 67, 89, 1]
+
+In [57]: print(numbers)
+[6, 8, 2, 3, 4, 5, 10, 34, 100, 45, 1, 67, 89, 1]
+
+In [58]: locals().pop("numbers")
+Out[58]: [6, 8, 2, 3, 4, 5, 10, 34, 100, 45, 1, 67, 89, 1]
+
+In [59]: print(numbers)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-59-a2aabdc73a85> in <module>
+----> 1 print(numbers)
+
+NameError: name 'numbers' is not defined
+```
