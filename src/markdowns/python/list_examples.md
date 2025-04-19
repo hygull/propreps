@@ -748,3 +748,36 @@ Out[30]: [90, 5, 6, 7, 8, 9, 0, [777, 5, 6, 7, 8]]
 In [31]: l4
 Out[31]: [88, 5, 6, 7, 8, 9, 0, [777, 5, 6, 7, 8]]
 ```
+
+```python
+In [44]: numbers = [1, 4, 6, 8, 2, 3, 4, 5, 10, 34, 100, 45, 1, 67, 89, 101]
+
+In [45]: len(numbers)
+Out[45]: 16
+
+In [46]: numbers.pop()
+Out[46]: 101
+
+In [47]: print(numbers)
+[1, 4, 6, 8, 2, 3, 4, 5, 10, 34, 100, 45, 1, 67, 89]
+
+In [48]: len(numbers)
+Out[48]: 15
+
+In [49]: numbers.pop(1)
+Out[49]: 4
+
+In [50]: numbers
+Out[50]: [1, 6, 8, 2, 3, 4, 5, 10, 34, 100, 45, 1, 67, 89]
+
+In [51]: len(numbers)
+Out[51]: 14
+
+In [52]: numbers.append(numbers.pop(0))
+
+In [53]: print(numbers)
+[6, 8, 2, 3, 4, 5, 10, 34, 100, 45, 1, 67, 89, 1]
+
+In [54]: len(numbers)
+Out[54]: 14
+```
