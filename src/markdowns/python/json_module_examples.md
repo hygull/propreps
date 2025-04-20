@@ -91,3 +91,27 @@ In [10]: print(json.dumps(person, indent=4, separators=(": ", ", ")))
     }
 }
 ```
+
+```json
+In [61]: import json
+
+In [62]: details = {"first_name": "Rishikesh", "last_name": "Agrawani", "age": 32}
+
+In [63]: print(details)
+{'first_name': 'Rishikesh', 'last_name': 'Agrawani', 'age': 32}
+
+In [64]: pretty_details = json.dumps(details, indent=4)
+
+In [65]: print(type(pretty_details))
+<class 'str'>
+
+In [66]: pretty_details
+Out[66]: '{\n    "first_name": "Rishikesh",\n    "last_name": "Agrawani",\n    "age": 32\n}'
+
+In [67]: print(pretty_details)
+{
+    "first_name": "Rishikesh",
+    "last_name": "Agrawani",
+    "age": 32
+}
+```
