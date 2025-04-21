@@ -685,3 +685,21 @@ Out[11]: ('num1', 'num2', 1, 3)
 In [12]: tuple({"num1": 12, "num2": 89}.keys()) + (1, 5, 6)
 Out[12]: ('num1', 'num2', 1, 5, 6)
 ```
+
+```python
+In [1]: # Extra keys
+
+In [2]: details = {"first_name": "Rishikesh", "last_name": "Agrawani", "age": 32}
+
+In [3]: details2 = {"first_name": "Rishikesh", "last_name": "Agrawani", "occupation": "Principal Software Engineer"}
+
+In [4]: keys = set(details.keys())
+
+In [5]: keys2 = set(details2.keys())
+
+In [6]: keys - keys2
+Out[6]: {'age'}
+
+In [7]: keys2 - keys
+Out[7]: {'occupation'}
+```
