@@ -781,3 +781,25 @@ In [53]: print(numbers)
 In [54]: len(numbers)
 Out[54]: 14
 ```
+
+```python
+In [1]: l = [1, 4, 6, 7, 9]
+
+In [2]: len(l)
+Out[2]: 5
+
+In [3]: l.pop(0)
+Out[3]: 1
+
+In [4]: l.append(11)
+
+In [5]: l
+Out[5]: [4, 6, 7, 9, 11]
+
+In [6]: ret = l.append(12)
+
+In [7]: print(ret)
+None
+
+In [8]: ret
+```
