@@ -521,3 +521,67 @@ Out[73]: {7}
 In [74]: {1, 6, 7} & {12, 5}
 Out[74]: set()
 ```
+
+```python
+In [1]: numbers = {1, 5, 7, 8, 9}
+
+In [2]: numbers
+Out[2]: {1, 5, 7, 8, 9}
+
+In [3]: type(numbers)
+Out[3]: set
+
+In [4]: evens = {2, 8, 10, 4, 6, 88}
+
+In [5]: evens
+Out[5]: {2, 4, 6, 8, 10, 88}
+
+In [6]: numbers.pop()
+Out[6]: 1
+
+In [7]: numbers.pop()
+Out[7]: 5
+
+In [8]: numbers
+Out[8]: {7, 8, 9}
+
+In [9]: numbers.add(22)
+
+In [10]: numbers
+Out[10]: {7, 8, 9, 22}
+
+In [11]: numbers.add(2)
+
+In [12]: numbers
+Out[12]: {2, 7, 8, 9, 22}
+
+In [13]: numbers.add(80)
+
+In [14]: numbers
+Out[14]: {2, 7, 8, 9, 22, 80}
+
+In [15]: numbers.add(-1)
+
+In [16]: numbers
+Out[16]: {-1, 2, 7, 8, 9, 22, 80}
+
+In [17]: numbers.add(-8)
+
+In [18]: numbers
+Out[18]: {-8, -1, 2, 7, 8, 9, 22, 80}
+
+In [19]: numbers.add(-6)
+
+In [20]: numbers
+Out[20]: {-8, -6, -1, 2, 7, 8, 9, 22, 80}
+
+In [21]: numbers.add(100)
+
+In [22]: numbers
+Out[22]: {-8, -6, -1, 2, 7, 8, 9, 22, 80, 100}
+
+In [23]: numbers.add(90)
+
+In [24]: numbers
+Out[24]: {-8, -6, -1, 2, 7, 8, 9, 22, 80, 90, 100}
+```
