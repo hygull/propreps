@@ -635,3 +635,43 @@ In [13]: "<<<&gfggf<<<--->>>>gdgdg>>>".strip("><")
 Out[13]: '&gfggf<<<--->>>>gdgdg'
 ```
 
+```python
+In [1]: "JHH".lower().upper()
+Out[1]: 'JHH'
+
+In [2]: "jHq".lower().upper()
+Out[2]: 'JHQ'
+
+In [3]: "jHq".upper().lower()
+Out[3]: 'jhq'
+
+In [4]: "jHq".upper().lower().upper()
+Out[4]: 'JHQ'
+
+In [5]: "jHq".upper().lower().upper().lower()
+Out[5]: 'jhq'
+
+In [6]: "jHq".upper().lower().upper().lower().lower()
+Out[6]: 'jhq'
+
+In [7]: "jHq".upper().lower().upper().lower().lower().title()
+Out[7]: 'Jhq'
+
+In [8]: "jHq gReAT".upper().lower().upper().lower().lower().title()
+Out[8]: 'Jhq Great'
+
+In [9]: "jHq gReAT".title()
+Out[9]: 'Jhq Great'
+
+In [10]: "jHq gReAT-pot".title()
+Out[10]: 'Jhq Great-Pot'
+
+In [11]: "jHq gReAT-pot_iopd".title()
+Out[11]: 'Jhq Great-Pot_Iopd'
+
+In [12]: "jHq gReAT-pot_iopd;ytdf".title()
+Out[12]: 'Jhq Great-Pot_Iopd;Ytdf'
+
+In [13]: "RiShI iS-soFTware-EngiNeeR;sO->he;lOvEs=>coDInG".title()
+Out[13]: 'Rishi Is-Software-Engineer;So->He;Loves=>Coding'
+```
