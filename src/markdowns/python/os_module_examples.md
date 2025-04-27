@@ -143,3 +143,34 @@ In [24]: isinstance(os.environ, dict)
 Out[24]: False
 ```
 
+```python
+In [25]: "<.>"
+Out[25]: '<.>'
+
+In [26]: "<.>".replace("<", "{").replace(">", "}")
+Out[26]: '{.}'
+
+In [27]: "<.>".replace("<", "}").replace(">", "{")
+Out[27]: '}.{'
+
+In [28]: "<.>".replace("<", "}").replace(">", "{")[0]
+Out[28]: '}'
+
+In [29]: "<.>".replace("<", "}").replace(">", "{").index("{")
+Out[29]: 2
+
+In [30]: "<.>".replace("<", "}").replace(">", "{").index("}")
+Out[30]: 0
+
+In [31]: "<.>".replace("<", "}").replace(">", "{").index("}") + 6
+Out[31]: 6
+
+In [32]: "<.>".replace("<", "}").replace(">", "{").index("}") / 90
+Out[32]: 0.0
+
+In [33]: "<.>".replace("<", "}").replace(">", "{").index("}") / 9
+Out[33]: 0.0
+
+In [34]: "<.>".replace("<", "}").replace(">", "{").index("}") // 9
+Out[34]: 0
+```
