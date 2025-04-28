@@ -585,3 +585,123 @@ In [23]: numbers.add(90)
 In [24]: numbers
 Out[24]: {-8, -6, -1, 2, 7, 8, 9, 22, 80, 90, 100}
 ```
+
+```python
+In [10]: frozenset("abcd is great to write for 1st time")
+Out[10]: 
+frozenset({' ',
+           '1',
+           'a',
+           'b',
+           'c',
+           'd',
+           'e',
+           'f',
+           'g',
+           'i',
+           'm',
+           'o',
+           'r',
+           's',
+           't',
+           'w'})
+
+In [11]: set("abcd is great to write for 1st time")
+Out[11]: 
+{' ',
+ '1',
+ 'a',
+ 'b',
+ 'c',
+ 'd',
+ 'e',
+ 'f',
+ 'g',
+ 'i',
+ 'm',
+ 'o',
+ 'r',
+ 's',
+ 't',
+ 'w'}
+
+In [12]: for ch in set("abcd is great to write for 1st time"):
+    ...:     print('ch ->', ch)
+    ...: 
+ch -> w
+ch -> m
+ch -> d
+ch -> o
+ch -> r
+ch -> a
+ch -> i
+ch -> t
+ch -> f
+ch -> e
+ch -> s
+ch -> g
+ch ->  
+ch -> c
+ch -> b
+ch -> 1
+
+In [13]: for ch in set("abcd is great to write for 1st time"):
+    ...:     print('ch ->', ch)
+    ...: 
+ch -> w
+ch -> m
+ch -> d
+ch -> o
+ch -> r
+ch -> a
+ch -> i
+ch -> t
+ch -> f
+ch -> e
+ch -> s
+ch -> g
+ch ->  
+ch -> c
+ch -> b
+ch -> 1
+
+In [14]: for ch in frozenset("abcd is great to write for 1st time"):
+    ...:     print('ch ->', ch)
+    ...: 
+ch -> w
+ch -> m
+ch -> d
+ch -> o
+ch -> r
+ch -> a
+ch -> i
+ch -> t
+ch -> f
+ch -> e
+ch -> s
+ch -> g
+ch ->  
+ch -> c
+ch -> b
+ch -> 1
+
+In [15]: for ch in set("abcd is great to write for 1st time"):
+    ...:     print('ch ->', ch)
+    ...: 
+ch -> w
+ch -> m
+ch -> d
+ch -> o
+ch -> r
+ch -> a
+ch -> i
+ch -> t
+ch -> f
+ch -> e
+ch -> s
+ch -> g
+ch ->  
+ch -> c
+ch -> b
+ch -> 1
+```
