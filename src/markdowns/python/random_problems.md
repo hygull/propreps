@@ -286,3 +286,18 @@ Out[45]: 0.0
 In [46]: 0.0 + 0000
 Out[46]: 0.0
 ```
+
+```python
+
+In [1]: "xyz"
+Out[1]: 'xyz'
+
+In [2]: """xyz"""
+Out[2]: 'xyz'
+
+In [3]: 'xyz'
+Out[3]: 'xyz'
+
+In [4]: '''xyz'''
+Out[4]: 'xyz'
+```
