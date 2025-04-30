@@ -675,3 +675,92 @@ Out[12]: 'Jhq Great-Pot_Iopd;Ytdf'
 In [13]: "RiShI iS-soFTware-EngiNeeR;sO->he;lOvEs=>coDInG".title()
 Out[13]: 'Rishi Is-Software-Engineer;So->He;Loves=>Coding'
 ```
+
+```python
+In [2]: s = "FEATURES"
+
+In [3]: s.lower()
+Out[3]: 'features'
+
+In [4]: s.upper()
+Out[4]: 'FEATURES'
+
+In [5]: s.title()
+Out[5]: 'Features'
+```
+
+```python
+In [6]: s.index(0)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[6], line 1
+----> 1 s.index(0)
+
+TypeError: must be str, not int
+```
+
+```python
+In [7]: s.index("A")
+Out[7]: 2
+
+In [8]: s.index("T")
+Out[8]: 3
+
+In [9]: s.index("E")
+Out[9]: 1
+```
+
+```python
+In [10]: s.index("Z")
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[10], line 1
+----> 1 s.index("Z")
+
+ValueError: substring not found
+```
+
+```python
+In [12]: s.capitalize()
+Out[12]: 'Features'
+
+In [13]: s = "This is An aPplE"
+
+In [14]: s.capitalize()
+Out[14]: 'This is an apple'
+
+In [15]: s.title()
+Out[15]: 'This Is An Apple'
+```
+
+```python
+In [17]: s.partition("An")
+Out[17]: ('This is ', 'An', ' aPplE')
+
+In [18]: s = "This is An aPplE, I also like An Anti-biotic"
+
+In [19]: s.partition("An")
+Out[19]: ('This is ', 'An', ' aPplE, I also like An Anti-biotic')
+
+In [20]: s = "This is aPplE, I also like An Anti-biotic"
+
+In [21]: s.partition("An")
+Out[21]: ('This is aPplE, I also like ', 'An', ' Anti-biotic')
+```
+
+> casefold() and lower() are both string methods in Python used to convert a string to lowercase. However, they differ in their approach and the range of characters they handle.
+
+> lower() is simpler and only converts ASCII characters to lowercase.
+
+> casefold() is more aggressive and handles a wider range of Unicode characters, including special characters and accented letters, making it suitable for case-insensitive string comparisons, especially when dealing with international text.
+
+```python
+In [24]: string1 = "ßack to YOU"
+    ...: string2 = "ssack to YOU"
+
+In [25]: string1.lower()
+Out[25]: 'ßack to you'
+
+In [26]: string1.casefold()
+Out[26]: 'ssack to you'
+```
