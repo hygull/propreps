@@ -28,7 +28,6 @@ In [11]: t
 Out[11]: (12, 6, 89.0, 89.44, (4+4j), 'Banana')
 ```
 
-
 ```python
 In [12]: # bytearray
 
@@ -159,6 +158,45 @@ In [39]: for num in r:
 7
 8
 9
+```
+
+```python
+In [40]: r2 = range(10, 21, 2)
+
+In [41]: r2
+Out[41]: range(10, 21, 2)
+
+In [42]: for num in r2:
+    ...:     print(num)
+    ...: 
+10
+12
+14
+16
+18
+20
+```
+
+```python
+In [43]: r3 = range(10, 21, -2)
+
+In [44]: for num in r3:
+    ...:     print(num)
+    ...: 
+```
+
+```python
+In [45]: r4 = range(21, 10, -2)
+
+In [46]: for num in r4:
+    ...:     print(num)
+    ...: 
+21
+19
+17
+15
+13
+11
 ```
 
 ```python
