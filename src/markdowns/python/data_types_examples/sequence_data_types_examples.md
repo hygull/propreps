@@ -108,3 +108,59 @@ In [24]: b_arr.append(97)
 In [25]: b_arr
 Out[25]: bytearray(b'AppleBa')
 ```
+
+```python
+In [27]: # bytes
+
+In [28]: b = bytes(b"Mango")
+
+In [29]: b
+Out[29]: b'Mango'
+
+In [30]: b[0]
+Out[30]: 77
+
+In [31]: b[1]
+Out[31]: 97
+
+In [32]: chr(97)
+Out[32]: 'a'
+
+In [33]: ord('a')
+Out[33]: 97
+```
+
+```python
+In [36]: for ch in b:
+    ...:     print(ch, '->', chr(ch))
+    ...: 
+77 -> M
+97 -> a
+110 -> n
+103 -> g
+111 -> o
+```
+
+```python
+In [37]: # range
+
+In [38]: r = range(10)
+
+In [39]: for num in r:
+    ...:     print(num)
+    ...: 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+```python
+
+```
