@@ -200,5 +200,51 @@ In [46]: for num in r4:
 ```
 
 ```python
+In [47]: # string
 
+In [48]: full_name = "Rishikesh Agrawani"
+
+In [49]: for ch in full_name:
+    ...:     print(ch)
+    ...: 
+R
+i
+s
+h
+i
+k
+e
+s
+h
+ 
+A
+g
+r
+a
+w
+a
+n
+i
+
+In [50]: for ch in full_name:
+    ...:     print(ch, ord(ch))
+    ...: 
+R 82
+i 105
+s 115
+h 104
+i 105
+k 107
+e 101
+s 115
+h 104
+  32
+A 65
+g 103
+r 114
+a 97
+w 119
+a 97
+n 110
+i 105
 ```
