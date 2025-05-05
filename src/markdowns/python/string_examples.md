@@ -764,3 +764,23 @@ Out[25]: 'ßack to you'
 In [26]: string1.casefold()
 Out[26]: 'ssack to you'
 ```
+
+```python
+In [1]: "GREAT FINE".lower().upper().replace("E", "A").replace("A", "E").title()
+Out[1]: 'Greet Fine'
+
+In [2]: "GREAT FINE".lower() #.upper().replace("E", "A").replace("A", "E").title()
+Out[2]: 'great fine'
+
+In [3]: "GREAT FINE".lower().upper() #.replace("E", "A").replace("A", "E").title()
+Out[3]: 'GREAT FINE'
+
+In [4]: "GREAT FINE".lower().upper().replace("E", "A") #.replace("A", "E").title()
+Out[4]: 'GRAAT FINA'
+
+In [5]: "GREAT FINE".lower().upper().replace("E", "A").replace("A", "E") #.title()
+Out[5]: 'GREET FINE'
+
+In [6]: "GREAT FINE".lower().upper().replace("E", "A").replace("A", "E").title()
+Out[6]: 'Greet Fine'
+```
