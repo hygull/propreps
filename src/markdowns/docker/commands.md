@@ -15,7 +15,7 @@
 
 
 
-### What are main docker commands that a beginner show first learn (With brief explanations and examples)?
+### What are main docker commands that a beginner should first learn (With brief explanations and examples)?
 
 ```bash
 As a beginner learning Docker, it's essential to start with the fundamental 
