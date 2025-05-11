@@ -114,3 +114,20 @@ Out[5]:
 In [6]: " ".join(words + words2)
 Out[6]: 'This Friday Was Finalised For Release! But That shpuld not be done!'
 ```
+
+```python
+In [1]: (True, 56.99, "Wow, Python!", 14+1992J, 5, set([1, 5, 7]))
+Out[1]: (True, 56.99, 'Wow, Python!', (14+1992j), 5, {1, 5, 7})
+
+In [2]: tup = (True, 56.99, "Wow, Python!", 14+1992J, 5, set([1, 5, 7]))
+
+In [4]: for item in tup:
+   ...:     print(tup, "->", type(item))
+   ...: 
+(True, 56.99, 'Wow, Python!', (14+1992j), 5, {1, 5, 7}) -> <class 'bool'>
+(True, 56.99, 'Wow, Python!', (14+1992j), 5, {1, 5, 7}) -> <class 'float'>
+(True, 56.99, 'Wow, Python!', (14+1992j), 5, {1, 5, 7}) -> <class 'str'>
+(True, 56.99, 'Wow, Python!', (14+1992j), 5, {1, 5, 7}) -> <class 'complex'>
+(True, 56.99, 'Wow, Python!', (14+1992j), 5, {1, 5, 7}) -> <class 'int'>
+(True, 56.99, 'Wow, Python!', (14+1992j), 5, {1, 5, 7}) -> <class 'set'>
+```
