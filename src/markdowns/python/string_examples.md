@@ -822,3 +822,22 @@ Out[12]: ['>', '>', '>', '>', '}', '+', '{', '<', '<', '<', '<']
 In [13]: list("<<<<{+}>>>>")[::-1]
 Out[13]: ['>', '>', '>', '>', '}', '+', '{', '<', '<', '<', '<']
 ```
+
+```python
+In [1]: lord_name = """SHIVA"""
+
+In [2]: print(lord_name)
+SHIVA
+
+In [3]: lord_name
+Out[3]: 'SHIVA'
+
+In [4]: lord_name.replace("S", "LORD S")
+Out[4]: 'LORD SHIVA'
+
+In [5]: lord_name.replace("VA", "VA GREAT")
+Out[5]: 'SHIVA GREAT'
+
+In [7]: lord_name.replace("S", "LORD S").replace("VA", "VA GREAT")
+Out[7]: 'LORD SHIVA GREAT'
+```
