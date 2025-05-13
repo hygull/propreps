@@ -841,3 +841,14 @@ Out[5]: 'SHIVA GREAT'
 In [7]: lord_name.replace("S", "LORD S").replace("VA", "VA GREAT")
 Out[7]: 'LORD SHIVA GREAT'
 ```
+
+```python
+In [1]: "hello ".strip()
+Out[1]: 'hello'
+
+In [2]: "hello ".lstrip()
+Out[2]: 'hello '
+
+In [3]: "hello ".rstrip()
+Out[3]: 'hello'
+```
