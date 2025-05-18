@@ -883,3 +883,41 @@ Out[10]: 'GRTNBGERUGRTNBGERUGRTNBGERU'
 In [11]: "GRTNBGERU" * 2
 Out[11]: 'GRTNBGERUGRTNBGERU'
 ```
+
+```python
+In [3]: "Light".upper()
+Out[3]: 'LIGHT'
+
+In [4]: "Light".lower()
+Out[4]: 'light'
+
+In [5]: "Light".title()
+Out[5]: 'Light'
+
+In [6]: "Light is bright".title()
+Out[6]: 'Light Is Bright'
+
+In [7]: "Light is bright".lower()
+Out[7]: 'light is bright'
+```
+
+```python
+In [9]: "Light is bright".upper()
+Out[9]: 'LIGHT IS BRIGHT'
+```
+
+```python
+In [10]: "Light-is-bright".upper()
+Out[10]: 'LIGHT-IS-BRIGHT'
+
+In [11]: "Light-is-bright".title()
+Out[11]: 'Light-Is-Bright'
+
+In [13]: "Light-is-bright".capitalize()
+Out[13]: 'Light-is-bright'
+```
+
+```python
+In [15]: "Light-is-bright".casefold()
+Out[15]: 'light-is-bright'
+```
