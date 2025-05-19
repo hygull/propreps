@@ -705,3 +705,59 @@ ch -> c
 ch -> b
 ch -> 1
 ```
+
+```python
+In [1]: s = set()
+
+In [2]: s
+Out[2]: set()
+
+In [3]: s.add(1)
+
+In [4]: s
+Out[4]: {1}
+
+In [5]: s.add(tuple([1, 5]))
+
+In [6]: s
+Out[6]: {(1, 5), 1}
+
+In [7]: s.add("Rishikesh")
+
+In [8]: s
+Out[8]: {(1, 5), 1, 'Rishikesh'}
+
+In [9]: s.add((1,))
+
+In [10]: s
+Out[10]: {(1, 5), (1,), 1, 'Rishikesh'}
+
+In [11]: s.add((1, 4, 6))
+
+In [12]: s
+Out[12]: {(1, 4, 6), (1, 5), (1,), 1, 'Rishikesh'}
+```
+
+```python
+In [13]: 
+
+In [13]: for item in s:
+    ...:     print(s, '->', type(s))
+    ...: 
+{1, (1,), (1, 5), 'Rishikesh', (1, 4, 6)} -> <class 'set'>
+{1, (1,), (1, 5), 'Rishikesh', (1, 4, 6)} -> <class 'set'>
+{1, (1,), (1, 5), 'Rishikesh', (1, 4, 6)} -> <class 'set'>
+{1, (1,), (1, 5), 'Rishikesh', (1, 4, 6)} -> <class 'set'>
+{1, (1,), (1, 5), 'Rishikesh', (1, 4, 6)} -> <class 'set'>
+```
+
+```python
+In [14]: for item in s:
+    ...:     print(item, '->', type(item))
+    ...: 
+1 -> <class 'int'>
+(1,) -> <class 'tuple'>
+(1, 5) -> <class 'tuple'>
+Rishikesh -> <class 'str'>
+(1, 4, 6) -> <class 'tuple'>
+```
