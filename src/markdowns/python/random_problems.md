@@ -301,3 +301,30 @@ Out[3]: 'xyz'
 In [4]: '''xyz'''
 Out[4]: 'xyz'
 ```
+
+```python
+In [1]: ddddd = [[[0]]]
+
+In [2]: ddddd
+Out[2]: [[[0]]]
+
+In [3]: ddddd[0]
+Out[3]: [[0]]
+
+In [4]: ddddd[0][0]
+Out[4]: [0]
+
+In [5]: ddddd[0][0][0]
+Out[5]: 0
+
+In [6]: lllll = {"name": {"name": {"name": {"name": "Rishikesh"}}}}
+
+In [7]: lllll["name"]["name"]
+Out[7]: {'name': {'name': 'Rishikesh'}}
+
+In [8]: lllll["name"]["name"]["name"]
+Out[8]: {'name': 'Rishikesh'}
+
+In [9]: lllll["name"]["name"]["name"].get("name")
+Out[9]: 'Rishikesh'
+```
