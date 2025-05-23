@@ -21,3 +21,16 @@ Cell In[8], line 1
 NameError: name 'age' is not defined
 
 ```
+
+```python
+In [9]:  locals().pop("full_name")
+Out[9]: 'Rishikesh Agrawani'
+
+In [10]: full_name
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[10], line 1
+----> 1 full_name
+
+NameError: name 'full_name' is not defined
+```
