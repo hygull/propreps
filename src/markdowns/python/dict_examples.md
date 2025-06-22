@@ -703,3 +703,29 @@ Out[6]: {'age'}
 In [7]: keys2 - keys
 Out[7]: {'occupation'}
 ```
+
+```python
+In [1]: {}
+Out[1]: {}
+
+In [2]: dict()
+Out[2]: {}
+
+In [3]: dict([])
+Out[3]: {}
+
+In [4]: dict([("age", 33)])
+Out[4]: {'age': 33}
+
+In [6]: dict([("age", 33), ('occupation', 'Engineer')])
+Out[6]: {'age': 33, 'occupation': 'Engineer'}
+
+In [8]: dict([("age", 33), ('occupation', 'Engineer'), ("village", "Bedagaon"), ("city", "Badedongar")])
+Out[8]: 
+{'age': 33,
+ 'occupation': 'Engineer',
+ 'village': 'Bedagaon',
+ 'city': 'Badedongar'}
+
+
+```
