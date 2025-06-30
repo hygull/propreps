@@ -921,3 +921,88 @@ Out[13]: 'Light-is-bright'
 In [15]: "Light-is-bright".casefold()
 Out[15]: 'light-is-bright'
 ```
+
+```python
+In [1]: name = "Rishikesh" "Agrawani"
+
+In [2]: name
+Out[2]: 'RishikeshAgrawani'
+
+In [3]: name = "Rishikesh" " " "Agrawani"
+
+In [4]: name
+Out[4]: 'Rishikesh Agrawani'
+
+In [5]: name = "Rishikesh " " Agrawani"
+
+In [6]: name
+Out[6]: 'Rishikesh  Agrawani'
+```
+
+```python
+In [9]: for ch in name:
+   ...:     print(ch, '->', ord(ch))
+   ...: 
+R -> 82
+i -> 105
+s -> 115
+h -> 104
+i -> 105
+k -> 107
+e -> 101
+s -> 115
+h -> 104
+  -> 32
+  -> 32
+A -> 65
+g -> 103
+r -> 114
+a -> 97
+w -> 119
+a -> 97
+n -> 110
+i -> 105
+```
+
+```python
+In [10]: chr(67)
+Out[10]: 'C'
+
+In [11]: chr(68)
+Out[11]: 'D'
+```
+
+```python
+
+In [12]: ord('C')
+Out[12]: 67
+
+In [13]: ord('D')
+Out[13]: 68
+```
+
+```python
+In [15]: for k, v in [('1', 1), ("11", 11)]:
+    ...:     print(k, '->', v)
+    ...: 
+1 -> 1
+11 -> 11
+
+In [16]: for k, v in [('1', 1), ("11", 11)]:
+    ...:     print(k, type(k), '->', v, type(v))
+    ...: 
+1 <class 'str'> -> 1 <class 'int'>
+11 <class 'str'> -> 11 <class 'int'>
+```
+
+```python
+In [17]: for ch in "Apple":
+    ...:     print(ch, ord(ch))
+    ...: 
+A 65
+p 112
+p 112
+l 108
+e 101
+```
+```
