@@ -47,3 +47,55 @@ In [5]: for i in range(10):
 8 -> 64
 9 -> 81
 ```
+
+```bash
+In [6]: numbers = range(1, 11)
+
+In [7]: for number in numbers:
+   ...:     print("Number: ", number)
+   ...: 
+Number:  1
+Number:  2
+Number:  3
+Number:  4
+Number:  5
+Number:  6
+Number:  7
+Number:  8
+Number:  9
+Number:  10
+
+In [8]: for number in numbers:
+   ...:     print("Number: ", number ** 2 \
+   ...:     )
+   ...: 
+Number:  1
+Number:  4
+Number:  9
+Number:  16
+Number:  25
+Number:  36
+Number:  49
+Number:  64
+Number:  81
+Number:  100
+```
+
+```bash
+In [12]: for number in numbers:
+    ...:     print(
+    ...:         "Number: ", number
+    ...:         ** 2
+    ...:     )
+    ...: 
+Number:  1
+Number:  4
+Number:  9
+Number:  16
+Number:  25
+Number:  36
+Number:  49
+Number:  64
+Number:  81
+Number:  100
+```
