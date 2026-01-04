@@ -99,3 +99,38 @@ Number:  64
 Number:  81
 Number:  100
 ```
+
+```bash
+In [14]: try:
+    ...:     10 / 5
+    ...:     12 / 0
+    ...: except Exception as e:
+    ...:     print(e)
+    ...: 
+division by zero
+
+In [15]: for number in numbers:
+    ...:     print(number)
+    ...: else:
+    ...:     print("DONE")
+    ...: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+DONE
+
+In [16]: for number in numbers:
+    ...:     print(number)
+    ...:     break
+    ...: else:
+    ...:     print("DONE")
+    ...: 
+1
+```
