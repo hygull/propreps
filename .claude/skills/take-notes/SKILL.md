@@ -1,5 +1,5 @@
 ---
-name: notes-taker
+name: take-notes
 description: Create organized notes on any topic. Automatically groups notes into relevant subdirectories under src/notes/ (e.g., src/notes/python/loops/, src/notes/agents/, src/notes/docker/). Use this when the user wants to take notes, save explanations, or document concepts.
 argument-hint: <topic>
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
